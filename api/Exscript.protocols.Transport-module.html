@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Exscript.protocols.Transport</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
+        <a href="Exscript.protocols-module.html">Package&nbsp;protocols</a> ::
+        Module&nbsp;Transport
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module Transport</h1><p class="nomargin-top"></p>
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport.Transport-class.html" class="summary-name">Transport</a><br />
+      This is the base class for all protocols; it defines the common 
+      portions of the API.
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="True"></a><span class="summary-name">True</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="False"></a><span class="summary-name">False</span> = <code title="0">0</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="flags"></a><span class="summary-name">flags</span> = <code title="re.I | re.M">re.I | re.M</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="printable"></a><span class="summary-name">printable</span> = <code title="re.escape(string.printable)">re.escape(string.printable)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="ignore"></a><span class="summary-name">ignore</span> = <code title="r'[\x1b\x07\x00]'">r'[\x1b\x07\x00]'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="newline"></a><span class="summary-name">newline</span> = <code title="r'[\r\n]'">r'[\r\n]'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#prompt_start" class="summary-name">prompt_start</a> = <code title="r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ ignore+ '+)'">r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ igno<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="prompt_chars"></a><span class="summary-name">prompt_chars</span> = <code title="r'[\-\w\(\)@:~]'">r'[\-\w\(\)@:~]'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="filename"></a><span class="summary-name">filename</span> = <code title="r'(?:[\w\+\-\._]+)'">r'(?:[\w\+\-\._]+)'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="path"></a><span class="summary-name">path</span> = <code title="r'(?:(?:'+ filename+ r')?(?:/'+ filename+ r')*/?)'">r'(?:(?:'+ filename+ r')?(?:/'+ filename+ r')*/?)'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="any_path"></a><span class="summary-name">any_path</span> = <code title="r'(?:'+ path+ r'|~'+ path+ r'?)'">r'(?:'+ path+ r'|~'+ path+ r'?)'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="host"></a><span class="summary-name">host</span> = <code title="r'(?:[\w+\-\.]+)'">r'(?:[\w+\-\.]+)'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="user"></a><span class="summary-name">user</span> = <code title="r'(?:[\w+\-]+)'">r'(?:[\w+\-]+)'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="user_host"></a><span class="summary-name">user_host</span> = <code title="r'(?:(?:'+ user+ r'\@)?'+ host+ r')'">r'(?:(?:'+ user+ r'\@)?'+ host+ r')'</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#prompt_re" class="summary-name">prompt_re</a> = <code title="re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_host+ r'?'+ r'[: ]?'\
++ any_path+ r'?'+ r'[: ]?'+ any_path+ r'?'+ r'(?:\('+ filename+ '\))?'\
++ r'\]?'+ r'[#&gt;%\$\]] ?$', flags)">re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#iosxr_prompt_re" class="summary-name">iosxr_prompt_re</a> = <code title="re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$', flags)">re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$'<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="huawei_re"></a><span class="summary-name">huawei_re</span> = <code title="re.compile(r'huawei', flags)">re.compile(r'huawei', flags)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="cisco_user_re"></a><span class="summary-name">cisco_user_re</span> = <code title="re.compile(r'user ?name: *$', flags)">re.compile(r'user ?name: *$', flags)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="junos_user_re"></a><span class="summary-name">junos_user_re</span> = <code title="re.compile(newline+ r'login: *?$', flags)">re.compile(newline+ r'login: *?$', flags)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="unix_user_re"></a><span class="summary-name">unix_user_re</span> = <code title="re.compile(r'(user|login): *$', flags)">re.compile(r'(user|login): *$', flags)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="pass_re"></a><span class="summary-name">pass_re</span> = <code title="re.compile(r'password:? *$', flags)">re.compile(r'password:? *$', flags)</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="skey_re"></a><span class="summary-name">skey_re</span> = <code title="re.compile(r'(?:s\/key|otp-md4) (\d+) (\S+)')">re.compile(r'(?:s\/key|otp-md4) (\d+) (\S+)')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#errors" class="summary-name">errors</a> = <code title="[r'error', r'invalid', r'incomplete', r'unrecognized', r'unknown comma\
+nd', r'connection timed out', r'[^\r\n]+ not found']">[r'error', r'invalid', r'incomplete', r'unrecognized'<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#error_re" class="summary-name">error_re</a> = <code title="re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', flags)">re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', fl<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#login_fail" class="summary-name">login_fail</a> = <code title="[r'bad secrets', r'denied', r'invalid', r'too short', r'incorrect', r'\
+connection timed out', r'failed']">[r'bad secrets', r'denied', r'invalid', r'too sho<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Transport-module.html#login_fail_re" class="summary-name">login_fail_re</a> = <code title="re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.join(login_fail)+ r')', f\
+lags)">re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.j<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES DETAILS ==================== -->
+<a name="section-VariablesDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables Details</span></td>
+</tr>
+</table>
+<a name="prompt_start"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">prompt_start</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ ignore+ '+)'
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="prompt_re"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">prompt_re</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_host+ r'?'+ r'[: ]?'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
++ any_path+ r'?'+ r'[: ]?'+ any_path+ r'?'+ r'(?:\('+ filename+ '\))?'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
++ r'\]?'+ r'[#&gt;%\$\]] ?$', flags)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="iosxr_prompt_re"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">iosxr_prompt_re</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$', flags)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="errors"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">errors</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+[r'error', r'invalid', r'incomplete', r'unrecognized', r'unknown comma<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+nd', r'connection timed out', r'[^\r\n]+ not found']
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="error_re"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">error_re</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', flags)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="login_fail"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">login_fail</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+[r'bad secrets', r'denied', r'invalid', r'too short', r'incorrect', r'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+connection timed out', r'failed']
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="login_fail_re"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">login_fail_re</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.join(login_fail)+ r')', f<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+lags)
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Dec  8 16:01:18 2009
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
