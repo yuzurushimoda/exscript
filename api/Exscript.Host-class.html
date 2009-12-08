@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.Host.Host</title>
+  <title>Exscript.Host</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,9 +42,7 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        Exscript ::
-        Host ::
-        Host ::
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         Class&nbsp;Host
       </span>
     </td>
@@ -80,7 +78,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">uri</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Constructor.</td>
@@ -99,10 +97,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_uri" class="summary-sig-name">set_uri</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">uri</span>)</span><br />
-      Defines the protocol, hostname, domain, TCP port number, username, 
-      and password from the given URL.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#append" class="summary-sig-name">append</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Appends the given value to the list variable with the given name.</td>
           <td align="right" valign="top">
             
             
@@ -114,14 +112,15 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">object</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_address" class="summary-sig-name">set_address</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">address</span>)</span><br />
-      Set the hostname/domain or IP address of the remote host without 
-      changing username, password, protocol, and TCP port number.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get" class="summary-sig-name">get</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the value of the given variable, or the given default value 
+      if the variable is not defined.</td>
           <td align="right" valign="top">
             
             
@@ -137,7 +136,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_address" class="summary-sig-name">get_address</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_address" class="summary-sig-name">get_address</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the name with the domain appended (if any).</td>
           <td align="right" valign="top">
             
@@ -150,64 +149,11 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_name" class="summary-sig-name">set_name</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Defines the hostname, without changing the domain.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_name" class="summary-sig-name">get_name</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the hostname, excluding the domain part.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_domain" class="summary-sig-name">set_domain</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">domain</span>)</span><br />
-      Defines the domain name.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_domain" class="summary-sig-name">get_domain</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_domain" class="summary-sig-name">get_domain</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the domain name.</td>
           <td align="right" valign="top">
             
@@ -220,13 +166,12 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_protocol" class="summary-sig-name">set_protocol</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">protocol</span>)</span><br />
-      Defines the protocol.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_name" class="summary-sig-name">get_name</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the hostname, excluding the domain part.</td>
           <td align="right" valign="top">
             
             
@@ -242,112 +187,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_protocol" class="summary-sig-name">get_protocol</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the name of the protocol.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_tcp_port" class="summary-sig-name">set_tcp_port</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tcp_port</span>)</span><br />
-      Defines the TCP port number.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_tcp_port" class="summary-sig-name">get_tcp_port</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the TCP port number.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_username" class="summary-sig-name">set_username</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Defines the username of the account that is used to log in.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_username" class="summary-sig-name">get_username</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the username of the account that is used to log in.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_password" class="summary-sig-name">set_password</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">password</span>)</span><br />
-      Defines the password of the account that is used to log in.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get_password" class="summary-sig-name">get_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_password" class="summary-sig-name">get_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the password of the account that is used to log in.</td>
           <td align="right" valign="top">
             
@@ -360,11 +200,81 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_protocol" class="summary-sig-name">get_protocol</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the name of the protocol.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_tcp_port" class="summary-sig-name">get_tcp_port</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the TCP port number.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_username" class="summary-sig-name">get_username</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the username of the account that is used to log in.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#has_key" class="summary-sig-name">has_key</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Returns True if the variable with the given name is defined, False 
+      otherwise.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set" class="summary-sig-name">set</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set" class="summary-sig-name">set</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">name</span>,
         <span class="summary-sig-arg">value</span>)</span><br />
       Stores the given variable/value in the object for later retrieval.</td>
@@ -383,10 +293,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#append" class="summary-sig-name">append</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
-      Appends the given value to the list variable with the given name.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_address" class="summary-sig-name">set_address</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">address</span>)</span><br />
+      Set the hostname/domain or IP address of the remote host without 
+      changing username, password, protocol, and TCP port number.</td>
           <td align="right" valign="top">
             
             
@@ -402,7 +312,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#set_default" class="summary-sig-name">set_default</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_default" class="summary-sig-name">set_default</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">name</span>,
         <span class="summary-sig-arg">value</span>)</span><br />
       Like set(), but only sets the value if the variable is not already 
@@ -418,14 +328,13 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#has_key" class="summary-sig-name">has_key</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Returns True if the variable with the given name is defined, False 
-      otherwise.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_domain" class="summary-sig-name">set_domain</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">domain</span>)</span><br />
+      Defines the domain name.</td>
           <td align="right" valign="top">
             
             
@@ -437,15 +346,104 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">object</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host.Host-class.html#get" class="summary-sig-name">get</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Returns the value of the given variable, or the given default value 
-      if the variable is not defined.</td>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_name" class="summary-sig-name">set_name</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Defines the hostname, without changing the domain.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_password" class="summary-sig-name">set_password</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">password</span>)</span><br />
+      Defines the password of the account that is used to log in.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_protocol" class="summary-sig-name">set_protocol</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">protocol</span>)</span><br />
+      Defines the protocol.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_tcp_port" class="summary-sig-name">set_tcp_port</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">tcp_port</span>)</span><br />
+      Defines the TCP port number.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_uri" class="summary-sig-name">set_uri</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">uri</span>)</span><br />
+      Defines the protocol, hostname, domain, TCP port number, username, 
+      and password from the given URL.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_username" class="summary-sig-name">set_username</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>)</span><br />
+      Defines the username of the account that is used to log in.</td>
           <td align="right" valign="top">
             
             
@@ -530,55 +528,257 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="set_uri"></a>
+<a name="append"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_uri</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">uri</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">append</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Defines the protocol, hostname, domain, TCP port number, username, and
-  password from the given URL. The hostname may be URL formatted, so the 
-  following formats are all valid:</p>
-  <ul>
-    <li>
-      myhostname
-    </li>
-    <li>
-      myhostname.domain
-    </li>
-    <li>
-      ssh:hostname
-    </li>
-    <li>
-      ssh:hostname.domain
-    </li>
-    <li>
-      ssh://hostname
-    </li>
-    <li>
-      ssh://user@hostname
-    </li>
-    <li>
-      ssh://user:password@hostname
-    </li>
-    <li>
-      ssh://user:password@hostname:21
-    </li>
-  </ul>
-  <p>For a list of supported protocols please see set_protocol().</p>
+  <p>Appends the given value to the list variable with the given name.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>uri</code></strong> (string) - An URL formatted hostname.</li>
+        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
+        <li><strong class="pname"><code>value</code></strong> (object) - The appended value.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the value of the given variable, or the given default value if
+  the variable is not defined.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
+        <li><strong class="pname"><code>default</code></strong> (object) - The default value.</li>
+    </ul></dd>
+    <dt>Returns: object</dt>
+        <dd>The value of the variable.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_address"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_address</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the name with the domain appended (if any).</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The hostname including the domain name.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_domain"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_domain</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the domain name.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The domain name.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_name"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_name</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the hostname, excluding the domain part.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The hostname excluding the domain name.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_password"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_password</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the password of the account that is used to log in.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The password.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_protocol"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_protocol</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the name of the protocol.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The protocol name.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_tcp_port"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tcp_port</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the TCP port number.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The TCP port number.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_username"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_username</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the username of the account that is used to log in.</p>
+  <dl class="fields">
+    <dt>Returns: string</dt>
+        <dd>The username.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="has_key"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">has_key</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns True if the variable with the given name is defined, False 
+  otherwise.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
+    </ul></dd>
+    <dt>Returns: bool</dt>
+        <dd>Whether the variable is defined.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stores the given variable/value in the object for later retrieval.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
+        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -608,69 +808,30 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="get_address"></a>
+<a name="set_default"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_address</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_default</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">value</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the name with the domain appended (if any).</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The hostname including the domain name.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_name"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_name</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Defines the hostname, without changing the domain.</p>
+  <p>Like set(), but only sets the value if the variable is not already 
+  defined.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - A hostname or IP address.</li>
+        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
+        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
     </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_name"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_name</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the hostname, excluding the domain part.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The hostname excluding the domain name.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -698,24 +859,51 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="get_domain"></a>
+<a name="set_name"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_domain</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_name</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the domain name.</p>
+  <p>Defines the hostname, without changing the domain.</p>
   <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The domain name.</dd>
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>name</code></strong> (string) - A hostname or IP address.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_password"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_password</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">password</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Defines the password of the account that is used to log in.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>password</code></strong> (string) - The password.</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -769,27 +957,6 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="get_protocol"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_protocol</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the name of the protocol.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The protocol name.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="set_tcp_port"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -814,24 +981,56 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="get_tcp_port"></a>
+<a name="set_uri"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tcp_port</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_uri</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">uri</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the TCP port number.</p>
+  <p>Defines the protocol, hostname, domain, TCP port number, username, and
+  password from the given URL. The hostname may be URL formatted, so the 
+  following formats are all valid:</p>
+  <ul>
+    <li>
+      myhostname
+    </li>
+    <li>
+      myhostname.domain
+    </li>
+    <li>
+      ssh:hostname
+    </li>
+    <li>
+      ssh:hostname.domain
+    </li>
+    <li>
+      ssh://hostname
+    </li>
+    <li>
+      ssh://user@hostname
+    </li>
+    <li>
+      ssh://user:password@hostname
+    </li>
+    <li>
+      ssh://user:password@hostname:21
+    </li>
+  </ul>
+  <p>For a list of supported protocols please see set_protocol().</p>
   <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The TCP port number.</dd>
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>uri</code></strong> (string) - An URL formatted hostname.</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -856,207 +1055,6 @@ object --+
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>name</code></strong> (string) - The username.</li>
     </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_username"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_username</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the username of the account that is used to log in.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The username.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_password"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_password</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">password</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Defines the password of the account that is used to log in.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>password</code></strong> (string) - The password.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_password"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_password</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the password of the account that is used to log in.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The password.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Stores the given variable/value in the object for later retrieval.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="append"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">append</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Appends the given value to the list variable with the given name.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The appended value.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_default"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_default</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Like set(), but only sets the value if the variable is not already 
-  defined.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="has_key"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">has_key</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns True if the variable with the given name is defined, False 
-  otherwise.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-    </ul></dd>
-    <dt>Returns: bool</dt>
-        <dd>Whether the variable is defined.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">default</span>=<span class="sig-default">None</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the value of the given variable, or the given default value if
-  the variable is not defined.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>default</code></strong> (object) - The default value.</li>
-    </ul></dd>
-    <dt>Returns: object</dt>
-        <dd>The value of the variable.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1092,7 +1090,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

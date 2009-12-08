@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.Connection-module.html">Module&nbsp;Connection</a> ::
+        <a href="Exscript.Connection-module.html" onclick="show_private();">Module&nbsp;Connection</a> ::
         Class&nbsp;Connection
       </span>
     </td>
@@ -251,8 +251,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">True</span>)</span><br />
+        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">1</span>)</span><br />
       Like protocols.Transport.authenticate(), but makes sure to 
       lock/release the account while it is used.</td>
           <td align="right" valign="top">
@@ -272,8 +272,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#authorize" class="summary-sig-name">authorize</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">False</span>,
-        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">True</span>)</span><br />
+        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">0</span>,
+        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">1</span>)</span><br />
       Like authenticate(), but uses the authorization password instead.</td>
           <td align="right" valign="top">
             
@@ -292,8 +292,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#auto_authorize" class="summary-sig-name">auto_authorize</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">True</span>,
-        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">wait</span>=<span class="summary-sig-default">1</span>,
+        <span class="summary-sig-arg">lock</span>=<span class="summary-sig-default">1</span>,
         <span class="summary-sig-arg">password</span>=<span class="summary-sig-default">None</span>)</span><br />
       Executes a command on the remote host that causes an authorization 
       procedure to be started, then authorizes using authorize().</td>
@@ -562,8 +562,8 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">authenticate</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">account</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wait</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">lock</span>=<span class="sig-default">True</span>)</span>
+        <span class="sig-arg">wait</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">lock</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
@@ -595,8 +595,8 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">authorize</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">account</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wait</span>=<span class="sig-default">False</span>,
-        <span class="sig-arg">lock</span>=<span class="sig-default">True</span>)</span>
+        <span class="sig-arg">wait</span>=<span class="sig-default">0</span>,
+        <span class="sig-arg">lock</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
@@ -625,8 +625,8 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">auto_authorize</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">account</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">wait</span>=<span class="sig-default">True</span>,
-        <span class="sig-arg">lock</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">wait</span>=<span class="sig-default">1</span>,
+        <span class="sig-arg">lock</span>=<span class="sig-default">1</span>,
         <span class="sig-arg">password</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -695,7 +695,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.protocols-module.html">Package&nbsp;protocols</a> ::
+        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
         Module&nbsp;Transport
       </span>
     </td>
@@ -70,7 +70,7 @@
     </td><td class="summary">
         <a href="Exscript.protocols.Transport.Transport-class.html" class="summary-name">Transport</a><br />
       This is the base class for all protocols; it defines the common 
-      portions of the API.
+        portions of the API.
     </td>
   </tr>
 </table>
@@ -100,173 +100,202 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="flags"></a><span class="summary-name">flags</span> = <code title="re.I | re.M">re.I | re.M</code>
+        <a name="flags"></a><span class="summary-name">flags</span> = <code title="10">10</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="printable"></a><span class="summary-name">printable</span> = <code title="re.escape(string.printable)">re.escape(string.printable)</code>
+        <a href="Exscript.protocols.Transport-module.html#printable" class="summary-name">printable</a> = <code title="'''0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\\!\\\
+&quot;\\#\\$\\%\\&amp;\\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\&lt;\\=\\&gt;\\?\\@\\[\\\\\\
+\]\\^\\_\\`\\{\\|\\}\\~\\ \\\t\\
+\\\r\\\x0b\\\x0c'''"><code class="variable-quote">'</code><code class="variable-string">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLM</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="ignore"></a><span class="summary-name">ignore</span> = <code title="r'[\x1b\x07\x00]'">r'[\x1b\x07\x00]'</code>
+        <a name="ignore"></a><span class="summary-name">ignore</span> = <code title="'[\\x1b\\x07\\x00]'"><code class="variable-quote">'</code><code class="variable-string">[\\x1b\\x07\\x00]</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="newline"></a><span class="summary-name">newline</span> = <code title="r'[\r\n]'">r'[\r\n]'</code>
+        <a name="newline"></a><span class="summary-name">newline</span> = <code title="'[\\r\\n]'"><code class="variable-quote">'</code><code class="variable-string">[\\r\\n]</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#prompt_start" class="summary-name">prompt_start</a> = <code title="r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ ignore+ '+)'">r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ igno<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#prompt_start" class="summary-name">prompt_start</a> = <code title="'''(?:[\\r\\n][^0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR\
+STUVWXYZ\\!\\&quot;\\#\\$\\%\\&amp;\\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\&lt;\\=\\&gt;\\
+\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\\ \\\t\\
+\\\r\\\x0b\\\x0c]?|[\\x1b\\x07\\x00]+)'''"><code class="variable-quote">'</code><code class="variable-string">(?:[\\r\\n][^0123456789abcdefghijklmnopqrstuvw</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="prompt_chars"></a><span class="summary-name">prompt_chars</span> = <code title="r'[\-\w\(\)@:~]'">r'[\-\w\(\)@:~]'</code>
+        <a name="prompt_chars"></a><span class="summary-name">prompt_chars</span> = <code title="'[\\-\\w\\(\\)@:~]'"><code class="variable-quote">'</code><code class="variable-string">[\\-\\w\\(\\)@:~]</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="filename"></a><span class="summary-name">filename</span> = <code title="r'(?:[\w\+\-\._]+)'">r'(?:[\w\+\-\._]+)'</code>
+        <a name="filename"></a><span class="summary-name">filename</span> = <code title="'(?:[\\w\\+\\-\\._]+)'"><code class="variable-quote">'</code><code class="variable-string">(?:[\\w\\+\\-\\._]+)</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="path"></a><span class="summary-name">path</span> = <code title="r'(?:(?:'+ filename+ r')?(?:/'+ filename+ r')*/?)'">r'(?:(?:'+ filename+ r')?(?:/'+ filename+ r')*/?)'</code>
+        <a href="Exscript.protocols.Transport-module.html#path" class="summary-name">path</a> = <code title="'(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)'"><code class="variable-quote">'</code><code class="variable-string">(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="any_path"></a><span class="summary-name">any_path</span> = <code title="r'(?:'+ path+ r'|~'+ path+ r'?)'">r'(?:'+ path+ r'|~'+ path+ r'?)'</code>
+        <a href="Exscript.protocols.Transport-module.html#any_path" class="summary-name">any_path</a> = <code title="'(?:(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)|~(?:(?:(\
+?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)?)'"><code class="variable-quote">'</code><code class="variable-string">(?:(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="host"></a><span class="summary-name">host</span> = <code title="r'(?:[\w+\-\.]+)'">r'(?:[\w+\-\.]+)'</code>
+        <a name="host"></a><span class="summary-name">host</span> = <code title="'(?:[\\w+\\-\\.]+)'"><code class="variable-quote">'</code><code class="variable-string">(?:[\\w+\\-\\.]+)</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="user"></a><span class="summary-name">user</span> = <code title="r'(?:[\w+\-]+)'">r'(?:[\w+\-]+)'</code>
+        <a name="user"></a><span class="summary-name">user</span> = <code title="'(?:[\\w+\\-]+)'"><code class="variable-quote">'</code><code class="variable-string">(?:[\\w+\\-]+)</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="user_host"></a><span class="summary-name">user_host</span> = <code title="r'(?:(?:'+ user+ r'\@)?'+ host+ r')'">r'(?:(?:'+ user+ r'\@)?'+ host+ r')'</code>
+        <a name="user_host"></a><span class="summary-name">user_host</span> = <code title="'(?:(?:(?:[\\w+\\-]+)\\@)?(?:[\\w+\\-\\.]+))'"><code class="variable-quote">'</code><code class="variable-string">(?:(?:(?:[\\w+\\-]+)\\@)?(?:[\\w+\\-\\.]+))</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#prompt_re" class="summary-name">prompt_re</a> = <code title="re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_host+ r'?'+ r'[: ]?'\
-+ any_path+ r'?'+ r'[: ]?'+ any_path+ r'?'+ r'(?:\('+ filename+ '\))?'\
-+ r'\]?'+ r'[#&gt;%\$\]] ?$', flags)">re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#prompt_re" class="summary-name">prompt_re</a> = <code title="re.compile(r'(?im)(?:[\r\n][^0123456789abcdefghijklmnopqrstuvwxyzABCDE\
+FGHIJKLMNOPQRSTUVWXYZ!&quot;#\$%&amp;\'\(\)\*\+,-\./:;&lt;=&gt;\?@\[\\\]\^_`\{\|\}~ \\
+t\n\r\v\f]?|[\x1b\x07\x00]+)[\[&lt;]?\w+(?:(?:(?:[\w\+-]+)@)?(?:[\w\+-\.]\
++))?[: ]?(?:(?:(?:(?:[\w\+-\._]+))?(?:/(?:[\w\+-\._]+))*/?)|~(?:(?:(?:\
+[\w\+-\._]+))?(?:/(?:[\w\+-\._]+))*/?)?)?[: ]?(?:(?:(?:(?:[\w\+-\._]+)\
+)?(?:/(?:[\w\+-\._]+))*/?)|~(?:(?:(?:[\w\+-\._]+))?(?:/(?:[\w\+-\._]+)\
+)*/?)?)?(?:\((?:[\w\+-\._]+)\))?\]?[#&gt;%\$\]] ?$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">(?:</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>0123456789abcdefghijk<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#iosxr_prompt_re" class="summary-name">iosxr_prompt_re</a> = <code title="re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$', flags)">re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$'<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#iosxr_prompt_re" class="summary-name">iosxr_prompt_re</a> = <code title="re.compile(r'(?im)RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$')">re.compile(r'<code class="re-flags">(?im)</code>RP/\d<code class="re-op">+</code>/\w<code class="re-op">+</code>/CPU\d<code class="re-op">+</code>:<code class="re-group">[^</code>#<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">[</code>#&gt;<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="huawei_re"></a><span class="summary-name">huawei_re</span> = <code title="re.compile(r'huawei', flags)">re.compile(r'huawei', flags)</code>
+        <a name="huawei_re"></a><span class="summary-name">huawei_re</span> = <code title="re.compile(r'(?im)huawei')">re.compile(r'<code class="re-flags">(?im)</code>huawei')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="cisco_user_re"></a><span class="summary-name">cisco_user_re</span> = <code title="re.compile(r'user ?name: *$', flags)">re.compile(r'user ?name: *$', flags)</code>
+        <a name="cisco_user_re"></a><span class="summary-name">cisco_user_re</span> = <code title="re.compile(r'(?im)user ?name: *$')">re.compile(r'<code class="re-flags">(?im)</code>user <code class="re-op">?</code>name: <code class="re-op">*</code>$')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="junos_user_re"></a><span class="summary-name">junos_user_re</span> = <code title="re.compile(newline+ r'login: *?$', flags)">re.compile(newline+ r'login: *?$', flags)</code>
+        <a name="junos_user_re"></a><span class="summary-name">junos_user_re</span> = <code title="re.compile(r'(?im)[\r\n]login: *?$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code>login: <code class="re-op">*?</code>$')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="unix_user_re"></a><span class="summary-name">unix_user_re</span> = <code title="re.compile(r'(user|login): *$', flags)">re.compile(r'(user|login): *$', flags)</code>
+        <a name="unix_user_re"></a><span class="summary-name">unix_user_re</span> = <code title="re.compile(r'(?im)(user|login): *$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">(</code>user<code class="re-op">|</code>login<code class="re-group">)</code>: <code class="re-op">*</code>$')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="pass_re"></a><span class="summary-name">pass_re</span> = <code title="re.compile(r'password:? *$', flags)">re.compile(r'password:? *$', flags)</code>
+        <a name="pass_re"></a><span class="summary-name">pass_re</span> = <code title="re.compile(r'(?im)password:? *$')">re.compile(r'<code class="re-flags">(?im)</code>password:<code class="re-op">?</code> <code class="re-op">*</code>$')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="skey_re"></a><span class="summary-name">skey_re</span> = <code title="re.compile(r'(?:s\/key|otp-md4) (\d+) (\S+)')">re.compile(r'(?:s\/key|otp-md4) (\d+) (\S+)')</code>
+        <a name="skey_re"></a><span class="summary-name">skey_re</span> = <code title="re.compile(r'(?:s/key|otp-md4) (\d+) (\S+)')">re.compile(r'<code class="re-group">(?:</code>s/key<code class="re-op">|</code>otp-md4<code class="re-group">)</code> <code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code> <code class="re-group">(</code>\S<code class="re-op">+</code><code class="re-group">)</code>')</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#errors" class="summary-name">errors</a> = <code title="[r'error', r'invalid', r'incomplete', r'unrecognized', r'unknown comma\
-nd', r'connection timed out', r'[^\r\n]+ not found']">[r'error', r'invalid', r'incomplete', r'unrecognized'<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#errors" class="summary-name">errors</a> = <code title="['error',
+ 'invalid',
+ 'incomplete',
+ 'unrecognized',
+ 'unknown command',
+ 'connection timed out',
+ '[^\\r\\n]+ not found']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">error</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">invalid</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">incomplete</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">unrecognized</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">u</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#error_re" class="summary-name">error_re</a> = <code title="re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', flags)">re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', fl<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#error_re" class="summary-name">error_re</a> = <code title="re.compile(r'(?im)^%?\s*(?:error|invalid|incomplete|unrecognized|unkno\
+wn command|connection timed out|[^\r\n]+ not found)')">re.compile(r'<code class="re-flags">(?im)</code>^%<code class="re-op">?</code>\s<code class="re-op">*</code><code class="re-group">(?:</code>error<code class="re-op">|</code>invalid<code class="re-op">|</code>incomplete<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#login_fail" class="summary-name">login_fail</a> = <code title="[r'bad secrets', r'denied', r'invalid', r'too short', r'incorrect', r'\
-connection timed out', r'failed']">[r'bad secrets', r'denied', r'invalid', r'too sho<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#login_fail" class="summary-name">login_fail</a> = <code title="['bad secrets',
+ 'denied',
+ 'invalid',
+ 'too short',
+ 'incorrect',
+ 'connection timed out',
+ 'failed']"><code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">bad secrets</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">denied</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">invalid</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">too short</code><code class="variable-quote">'</code><code class="variable-op">,</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.Transport-module.html#login_fail_re" class="summary-name">login_fail_re</a> = <code title="re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.join(login_fail)+ r')', f\
-lags)">re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.j<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.Transport-module.html#login_fail_re" class="summary-name">login_fail_re</a> = <code title="re.compile(r'(?im)[\r\n][^\r\n]*(?:bad secrets|denied|invalid|too shor\
+t|incorrect|connection timed out|failed)')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.protocols'"><code class="variable-quote">'</code><code class="variable-string">Exscript.protocols</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -279,6 +308,27 @@ lags)">re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.j<code class="variable-ellip
     <span class="table-header">Variables Details</span></td>
 </tr>
 </table>
+<a name="printable"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">printable</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'''</code><code class="variable-string">0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ\\!\\</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">&quot;\\#\\$\\%\\&amp;\\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\&lt;\\=\\&gt;\\?\\@\\[\\\\\</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">\]\\^\\_\\`\\{\\|\\}\\~\\ \\\t\\</code>
+<code class="variable-string">\\\r\\\x0b\\\x0c</code><code class="variable-quote">'''</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="prompt_start"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -291,7 +341,47 @@ lags)">re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.j<code class="variable-ellip
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ ignore+ '+)'
+<code class="variable-quote">'''</code><code class="variable-string">(?:[\\r\\n][^0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQR</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">STUVWXYZ\\!\\&quot;\\#\\$\\%\\&amp;\\\'\\(\\)\\*\\+\\,\\-\\.\\/\\:\\;\\&lt;\\=\\&gt;\</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">\?\\@\\[\\\\\\]\\^\\_\\`\\{\\|\\}\\~\\ \\\t\\</code>
+<code class="variable-string">\\\r\\\x0b\\\x0c]?|[\\x1b\\x07\\x00]+)</code><code class="variable-quote">'''</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="path"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">path</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)</code><code class="variable-quote">'</code>
+</pre></td></tr></table>
+</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="any_path"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <h3 class="epydoc">any_path</h3>
+  
+  <dl class="fields">
+  </dl>
+  <dl class="fields">
+    <dt>Value:</dt>
+      <dd><table><tr><td><pre class="variable">
+<code class="variable-quote">'</code><code class="variable-string">(?:(?:(?:(?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)|~(?:(?:(</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="variable-string">?:[\\w\\+\\-\\._]+))?(?:/(?:[\\w\\+\\-\\._]+))*/?)?)</code><code class="variable-quote">'</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -309,9 +399,13 @@ r'(?:'+ newline+ r'[^'+ printable+ r']?|'+ ignore+ '+)'
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_host+ r'?'+ r'[: ]?'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-+ any_path+ r'?'+ r'[: ]?'+ any_path+ r'?'+ r'(?:\('+ filename+ '\))?'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-+ r'\]?'+ r'[#&gt;%\$\]] ?$', flags)
+re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">(?:</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>0123456789abcdefghijklmnopqrstuvwxyzABCDE<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+FGHIJKLMNOPQRSTUVWXYZ!&quot;#\$%&amp;\'\(\)\*\+,-\./:;&lt;=&gt;\?@\[\\\]\^_`\{\|\}~ \<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+t\n\r\v\f<code class="re-group">]</code><code class="re-op">?</code><code class="re-op">|</code><code class="re-group">[</code>\x1b\x07\x00<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">[</code>\[&lt;<code class="re-group">]</code><code class="re-op">?</code>\w<code class="re-op">+</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">[</code>\w\+-<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code>@<code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\.<code class="re-group">]</code><code class="re-op"></code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">[</code>: <code class="re-group">]</code><code class="re-op">?</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>/<code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">*</code>/<code class="re-op">?</code><code class="re-group">)</code><code class="re-op">|</code>~<code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group"></code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>/<code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">*</code>/<code class="re-op">?</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">[</code>: <code class="re-group">]</code><code class="re-op">?</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group"></code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>/<code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">*</code>/<code class="re-op">?</code><code class="re-group">)</code><code class="re-op">|</code>~<code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>/<code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code><code class="re-group"></code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+<code class="re-group">)</code><code class="re-op">*</code>/<code class="re-op">?</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">)</code><code class="re-op">?</code><code class="re-group">(?:</code>\(<code class="re-group">(?:</code><code class="re-group">[</code>\w\+-\._<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">)</code>\)<code class="re-group">)</code><code class="re-op">?</code>\]<code class="re-op">?</code><code class="re-group">[</code>#&gt;%\$\]<code class="re-group">]</code> <code class="re-op">?</code>$')
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -329,7 +423,7 @@ re.compile(prompt_start+ r'[\[\&lt;]?'+ r'\w+'+ user_host+ r'?'+ r'[: ]?'<span c
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$', flags)
+re.compile(r'<code class="re-flags">(?im)</code>RP/\d<code class="re-op">+</code>/\w<code class="re-op">+</code>/CPU\d<code class="re-op">+</code>:<code class="re-group">[^</code>#<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">[</code>#&gt;<code class="re-group">]</code> <code class="re-op">?</code>$')
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -347,8 +441,13 @@ re.compile(r'RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$', flags)
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-[r'error', r'invalid', r'incomplete', r'unrecognized', r'unknown comma<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-nd', r'connection timed out', r'[^\r\n]+ not found']
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">error</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">invalid</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">incomplete</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">unrecognized</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">unknown command</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">connection timed out</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">[^\\r\\n]+ not found</code><code class="variable-quote">'</code><code class="variable-group">]</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -366,7 +465,8 @@ nd', r'connection timed out', r'[^\r\n]+ not found']
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', flags)
+re.compile(r'<code class="re-flags">(?im)</code>^%<code class="re-op">?</code>\s<code class="re-op">*</code><code class="re-group">(?:</code>error<code class="re-op">|</code>invalid<code class="re-op">|</code>incomplete<code class="re-op">|</code>unrecognized<code class="re-op">|</code>unkno<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+wn command<code class="re-op">|</code>connection timed out<code class="re-op">|</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">+</code> not found<code class="re-group">)</code>')
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -384,8 +484,13 @@ re.compile(r'^%?\s*(?:'+ '|'.join(errors)+ r')', flags)
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-[r'bad secrets', r'denied', r'invalid', r'too short', r'incorrect', r'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-connection timed out', r'failed']
+<code class="variable-group">[</code><code class="variable-quote">'</code><code class="variable-string">bad secrets</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">denied</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">invalid</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">too short</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">incorrect</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">connection timed out</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">failed</code><code class="variable-quote">'</code><code class="variable-group">]</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -403,8 +508,8 @@ connection timed out', r'failed']
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(newline+ r'[^\r\n]*'+ r'(?:'+ '|'.join(login_fail)+ r')', f<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-lags)
+re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="re-op">|</code>denied<code class="re-op">|</code>invalid<code class="re-op">|</code>too shor<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+t<code class="re-op">|</code>incorrect<code class="re-op">|</code>connection timed out<code class="re-op">|</code>failed<code class="re-group">)</code>')
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -442,7 +547,7 @@ lags)
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

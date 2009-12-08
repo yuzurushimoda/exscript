@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.protocols.Dummy.Dummy</title>
+  <title>Exscript.protocols.Dummy</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,10 +42,8 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        Exscript ::
-        protocols ::
-        Dummy ::
-        Dummy ::
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
+        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
         Class&nbsp;Dummy
       </span>
     </td>
@@ -59,11 +57,13 @@
 <!-- ==================== CLASS DESCRIPTION ==================== -->
 <h1 class="epydoc">Class Dummy</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-SpiffSignal.Trackable --+    
-                        |    
-      <a href="Exscript.protocols.Transport.Transport-class.html">Transport.Transport</a> --+
-                            |
-                           <strong class="uidshort">Dummy</strong>
+         object --+        
+                  |        
+Transport.Trackable --+    
+                      |    
+    <a href="Exscript.protocols.Transport.Transport-class.html">Transport.Transport</a> --+
+                          |
+                         <strong class="uidshort">Dummy</strong>
 </pre>
 
 <hr />
@@ -77,155 +77,6 @@ SpiffSignal.Trackable --+
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Instance Methods</span></td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Constructor.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Boolean</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns True if the adapter implements a virtual device, i.e.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#add_command_handler" class="summary-sig-name">add_command_handler</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">command</span>,
-        <span class="summary-sig-arg">response</span>)</span><br />
-      Register a regular expression such that whenever a string sent to the
-      remote host matches, the given response handler is called.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#load_command_handler_from_file" class="summary-sig-name">load_command_handler_from_file</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">filename</span>,
-        <span class="summary-sig-arg">autoprompt</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Wrapper around add_command_handler that reads the handlers from the 
-      file with the given name.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Boolean</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#send" class="summary-sig-name">send</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">data</span>)</span><br />
-      Sends the given data to the remote host.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">data</span>)</span><br />
-      Sends the given data to the remote host (with a newline appended) and
-      waits for a prompt in the response.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#expect" class="summary-sig-name">expect</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">prompt</span>)</span><br />
-      Monitors the data received from the remote host and waits until the 
-      response matches the given prompt.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy.Dummy-class.html#close" class="summary-sig-name">close</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Closes the connection with the remote host.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">Transport</span>
@@ -256,6 +107,44 @@ SpiffSignal.Trackable --+
       Overwritten to return the very same object instead of copying the 
       stream, because copying a network connection is impossible.
       <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#add_command_handler" class="summary-sig-name">add_command_handler</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">command</span>,
+        <span class="summary-sig-arg">response</span>)</span><br />
+      Register a regular expression such that whenever a string sent to the
+      remote host matches, the given response handler is called.</td>
           <td align="right" valign="top">
             
             
@@ -313,11 +202,67 @@ SpiffSignal.Trackable --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#close" class="summary-sig-name">close</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Closes the connection with the remote host.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">hostname</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">port</span>=<span class="summary-sig-default">None</span>)</span><br />
       Opens the connection to the remote host or IP address.
       <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Sends the given data to the remote host (with a newline appended) and
+      waits for a prompt in the response.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#expect" class="summary-sig-name">expect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prompt</span>)</span><br />
+      Monitors the data received from the remote host and waits until the 
+      response matches the given prompt.</td>
           <td align="right" valign="top">
             
             
@@ -441,6 +386,61 @@ SpiffSignal.Trackable --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the adapter implements a virtual device, i.e.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#load_command_handler_from_file" class="summary-sig-name">load_command_handler_from_file</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">autoprompt</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Wrapper around add_command_handler that reads the handlers from the 
+      file with the given name.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Dummy-class.html#send" class="summary-sig-name">send</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Sends the given data to the remote host.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -499,6 +499,105 @@ SpiffSignal.Trackable --+
       
     </td>
   </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>Transport.Trackable</code></b>:
+      <code>signal_connect</code>,
+      <code>signal_disconnect</code>,
+      <code>signal_emit</code>,
+      <code>signal_is_connected</code>,
+      <code>signal_subscribers</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOGIN_TYPE_BOTH"></a><span class="summary-name">LOGIN_TYPE_BOTH</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOGIN_TYPE_NONE"></a><span class="summary-name">LOGIN_TYPE_NONE</span> = <code title="4">4</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOGIN_TYPE_PASSWORDONLY"></a><span class="summary-name">LOGIN_TYPE_PASSWORDONLY</span> = <code title="1">1</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="LOGIN_TYPE_USERONLY"></a><span class="summary-name">LOGIN_TYPE_USERONLY</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROMPT_STAGE_CUSTOM"></a><span class="summary-name">PROMPT_STAGE_CUSTOM</span> = <code title="3">3</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROMPT_STAGE_PASSWORD"></a><span class="summary-name">PROMPT_STAGE_PASSWORD</span> = <code title="2">2</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="PROMPT_STAGE_USERNAME"></a><span class="summary-name">PROMPT_STAGE_USERNAME</span> = <code title="1">1</code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
 </table>
 <!-- ==================== METHOD DETAILS ==================== -->
 <a name="section-MethodDetails"></a>
@@ -554,33 +653,7 @@ SpiffSignal.Trackable --+
           </ul></li>
     </ul></dd>
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport.Transport-class.html#__init__">Transport.Transport.__init__</a>
-    </dt>
-  </dl>
-</td></tr></table>
-</div>
-<a name="is_dummy"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_dummy</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns True if the adapter implements a virtual device, i.e. it isn't
-  an actual network connection.</p>
-  <dl class="fields">
-    <dt>Returns: Boolean</dt>
-        <dd>True for dummy adapters, False for network adapters.</dd>
-    <dt>Overrides:
-        <a href="Exscript.protocols.Transport.Transport-class.html#is_dummy">Transport.Transport.is_dummy</a>
-        <dd><em class="note">(inherited documentation)</em></dd>
+        object.__init__
     </dt>
   </dl>
 </td></tr></table>
@@ -614,60 +687,25 @@ SpiffSignal.Trackable --+
   </dl>
 </td></tr></table>
 </div>
-<a name="load_command_handler_from_file"></a>
+<a name="close"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_command_handler_from_file</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">filename</span>,
-        <span class="sig-arg">autoprompt</span>=<span class="sig-default">True</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">close</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">0</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Wrapper around add_command_handler that reads the handlers from the 
-  file with the given name. The file is a Python script containing a list 
-  named 'commands' of tuples that map command names to handlers.</p>
+  <p>Closes the connection with the remote host.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>filename</code></strong> (str) - The name of the file containing the tuples.</li>
-        <li><strong class="pname"><code>autoprompt</code></strong> (bool) - Whether to append a prompt to each response.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="send"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">send</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">data</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Sends the given data to the remote host. Returns without waiting for a
-  response.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>data</code></strong> - The data that is sent to the remote host.</li>
-    </ul></dd>
-    <dt>Returns: Boolean</dt>
-        <dd>True on success, False otherwise.</dd>
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport.Transport-class.html#send">Transport.Transport.send</a>
+        <a href="Exscript.protocols.Transport.Transport-class.html#close">Transport.Transport.close</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -739,25 +777,86 @@ SpiffSignal.Trackable --+
   </dl>
 </td></tr></table>
 </div>
-<a name="close"></a>
+<a name="is_dummy"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">close</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_dummy</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Closes the connection with the remote host.</p>
+  <p>Returns True if the adapter implements a virtual device, i.e. it isn't
+  an actual network connection.</p>
   <dl class="fields">
+    <dt>Returns: Boolean</dt>
+        <dd>True for dummy adapters, False for network adapters.</dd>
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport.Transport-class.html#close">Transport.Transport.close</a>
+        <a href="Exscript.protocols.Transport.Transport-class.html#is_dummy">Transport.Transport.is_dummy</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="load_command_handler_from_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">load_command_handler_from_file</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">filename</span>,
+        <span class="sig-arg">autoprompt</span>=<span class="sig-default">1</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Wrapper around add_command_handler that reads the handlers from the 
+  file with the given name. The file is a Python script containing a list 
+  named 'commands' of tuples that map command names to handlers.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>filename</code></strong> (str) - The name of the file containing the tuples.</li>
+        <li><strong class="pname"><code>autoprompt</code></strong> (bool) - Whether to append a prompt to each response.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sends the given data to the remote host. Returns without waiting for a
+  response.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>data</code></strong> - The data that is sent to the remote host.</li>
+    </ul></dd>
+    <dt>Returns: Boolean</dt>
+        <dd>True on success, False otherwise.</dd>
+    <dt>Overrides:
+        <a href="Exscript.protocols.Transport.Transport-class.html#send">Transport.Transport.send</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -795,7 +894,7 @@ SpiffSignal.Trackable --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

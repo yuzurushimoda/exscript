@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.Queue.Queue</title>
+  <title>Exscript.Queue</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,9 +42,7 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        Exscript ::
-        Queue ::
-        Queue ::
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         Class&nbsp;Queue
       </span>
     </td>
@@ -81,7 +79,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
       Constructor.</td>
           <td align="right" valign="top">
@@ -99,7 +97,26 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#add_protocol" class="summary-sig-name">add_protocol</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#add_account" class="summary-sig-name">add_account</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">account</span>)</span><br />
+      Adds the given account to the account pool that Exscript uses to log 
+      into hosts.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#add_protocol" class="summary-sig-name">add_protocol</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">name</span>,
         <span class="summary-sig-arg">theclass</span>)</span><br />
       Registers a new protocol in addition to the built-in 'ssh', 'telnet',
@@ -115,13 +132,15 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">object</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#set_max_threads" class="summary-sig-name">set_max_threads</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">n_connections</span>)</span><br />
-      Sets the maximum number of concurrent connections.</td>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#force_run" class="summary-sig-name">force_run</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">hosts</span>,
+        <span class="summary-sig-arg">function</span>)</span><br />
+      Like priority_run(), but starts the task immediately even if that 
+      max_threads is exceeded.</td>
           <td align="right" valign="top">
             
             
@@ -137,63 +156,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#get_max_threads" class="summary-sig-name">get_max_threads</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#get_max_threads" class="summary-sig-name">get_max_threads</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the maximum number of concurrent threads.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#add_account" class="summary-sig-name">add_account</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">account</span>)</span><br />
-      Adds the given account to the account pool that Exscript uses to log 
-      into hosts.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#task_is_completed" class="summary-sig-name">task_is_completed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">task</span>)</span><br />
-      Returns True if the given task is completed, False otherwise.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#wait_for" class="summary-sig-name">wait_for</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">task</span>)</span><br />
-      Waits until the given task is completed.</td>
           <td align="right" valign="top">
             
             
@@ -222,49 +186,11 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#shutdown" class="summary-sig-name">shutdown</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">False</span>)</span><br />
-      Stop executing any further jobs.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">object</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#run" class="summary-sig-name">run</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">hosts</span>,
-        <span class="summary-sig-arg">function</span>)</span><br />
-      Add the given function to a queue, and call it once for each host 
-      according to the threading options.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">object</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#priority_run" class="summary-sig-name">priority_run</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#priority_run" class="summary-sig-name">priority_run</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">hosts</span>,
         <span class="summary-sig-arg">function</span>)</span><br />
       Like run(), but adds the task to the front of the queue.</td>
@@ -283,11 +209,83 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue.Queue-class.html#force_run" class="summary-sig-name">force_run</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#run" class="summary-sig-name">run</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">hosts</span>,
         <span class="summary-sig-arg">function</span>)</span><br />
-      Like priority_run(), but starts the task immediately even if that 
-      max_threads is exceeded.</td>
+      Add the given function to a queue, and call it once for each host 
+      according to the threading options.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#set_max_threads" class="summary-sig-name">set_max_threads</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">n_connections</span>)</span><br />
+      Sets the maximum number of concurrent connections.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#shutdown" class="summary-sig-name">shutdown</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Stop executing any further jobs.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#task_is_completed" class="summary-sig-name">task_is_completed</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">task</span>)</span><br />
+      Returns True if the given task is completed, False otherwise.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#wait_for" class="summary-sig-name">wait_for</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">task</span>)</span><br />
+      Waits until the given task is completed.</td>
           <td align="right" valign="top">
             
             
@@ -328,8 +326,12 @@ object --+
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.Queue.Queue-class.html#built_in_protocols" class="summary-name">built_in_protocols</a> = <code title="{'dummy': 'Dummy', 'telnet': 'Telnet', 'pseudo': 'Dummy', 'ssh': 'SSH'\
-, 'ssh1': 'SSH', 'ssh2': 'SSH'}">{'dummy': 'Dummy', 'telnet': 'Telnet', 'p<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.Queue-class.html#built_in_protocols" class="summary-name">built_in_protocols</a> = <code title="{'dummy': 'Dummy',
+ 'pseudo': 'Dummy',
+ 'ssh': 'SSH',
+ 'ssh1': 'SSH',
+ 'ssh2': 'SSH',
+ 'telnet': 'Telnet'}"><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">dummy</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Dummy</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">pseudo</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Dummy</code><code class="variable-quote">'</code><code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">ss</code><code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 </table>
@@ -417,6 +419,31 @@ object --+
   </dl>
 </td></tr></table>
 </div>
+<a name="add_account"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_account</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">account</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Adds the given account to the account pool that Exscript uses to log 
+  into hosts.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>account</code></strong> (Account) - The account that is added.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="add_protocol"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -446,27 +473,32 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="set_max_threads"></a>
+<a name="force_run"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_max_threads</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">n_connections</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">force_run</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">hosts</span>,
+        <span class="sig-arg">function</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Sets the maximum number of concurrent connections.</p>
+  <p>Like priority_run(), but starts the task immediately even if that 
+  max_threads is exceeded.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>n_connections</code></strong> (int) - The maximum number of connections.</li>
+        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
+        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
     </ul></dd>
+    <dt>Returns: object</dt>
+        <dd>An object representing the task.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -491,27 +523,114 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="add_account"></a>
+<a name="priority_run"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_account</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">account</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">priority_run</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">hosts</span>,
+        <span class="sig-arg">function</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Adds the given account to the account pool that Exscript uses to log 
-  into hosts.</p>
+  <p>Like run(), but adds the task to the front of the queue.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account that is added.</li>
+        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
+        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
+    </ul></dd>
+    <dt>Returns: object</dt>
+        <dd>An object representing the task.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="run"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">run</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">hosts</span>,
+        <span class="sig-arg">function</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Add the given function to a queue, and call it once for each host 
+  according to the threading options. Use decorators.bind_args() if you 
+  also want to pass additional arguments to the callback function.</p>
+  <p>Returns an object that represents the queued task, and that may be 
+  passed to is_completed() to check the status.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
+        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
+    </ul></dd>
+    <dt>Returns: object</dt>
+        <dd>An object representing the task.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set_max_threads"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_max_threads</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">n_connections</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sets the maximum number of concurrent connections.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>n_connections</code></strong> (int) - The maximum number of connections.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="shutdown"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">shutdown</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Stop executing any further jobs. If the force argument is True, the 
+  function does not wait until any queued jobs are completed but stops 
+  immediately.</p>
+  <p>After emptying the queue it is restarted, so you may still call run() 
+  after using this method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>force</code></strong> (bool) - Whether to wait until all jobs were processed.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
@@ -568,123 +687,6 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="shutdown"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">shutdown</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">force</span>=<span class="sig-default">False</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Stop executing any further jobs. If the force argument is True, the 
-  function does not wait until any queued jobs are completed but stops 
-  immediately.</p>
-  <p>After emptying the queue it is restarted, so you may still call run() 
-  after using this method.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>force</code></strong> (bool) - Whether to wait until all jobs were processed.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="run"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">run</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">hosts</span>,
-        <span class="sig-arg">function</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Add the given function to a queue, and call it once for each host 
-  according to the threading options. Use decorators.bind_args() if you 
-  also want to pass additional arguments to the callback function.</p>
-  <p>Returns an object that represents the queued task, and that may be 
-  passed to is_completed() to check the status.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
-        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
-    </ul></dd>
-    <dt>Returns: object</dt>
-        <dd>An object representing the task.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="priority_run"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">priority_run</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">hosts</span>,
-        <span class="sig-arg">function</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Like run(), but adds the task to the front of the queue.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
-        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
-    </ul></dd>
-    <dt>Returns: object</dt>
-        <dd>An object representing the task.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="force_run"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">force_run</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">hosts</span>,
-        <span class="sig-arg">function</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Like priority_run(), but starts the task immediately even if that 
-  max_threads is exceeded.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>hosts</code></strong> (string|list(string)|Host|list(Host)) - A hostname or Host object, or a list of them.</li>
-        <li><strong class="pname"><code>function</code></strong> (function) - The function to execute.</li>
-    </ul></dd>
-    <dt>Returns: object</dt>
-        <dd>An object representing the task.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <br />
 <!-- ==================== CLASS VARIABLE DETAILS ==================== -->
 <a name="section-ClassVariableDetails"></a>
@@ -707,8 +709,12 @@ object --+
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'dummy': 'Dummy', 'telnet': 'Telnet', 'pseudo': 'Dummy', 'ssh': 'SSH'<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-, 'ssh1': 'SSH', 'ssh2': 'SSH'}
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">dummy</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Dummy</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">pseudo</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Dummy</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">SSH</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh1</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">SSH</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh2</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">SSH</code><code class="variable-quote">'</code><code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code><code class="variable-op">: </code><code class="variable-quote">'</code><code class="variable-string">Telnet</code><code class="variable-quote">'</code><code class="variable-group">}</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -746,7 +752,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

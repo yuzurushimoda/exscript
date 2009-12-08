@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.protocols.SSH</title>
+  <title>Exscript.protocols.Dummy'</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,8 +43,8 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.protocols-module.html">Package&nbsp;protocols</a> ::
-        Module&nbsp;SSH
+        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
+        Module&nbsp;Dummy'
       </span>
     </td>
     <td>
@@ -55,7 +55,7 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module SSH</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Module Dummy'</h1><p class="nomargin-top"></p>
 <!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -68,8 +68,8 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH.SSH-class.html" class="summary-name">SSH</a><br />
-      The secure shell protocol adapter.
+        <a href="Exscript.protocols.Dummy-class.html" class="summary-name">Dummy</a><br />
+      A protocol adapter that emulates a remote device.
     </td>
   </tr>
 </table>
@@ -85,13 +85,6 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="True"></a><span class="summary-name">True</span> = <code title="1">1</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
         <a name="False"></a><span class="summary-name">False</span> = <code title="0">0</code>
     </td>
   </tr>
@@ -99,21 +92,71 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="fingerprint"></a><span class="summary-name">fingerprint</span> = <code title="r'\:'.join([r'\w\w']* 16)">r'\:'.join([r'\w\w']* 16)</code>
+        <a name="True"></a><span class="summary-name">True</span> = <code title="1">1</code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH-module.html#verify_re" class="summary-name">verify_re</a> = <code title="re.compile(r'\b'+ fingerprint+ r'\b.*\byes.*', re.I | re.S | re.M)">re.compile(r'\b'+ fingerprint+ r'\b.*\byes.*', re.<code class="variable-ellipsis">...</code></code>
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.protocols'"><code class="variable-quote">'</code><code class="variable-string">Exscript.protocols</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH-module.html#escape_re" class="summary-name">escape_re</a> = <code title="re.compile(r'(?:[\x00-\x09]|\x1b\[[^m]*m|\x1b\][^\x07]*\x07)')">re.compile(r'(?:[\x00-\x09]|\x1b\[[^m]*m|\x1b\][^\<code class="variable-ellipsis">...</code></code>
+        <a name="cisco_user_re"></a><span class="summary-name">cisco_user_re</span> = <code title="re.compile(r'(?im)user ?name: *$')">re.compile(r'<code class="re-flags">(?im)</code>user <code class="re-op">?</code>name: <code class="re-op">*</code>$')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="huawei_re"></a><span class="summary-name">huawei_re</span> = <code title="re.compile(r'(?im)huawei')">re.compile(r'<code class="re-flags">(?im)</code>huawei')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Dummy%27-module.html#iosxr_prompt_re" class="summary-name">iosxr_prompt_re</a> = <code title="re.compile(r'(?im)RP/\d+/\w+/CPU\d+:[^#]+[#&gt;] ?$')">re.compile(r'<code class="re-flags">(?im)</code>RP/\d<code class="re-op">+</code>/\w<code class="re-op">+</code>/CPU\d<code class="re-op">+</code>:<code class="re-group">[^</code>#<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">[</code>#&gt;<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="junos_user_re"></a><span class="summary-name">junos_user_re</span> = <code title="re.compile(r'(?im)[\r\n]login: *?$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code>login: <code class="re-op">*?</code>$')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.protocols.Dummy%27-module.html#login_fail_re" class="summary-name">login_fail_re</a> = <code title="re.compile(r'(?im)[\r\n][^\r\n]*(?:bad secrets|denied|invalid|too shor\
+t|incorrect|connection timed out|failed)')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="pass_re"></a><span class="summary-name">pass_re</span> = <code title="re.compile(r'(?im)password:? *$')">re.compile(r'<code class="re-flags">(?im)</code>password:<code class="re-op">?</code> <code class="re-op">*</code>$')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="skey_re"></a><span class="summary-name">skey_re</span> = <code title="re.compile(r'(?:s/key|otp-md4) (\d+) (\S+)')">re.compile(r'<code class="re-group">(?:</code>s/key<code class="re-op">|</code>otp-md4<code class="re-group">)</code> <code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code> <code class="re-group">(</code>\S<code class="re-op">+</code><code class="re-group">)</code>')</code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="unix_user_re"></a><span class="summary-name">unix_user_re</span> = <code title="re.compile(r'(?im)(user|login): *$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">(</code>user<code class="re-op">|</code>login<code class="re-group">)</code>: <code class="re-op">*</code>$')</code>
     </td>
   </tr>
 </table>
@@ -126,37 +169,38 @@
     <span class="table-header">Variables Details</span></td>
 </tr>
 </table>
-<a name="verify_re"></a>
+<a name="iosxr_prompt_re"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">verify_re</h3>
+  <h3 class="epydoc">iosxr_prompt_re</h3>
   
   <dl class="fields">
   </dl>
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(r'\b'+ fingerprint+ r'\b.*\byes.*', re.I | re.S | re.M)
+re.compile(r'<code class="re-flags">(?im)</code>RP/\d<code class="re-op">+</code>/\w<code class="re-op">+</code>/CPU\d<code class="re-op">+</code>:<code class="re-group">[^</code>#<code class="re-group">]</code><code class="re-op">+</code><code class="re-group">[</code>#&gt;<code class="re-group">]</code> <code class="re-op">?</code>$')
 </pre></td></tr></table>
 </dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="escape_re"></a>
+<a name="login_fail_re"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
-  <h3 class="epydoc">escape_re</h3>
+  <h3 class="epydoc">login_fail_re</h3>
   
   <dl class="fields">
   </dl>
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-re.compile(r'(?:[\x00-\x09]|\x1b\[[^m]*m|\x1b\][^\x07]*\x07)')
+re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="re-op">|</code>denied<code class="re-op">|</code>invalid<code class="re-op">|</code>too shor<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
+t<code class="re-op">|</code>incorrect<code class="re-op">|</code>connection timed out<code class="re-op">|</code>failed<code class="re-group">)</code>')
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -194,7 +238,7 @@ re.compile(r'(?:[\x00-\x09]|\x1b\[[^m]*m|\x1b\][^\x07]*\x07)')
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:07 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

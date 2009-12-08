@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.util-module.html">Package&nbsp;util</a> ::
+        <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
         Module&nbsp;url
       </span>
     </td>
@@ -88,7 +88,7 @@
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Exscript.util.url-module.html#parse_url" class="summary-sig-name">parse_url</a>(<span class="summary-sig-arg">url</span>,
-        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default">'telnet'</span>)</span><br />
+        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span><br />
       Parses the given URL and returns an URL object.</td>
           <td align="right" valign="top">
             
@@ -112,8 +112,29 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.util.url-module.html#well_known_ports" class="summary-name">well_known_ports</a> = <code title="{'ftp': 21, 'ssh': 22, 'ssh1': 22, 'ssh2': 22, 'telnet': 23, 'smtp': 2\
-5, 'http': 80, 'pop3': 110, 'imap': 143}">{'ftp': 21, 'ssh': 22, 'ssh1': 22, 'ssh2': <code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.util.url-module.html#well_known_ports" class="summary-name">well_known_ports</a> = <code title="{'ftp': 21,
+ 'http': 80,
+ 'imap': 143,
+ 'pop3': 110,
+ 'smtp': 25,
+ 'ssh': 22,
+ 'ssh1': 22,
+ 'ssh2': 22,
+..."><code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ftp</code><code class="variable-quote">'</code><code class="variable-op">: </code>21<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">http</code><code class="variable-quote">'</code><code class="variable-op">: </code>80<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">imap</code><code class="variable-quote">'</code><code class="variable-op">: </code>143<code class="variable-op">, </code><code class="variable-quote">'</code><code class="variable-string">pop3</code><code class="variable-quote">'</code><code class="variable-ellipsis">...</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.util'"><code class="variable-quote">'</code><code class="variable-string">Exscript.util</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="i"></a><span class="summary-name">i</span> = <code title="255">255</code>
     </td>
   </tr>
 </table>
@@ -134,7 +155,7 @@
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">parse_url</span>(<span class="sig-arg">url</span>,
-        <span class="sig-arg">default_protocol</span>=<span class="sig-default">'telnet'</span>)</span>
+        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
@@ -193,8 +214,15 @@
   <dl class="fields">
     <dt>Value:</dt>
       <dd><table><tr><td><pre class="variable">
-{'ftp': 21, 'ssh': 22, 'ssh1': 22, 'ssh2': 22, 'telnet': 23, 'smtp': 2<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-5, 'http': 80, 'pop3': 110, 'imap': 143}
+<code class="variable-group">{</code><code class="variable-quote">'</code><code class="variable-string">ftp</code><code class="variable-quote">'</code><code class="variable-op">: </code>21<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">http</code><code class="variable-quote">'</code><code class="variable-op">: </code>80<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">imap</code><code class="variable-quote">'</code><code class="variable-op">: </code>143<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">pop3</code><code class="variable-quote">'</code><code class="variable-op">: </code>110<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">smtp</code><code class="variable-quote">'</code><code class="variable-op">: </code>25<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh</code><code class="variable-quote">'</code><code class="variable-op">: </code>22<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh1</code><code class="variable-quote">'</code><code class="variable-op">: </code>22<code class="variable-op">,</code>
+ <code class="variable-quote">'</code><code class="variable-string">ssh2</code><code class="variable-quote">'</code><code class="variable-op">: </code>22<code class="variable-op">,</code>
+<code class="variable-ellipsis">...</code>
 </pre></td></tr></table>
 </dd>
   </dl>
@@ -232,7 +260,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Dec  8 16:07:37 2009
+    Generated by Epydoc 3.0.1 on Tue Dec  8 23:33:08 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
