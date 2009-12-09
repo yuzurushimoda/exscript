@@ -2,10 +2,6 @@ Exscript	Exscript-module.html
 Exscript.__package__	Exscript-module.html#__package__
 Exscript.obj	Exscript-module.html#obj
 Exscript.name	Exscript-module.html#name
-Exscript.AbstractMethod	Exscript.AbstractMethod-module.html
-Exscript.AbstractMethod._caller	Exscript.AbstractMethod-module.html#_caller
-Exscript.AbstractMethod.__package__	Exscript.AbstractMethod-module.html#__package__
-Exscript.AbstractMethod.AbstractMethod	Exscript.AbstractMethod-module.html#AbstractMethod
 Exscript.Account'	Exscript.Account%27-module.html
 Exscript.Account'.__package__	Exscript.Account%27-module.html#__package__
 Exscript.Connection	Exscript.Connection-module.html
@@ -83,7 +79,6 @@ Exscript.protocols.Transport.__package__	Exscript.protocols.Transport-module.htm
 Exscript.protocols.Transport.unix_user_re	Exscript.protocols.Transport-module.html#unix_user_re
 Exscript.protocols.Transport.login_fail	Exscript.protocols.Transport-module.html#login_fail
 Exscript.protocols.Transport.True	Exscript.protocols.Transport-module.html#True
-Exscript.protocols.Transport.AbstractMethod	Exscript.AbstractMethod-module.html#AbstractMethod
 Exscript.protocols.Transport.printable	Exscript.protocols.Transport-module.html#printable
 Exscript.protocols.Transport.junos_user_re	Exscript.protocols.Transport-module.html#junos_user_re
 Exscript.protocols.Transport.newline	Exscript.protocols.Transport-module.html#newline
