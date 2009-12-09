@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.match</title>
+  <title>Exscript.util.cast</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,7 +44,7 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
-        Module&nbsp;match
+        Module&nbsp;cast
       </span>
     </td>
     <td>
@@ -55,7 +55,7 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module match</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Module cast</h1><p class="nomargin-top"></p>
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -66,14 +66,12 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string|tuple</span>
+      <span class="summary-type">Host</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.match-module.html#first_match" class="summary-sig-name">first_match</a>(<span class="summary-sig-arg">string</span>,
-        <span class="summary-sig-arg">regex</span>,
-        <span class="summary-sig-arg">flags</span>=<span class="summary-sig-default">8</span>)</span><br />
-      Matches the given string against the given regex.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.cast-module.html#to_host" class="summary-sig-name">to_host</a>(<span class="summary-sig-arg">host</span>)</span><br />
+      Given a string or a Host object, this function returns a Host object.</td>
           <td align="right" valign="top">
             
             
@@ -85,13 +83,48 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">list[string|tuple]</span>
+      <span class="summary-type">list[Host]</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.match-module.html#any_match" class="summary-sig-name">any_match</a>(<span class="summary-sig-arg">string</span>,
-        <span class="summary-sig-arg">regex</span>)</span><br />
-      Matches the given string against the given regex.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.cast-module.html#to_hosts" class="summary-sig-name">to_hosts</a>(<span class="summary-sig-arg">hosts</span>)</span><br />
+      Given a string or a Host object, or a list of strings or Host 
+      objects, this function returns a list of Host objects.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Log</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.cast-module.html#to_log" class="summary-sig-name">to_log</a>(<span class="summary-sig-arg">log</span>)</span><br />
+      Given a string, this function returns a new Logfile object.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Log]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.cast-module.html#to_logs" class="summary-sig-name">to_logs</a>(<span class="summary-sig-arg">logs</span>)</span><br />
+      Given a string or a Log object, or a list of strings or Log objects, 
+      this function returns a list of Log objects.</td>
           <td align="right" valign="top">
             
             
@@ -127,130 +160,107 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
-<a name="first_match"></a>
+<a name="to_host"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">first_match</span>(<span class="sig-arg">string</span>,
-        <span class="sig-arg">regex</span>,
-        <span class="sig-arg">flags</span>=<span class="sig-default">8</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_host</span>(<span class="sig-arg">host</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Matches the given string against the given regex.</p>
-  <ul>
-    <li>
-      If no match is found and the regular expression has zero or one 
-      groups, this function returns None.
-    </li>
-    <li>
-      If no match is found and the regular expression has more than one 
-      group, this function returns a tuple of None. The number of elements 
-      in the tuple equals the number of groups in the regular expression.
-    </li>
-    <li>
-      If a match is found and the regular expression has no groups, the 
-      entire string is returned.
-    </li>
-    <li>
-      If a match is found and the regular expression has one group, the 
-      matching string from the group is returned.
-    </li>
-    <li>
-      If a match is found and the regular expression has multiple groups, a
-      tuple containing the matching strings from the groups is returned.
-    </li>
-  </ul>
-  <p>This behavior ensures that the following assignments can never 
-  fail:</p>
-<pre class="literalblock">
-  foo   = 'my test'
-  match = first_match(foo, r'aaa')         # Returns None
-  match = first_match(foo, r'\S+')         # Returns 'my test'
-  match = first_match(foo, r'(aaa)')       # Returns None
-  match = first_match(foo, r'(\S+)')       # Returns 'my'
-  match = first_match(foo, r'(aaa) (\S+)') # Returns (None, None)
-  match = first_match(foo, r'(\S+) (\S+)') # Returns ('my', 'foo')
-</pre>
+  <p>Given a string or a Host object, this function returns a Host 
+  object.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>string</code></strong> (string|Connection) - The string that is matched, or a Connection object.</li>
-        <li><strong class="pname"><code>regex</code></strong> (string) - A regular expression.</li>
+        <li><strong class="pname"><code>host</code></strong> (string|Host) - A hostname (may be URL formatted) or a Host object.</li>
     </ul></dd>
-    <dt>Returns: string|tuple</dt>
-        <dd>A match, or a tuple of matches.</dd>
+    <dt>Returns: Host</dt>
+        <dd>The Host object.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="any_match"></a>
+<a name="to_hosts"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">any_match</span>(<span class="sig-arg">string</span>,
-        <span class="sig-arg">regex</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_hosts</span>(<span class="sig-arg">hosts</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Matches the given string against the given regex.</p>
-  <ul>
-    <li>
-      If no match is found, this function returns an empty list.
-    </li>
-    <li>
-      If a match is found and the regular expression has no groups, a list 
-      of matching lines returned.
-    </li>
-    <li>
-      If a match is found and the regular expression has one group, a list 
-      of matching strings is returned.
-    </li>
-    <li>
-      If a match is found and the regular expression has multiple groups, a
-      list containing tuples of matching strings is returned.
-    </li>
-  </ul>
-  <p>This behavior ensures that the following can never fail:</p>
-<pre class="literalblock">
-   foo = '1 uno\n2 due'
-   for m in any_match(foo, r'aaa'):         # Returns []
-       print m
-
-   for m in any_match(foo, r'\S+'):         # Returns ['1 uno', '2 due']
-       print m
-
-   for m in any_match(foo, r'(aaa)'):       # Returns []
-       print m
-
-   for m in any_match(foo, r'(\S+)'):       # Returns ['1', '2']
-       print m
-
-   for one, two in any_match(foo, r'(aaa) (\S+)'): # Returns []
-       print m
-
-   for one, two in any_match(foo, r'(\S+) (\S+)'): # Returns [('1', 'uno'), ('2', 'due')]
-       print m
-</pre>
+  <p>Given a string or a Host object, or a list of strings or Host objects,
+  this function returns a list of Host objects.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>string</code></strong> (string|Connection) - The string that is matched, or a Connection object.</li>
-        <li><strong class="pname"><code>regex</code></strong> (string) - A regular expression.</li>
+        <li><strong class="pname"><code>host</code></strong> (string|Host|list(string)|list(Host)) - One or more hosts or hostnames.</li>
     </ul></dd>
-    <dt>Returns: list[string|tuple]</dt>
-        <dd>A list of strings, or a list of tuples.</dd>
+    <dt>Returns: list[Host]</dt>
+        <dd>A list of Host objects.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="to_log"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_log</span>(<span class="sig-arg">log</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a string, this function returns a new Logfile object. Given any 
+  other Log object, this function just returns the same object.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>log</code></strong> (string|Log) - A logfile name or a Log object.</li>
+    </ul></dd>
+    <dt>Returns: Log</dt>
+        <dd>The Log object.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="to_logs"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_logs</span>(<span class="sig-arg">logs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a string or a Log object, or a list of strings or Log objects, 
+  this function returns a list of Log objects.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>log</code></strong> (string|Log|list(string)|list(Log)) - One or more logs or logfile names.</li>
+    </ul></dd>
+    <dt>Returns: list[Log]</dt>
+        <dd>A list of Log objects.</dd>
   </dl>
 </td></tr></table>
 </div>
