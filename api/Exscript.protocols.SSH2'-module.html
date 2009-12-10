@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.protocols.SSH'</title>
+  <title>Exscript.protocols.SSH2'</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,7 +44,7 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
-        Module&nbsp;SSH'
+        Module&nbsp;SSH2'
       </span>
     </td>
     <td>
@@ -55,7 +55,7 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module SSH'</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Module SSH2'</h1><p class="nomargin-top"></p>
 <!-- ==================== CLASSES ==================== -->
 <a name="section-Classes"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -68,8 +68,8 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH-class.html" class="summary-name">SSH</a><br />
-      The secure shell protocol adapter.
+        <a href="Exscript.protocols.SSH2-class.html" class="summary-name">SSH2</a><br />
+      The secure shell protocol version 2 adapter, based on Paramiko.
     </td>
   </tr>
 </table>
@@ -106,14 +106,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH%27-module.html#escape_re" class="summary-name">escape_re</a> = <code title="re.compile(r'(?:[\x00-\t]|\x1b\[[^m]*m|\x1b\][^\x07]*\x07)')">re.compile(r'<code class="re-group">(?:</code><code class="re-group">[</code>\x00<code class="re-op">-</code>\t<code class="re-group">]</code><code class="re-op">|</code>\x1b\[<code class="re-group">[^</code>m<code class="re-group">]</code><code class="re-op">*</code>m<code class="re-op">|</code>\x1b\]<code class="re-group">[^</code>\x0<code class="variable-ellipsis">...</code></code>
+        <a href="Exscript.protocols.SSH2%27-module.html#escape_re" class="summary-name">escape_re</a> = <code title="re.compile(r'(?:[\x00-\t]|\x1b\[[^m]*m|\x1b\][^\x07]*\x07)')">re.compile(r'<code class="re-group">(?:</code><code class="re-group">[</code>\x00<code class="re-op">-</code>\t<code class="re-group">]</code><code class="re-op">|</code>\x1b\[<code class="re-group">[^</code>m<code class="re-group">]</code><code class="re-op">*</code>m<code class="re-op">|</code>\x1b\]<code class="re-group">[^</code>\x0<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH%27-module.html#fingerprint" class="summary-name">fingerprint</a> = <code title="'\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\
+        <a href="Exscript.protocols.SSH2%27-module.html#fingerprint" class="summary-name">fingerprint</a> = <code title="'\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\
 \\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\
 \w'"><code class="variable-quote">'</code><code class="variable-string">\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\</code><code class="variable-ellipsis">...</code></code>
     </td>
@@ -122,36 +122,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.protocols.SSH%27-module.html#login_fail_re" class="summary-name">login_fail_re</a> = <code title="re.compile(r'(?im)[\r\n][^\r\n]*(?:bad secrets|denied|invalid|too shor\
-t|incorrect|connection timed out|failed)')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="variable-ellipsis">...</code></code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="pass_re"></a><span class="summary-name">pass_re</span> = <code title="re.compile(r'(?im)password:? *$')">re.compile(r'<code class="re-flags">(?im)</code>password:<code class="re-op">?</code> <code class="re-op">*</code>$')</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="skey_re"></a><span class="summary-name">skey_re</span> = <code title="re.compile(r'(?:s/key|otp-md4) (\d+) (\S+)')">re.compile(r'<code class="re-group">(?:</code>s/key<code class="re-op">|</code>otp-md4<code class="re-group">)</code> <code class="re-group">(</code>\d<code class="re-op">+</code><code class="re-group">)</code> <code class="re-group">(</code>\S<code class="re-op">+</code><code class="re-group">)</code>')</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="user_re"></a><span class="summary-name">user_re</span> = <code title="re.compile(r'(?im)(user ?name|user|login): *$')">re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">(</code>user <code class="re-op">?</code>name<code class="re-op">|</code>user<code class="re-op">|</code>login<code class="re-group">)</code>: <code class="re-op">*</code>$')</code>
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="Exscript.protocols.SSH%27-module.html#verify_re" class="summary-name">verify_re</a> = <code title="re.compile(r'(?ims)\b\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w\
+        <a href="Exscript.protocols.SSH2%27-module.html#verify_re" class="summary-name">verify_re</a> = <code title="re.compile(r'(?ims)\b\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w:\w\w\
 :\w\w:\w\w:\w\w:\w\w:\w\w:\w\w\b.*\byes.*')">re.compile(r'<code class="re-flags">(?ims)</code>\b\w\w:\w\w:\w\w:\w\w:\w\w:\w\w<code class="variable-ellipsis">...</code></code>
     </td>
   </tr>
@@ -198,25 +169,6 @@ re.compile(r'<code class="re-group">(?:</code><code class="re-group">[</code>\x0
 <code class="variable-quote">'</code><code class="variable-string">\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-string">\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\\w\\:\\w\</code><span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
 <code class="variable-string">\w</code><code class="variable-quote">'</code>
-</pre></td></tr></table>
-</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="login_fail_re"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <h3 class="epydoc">login_fail_re</h3>
-  
-  <dl class="fields">
-  </dl>
-  <dl class="fields">
-    <dt>Value:</dt>
-      <dd><table><tr><td><pre class="variable">
-re.compile(r'<code class="re-flags">(?im)</code><code class="re-group">[</code>\r\n<code class="re-group">]</code><code class="re-group">[</code><code class="re-op">^</code>\r\n<code class="re-group">]</code><code class="re-op">*</code><code class="re-group">(?:</code>bad secrets<code class="re-op">|</code>denied<code class="re-op">|</code>invalid<code class="re-op">|</code>too shor<span class="variable-linewrap"><img src="crarr.png" alt="\" /></span>
-t<code class="re-op">|</code>incorrect<code class="re-op">|</code>connection timed out<code class="re-op">|</code>failed<code class="re-group">)</code>')
 </pre></td></tr></table>
 </dd>
   </dl>
