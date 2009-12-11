@@ -48,11 +48,8 @@ Exscript.protocols.SSH'.fingerprint	Exscript.protocols.SSH%27-module.html#finger
 Exscript.protocols.SSH'.skey_re	Exscript.protocols.SSH%27-module.html#skey_re
 Exscript.protocols.SSH'.True	Exscript.protocols.SSH%27-module.html#True
 Exscript.protocols.SSH2'	Exscript.protocols.SSH2%27-module.html
-Exscript.protocols.SSH2'.verify_re	Exscript.protocols.SSH2%27-module.html#verify_re
 Exscript.protocols.SSH2'.False	Exscript.protocols.SSH2%27-module.html#False
-Exscript.protocols.SSH2'.escape_re	Exscript.protocols.SSH2%27-module.html#escape_re
 Exscript.protocols.SSH2'.__package__	Exscript.protocols.SSH2%27-module.html#__package__
-Exscript.protocols.SSH2'.fingerprint	Exscript.protocols.SSH2%27-module.html#fingerprint
 Exscript.protocols.SSH2'.True	Exscript.protocols.SSH2%27-module.html#True
 Exscript.protocols.Telnet'	Exscript.protocols.Telnet%27-module.html
 Exscript.protocols.Telnet'.user_re	Exscript.protocols.Telnet%27-module.html#user_re
@@ -362,7 +359,6 @@ Exscript.protocols.Transport.Transport.get_error_prompt	Exscript.protocols.Trans
 Exscript.protocols.SSH2._expect_hook	Exscript.protocols.SSH2-class.html#_expect_hook
 Exscript.protocols.SSH2._fill_buffer	Exscript.protocols.SSH2-class.html#_fill_buffer
 Exscript.protocols.SSH2.send	Exscript.protocols.SSH2-class.html#send
-Exscript.protocols.SSH2._remove_esc	Exscript.protocols.SSH2-class.html#_remove_esc
 Exscript.protocols.Transport.Transport.__deepcopy__	Exscript.protocols.Transport.Transport-class.html#__deepcopy__
 Exscript.protocols.Transport.Transport._dbg	Exscript.protocols.Transport.Transport-class.html#_dbg
 Exscript.protocols.Transport.Transport.expect_prompt	Exscript.protocols.Transport.Transport-class.html#expect_prompt
