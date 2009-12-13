@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.protocols.Exception.InvalidCommandException</title>
+  <title>Exscript.parselib.Exception.LexerException</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,9 +43,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
-        <a href="Exscript.protocols.Exception-module.html" onclick="show_private();">Module&nbsp;Exception</a> ::
-        Class&nbsp;InvalidCommandException
+        <a href="Exscript.parselib-module.html" onclick="show_private();">Package&nbsp;parselib</a> ::
+        <a href="Exscript.parselib.Exception-module.html" onclick="show_private();">Module&nbsp;Exception</a> ::
+        Class&nbsp;LexerException
       </span>
     </td>
     <td>
@@ -56,23 +56,24 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class InvalidCommandException</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class LexerException</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-              object --+            
-                       |            
-exceptions.BaseException --+        
-                           |        
-        exceptions.Exception --+    
-                               |    
-              <a href="Exscript.protocols.Exception.TransportException-class.html">TransportException</a> --+
-                                   |
-                                  <strong class="uidshort">InvalidCommandException</strong>
+              object --+        
+                       |        
+exceptions.BaseException --+    
+                           |    
+        exceptions.Exception --+
+                               |
+                              <strong class="uidshort">LexerException</strong>
 </pre>
 
-<hr />
-<p>An exception that is thrown if the response of a connected host 
-  contained a string that looked like an error.</p>
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li><a href="Exscript.parselib.Exception.RuntimeError-class.html">RuntimeError</a></li><li>, <a href="Exscript.parselib.Exception.SyntaxError-class.html">SyntaxError</a></li>  </ul>
+</dd></dl>
 
+<hr />
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -106,6 +107,22 @@ exceptions.BaseException --+
       <code>__sizeof__</code>,
       <code>__subclasshook__</code>
       </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="name"></a><span class="summary-name">name</span> = <code title="'Error'"><code class="variable-quote">'</code><code class="variable-string">Error</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>

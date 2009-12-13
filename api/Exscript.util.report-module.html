@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.interact</title>
+  <title>Exscript.util.report</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -44,7 +44,7 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
-        Module&nbsp;interact
+        Module&nbsp;report
       </span>
     </td>
     <td>
@@ -55,7 +55,7 @@
   </tr>
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module interact</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Module report</h1><p class="nomargin-top"></p>
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -70,9 +70,9 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#get_user" class="summary-sig-name">get_user</a>()</span><br />
-      Prompts the user for his login name, defaulting to the USER 
-      environment variable.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.report-module.html#summarize" class="summary-sig-name">summarize</a>(<span class="summary-sig-arg">logger</span>)</span><br />
+      Creates a short summary on the actions that were logged by the given 
+      QueueLogger.</td>
           <td align="right" valign="top">
             
             
@@ -84,30 +84,16 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">(string, string)</span>
+      <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#get_login" class="summary-sig-name">get_login</a>()</span><br />
-      Prompts the user for the login name using get_user(), and also asks 
-      for the password.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#read_login" class="summary-sig-name">read_login</a>()</span><br />
-      Like get_login(), but returns an Account object.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.report-module.html#format" class="summary-sig-name">format</a>(<span class="summary-sig-arg">logger</span>,
+        <span class="summary-sig-arg">show_successful</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">show_errors</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">show_traceback</span>=<span class="summary-sig-default">True</span>)</span><br />
+      Prints a report of the actions that were logged by the given 
+      QueueLogger.</td>
           <td align="right" valign="top">
             
             
@@ -130,7 +116,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.util'"><code class="variable-quote">'</code><code class="variable-string">Exscript.util</code><code class="variable-quote">'</code></code>
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="None">None</code>
     </td>
   </tr>
 </table>
@@ -143,70 +129,59 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
-<a name="get_user"></a>
+<a name="summarize"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_user</span>()</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">summarize</span>(<span class="sig-arg">logger</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Prompts the user for his login name, defaulting to the USER 
-  environment variable. Returns a string containing the username. May throw
-  an exception if EOF is given by the user.</p>
+  <p>Creates a short summary on the actions that were logged by the given 
+  QueueLogger.</p>
   <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>logger</code></strong> (QueueLogger) - The logger that recorded what happened in the queue.</li>
+    </ul></dd>
     <dt>Returns: string</dt>
-        <dd>A username.</dd>
+        <dd>A string summarizing the status of every performed task.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_login"></a>
+<a name="format"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_login</span>()</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">format</span>(<span class="sig-arg">logger</span>,
+        <span class="sig-arg">show_successful</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">show_errors</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">show_traceback</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Prompts the user for the login name using get_user(), and also asks 
-  for the password. Returns a tuple containing the username and the 
-  password. May throw an exception if EOF is given by the user.</p>
+  <p>Prints a report of the actions that were logged by the given 
+  QueueLogger. The report contains a list of successful actions, as well as
+  the full error message on failed actions.</p>
   <dl class="fields">
-    <dt>Returns: (string, string)</dt>
-        <dd>A tuple containing the username and the password.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="read_login"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">read_login</span>()</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Like get_login(), but returns an Account object.</p>
-  <dl class="fields">
-    <dt>Returns: Account</dt>
-        <dd>A new account.</dd>
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>logger</code></strong> (QueueLogger) - The logger that recorded what happened in the queue.</li>
+    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>A string summarizing the status of every performed task.</dd>
   </dl>
 </td></tr></table>
 </div>

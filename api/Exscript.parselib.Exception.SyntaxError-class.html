@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util</title>
+  <title>Exscript.parselib.Exception.SyntaxError</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -43,7 +43,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        Package&nbsp;util
+        <a href="Exscript.parselib-module.html" onclick="show_private();">Package&nbsp;parselib</a> ::
+        <a href="Exscript.parselib.Exception-module.html" onclick="show_private();">Module&nbsp;Exception</a> ::
+        Class&nbsp;SyntaxError
       </span>
     </td>
     <td>
@@ -53,33 +55,93 @@
     </td>
   </tr>
 </table>
-<!-- ==================== PACKAGE DESCRIPTION ==================== -->
-<h1 class="epydoc">Package util</h1><p class="nomargin-top"></p>
-<!-- ==================== SUBMODULES ==================== -->
-<a name="section-Submodules"></a>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class SyntaxError</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+              object --+            
+                       |            
+exceptions.BaseException --+        
+                           |        
+        exceptions.Exception --+    
+                               |    
+                  <a href="Exscript.parselib.Exception.LexerException-class.html">LexerException</a> --+
+                                   |
+                                  <strong class="uidshort">SyntaxError</strong>
+</pre>
+
+<hr />
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Submodules</span></td>
+    <span class="table-header">Instance Methods</span></td>
 </tr>
-  <tr><td class="summary">
-  <ul class="nomargin">
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.cast-module.html" onclick="show_private();">Exscript.util.cast</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.crypt-module.html" onclick="show_private();">Exscript.util.crypt</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.decorator-module.html">Exscript.util.decorator</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.file-module.html">Exscript.util.file</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.interact-module.html">Exscript.util.interact</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.ipv4-module.html" onclick="show_private();">Exscript.util.ipv4</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.match-module.html">Exscript.util.match</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.report-module.html">Exscript.util.report</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.start-module.html">Exscript.util.start</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.template-module.html">Exscript.util.template</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.url-module.html" onclick="show_private();">Exscript.util.url</a></strong>    </li>
-  </ul></td></tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.Exception</code></b>:
+      <code>__init__</code>,
+      <code>__new__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
+      <code>__delattr__</code>,
+      <code>__getattribute__</code>,
+      <code>__getitem__</code>,
+      <code>__getslice__</code>,
+      <code>__reduce__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__setstate__</code>,
+      <code>__str__</code>,
+      <code>__unicode__</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__format__</code>,
+      <code>__hash__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
 </table>
-
-<br />
+<!-- ==================== CLASS VARIABLES ==================== -->
+<a name="section-ClassVariables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Class Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="name"></a><span class="summary-name">name</span> = <code title="'Syntax error'"><code class="variable-quote">'</code><code class="variable-string">Syntax error</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>exceptions.BaseException</code></b>:
+      <code>args</code>,
+      <code>message</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
 <!-- ==================== NAVIGATION BAR ==================== -->
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
