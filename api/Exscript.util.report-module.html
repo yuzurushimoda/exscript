@@ -43,7 +43,7 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
+        <a href="Exscript.util-module.html">Package&nbsp;util</a> ::
         Module&nbsp;report
       </span>
     </td>
@@ -70,9 +70,27 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.report-module.html#status" class="summary-sig-name">status</a>(<span class="summary-sig-arg">logger</span>)</span><br />
+      Creates a one-line summary on the actions that were logged by the 
+      given Logger.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="Exscript.util.report-module.html#summarize" class="summary-sig-name">summarize</a>(<span class="summary-sig-arg">logger</span>)</span><br />
       Creates a short summary on the actions that were logged by the given 
-      QueueLogger.</td>
+      Logger.</td>
           <td align="right" valign="top">
             
             
@@ -92,8 +110,7 @@
         <span class="summary-sig-arg">show_successful</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">show_errors</span>=<span class="summary-sig-default">True</span>,
         <span class="summary-sig-arg">show_traceback</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Prints a report of the actions that were logged by the given 
-      QueueLogger.</td>
+      Prints a report of the actions that were logged by the given Logger.</td>
           <td align="right" valign="top">
             
             
@@ -101,22 +118,6 @@
         </tr>
       </table>
       
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Variables</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="None">None</code>
     </td>
   </tr>
 </table>
@@ -129,6 +130,32 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
+<a name="status"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">status</span>(<span class="sig-arg">logger</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Creates a one-line summary on the actions that were logged by the 
+  given Logger.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>logger</code></strong> (Logger) - The logger that recorded what happened in the queue.</li>
+    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>A string summarizing the status.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="summarize"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -144,11 +171,11 @@
   </tr></table>
   
   <p>Creates a short summary on the actions that were logged by the given 
-  QueueLogger.</p>
+  Logger.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>logger</code></strong> (QueueLogger) - The logger that recorded what happened in the queue.</li>
+        <li><strong class="pname"><code>logger</code></strong> (Logger) - The logger that recorded what happened in the queue.</li>
     </ul></dd>
     <dt>Returns: string</dt>
         <dd>A string summarizing the status of every performed task.</dd>
@@ -172,13 +199,13 @@
     </td>
   </tr></table>
   
-  <p>Prints a report of the actions that were logged by the given 
-  QueueLogger. The report contains a list of successful actions, as well as
-  the full error message on failed actions.</p>
+  <p>Prints a report of the actions that were logged by the given Logger. 
+  The report contains a list of successful actions, as well as the full 
+  error message on failed actions.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>logger</code></strong> (QueueLogger) - The logger that recorded what happened in the queue.</li>
+        <li><strong class="pname"><code>logger</code></strong> (Logger) - The logger that recorded what happened in the queue.</li>
     </ul></dd>
     <dt>Returns: string</dt>
         <dd>A string summarizing the status of every performed task.</dd>
@@ -217,7 +244,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Dec 13 16:02:52 2009
+    Generated by Epydoc 3.0.1 on Tue Dec 15 23:13:30 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

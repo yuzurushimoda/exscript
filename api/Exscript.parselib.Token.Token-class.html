@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.Account</title>
+  <title>Exscript.parselib.Token.Token</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,8 +42,11 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        Class&nbsp;Account
+        Exscript ::
+        parselib ::
+        Token ::
+        Token ::
+        Class&nbsp;Token
       </span>
     </td>
     <td>
@@ -54,18 +57,33 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Account</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class Token</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-                   object --+    
-                            |    
-protocols.Transport.Trackable --+
-                                |
-                               <strong class="uidshort">Account</strong>
+object --+
+         |
+        <strong class="uidshort">Token</strong>
 </pre>
 
 <hr />
-<p>This class represents a user account.</p>
+<p>Abstract base class for all tokens.</p>
 
+<!-- ==================== NESTED CLASSES ==================== -->
+<a name="section-NestedClasses"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Nested Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.parselib.Token.Token.Iterator-class.html" class="summary-name">Iterator</a><br />
+      A tree iterator that walks through all tokens.
+    </td>
+  </tr>
+</table>
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -80,12 +98,12 @@ protocols.Transport.Trackable --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Account-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.parselib.Token.Token-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">password</span>,
-        <span class="summary-sig-arg">password2</span>=<span class="summary-sig-default">None</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Constructor.</td>
+        <span class="summary-sig-arg">lexer</span>,
+        <span class="summary-sig-arg">parser</span>,
+        <span class="summary-sig-arg">parent</span>=<span class="summary-sig-default">None</span>)</span><br />
+      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
           <td align="right" valign="top">
             
             
@@ -101,59 +119,8 @@ protocols.Transport.Trackable --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="acquire"></a><span class="summary-sig-name">acquire</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Locks the account.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Account-class.html#get_authorization_password" class="summary-sig-name">get_authorization_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the authorization password of the account.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Account-class.html#get_name" class="summary-sig-name">get_name</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the name of the account.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Account-class.html#get_password" class="summary-sig-name">get_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the password of the account.</td>
+          <td><span class="summary-sig"><a name="value"></a><span class="summary-sig-name">value</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">context</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -169,8 +136,91 @@ protocols.Transport.Trackable --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="release"></a><span class="summary-sig-name">release</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Unlocks the account.</td>
+          <td><span class="summary-sig"><a name="mark_start"></a><span class="summary-sig-name">mark_start</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="mark_end"></a><span class="summary-sig-name">mark_end</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">char</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="__iter__"></a><span class="summary-sig-name">__iter__</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns an iterator that points to the first token.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add"></a><span class="summary-sig-name">add</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">child</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="get_children"></a><span class="summary-sig-name">get_children</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="dump"></a><span class="summary-sig-name">dump</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">indent</span>=<span class="summary-sig-default">0</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -182,13 +232,6 @@ protocols.Transport.Trackable --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
-    <p class="indent-wrapped-lines"><b>Inherited from <code>protocols.Transport.Trackable</code></b>:
-      <code>signal_connect</code>,
-      <code>signal_disconnect</code>,
-      <code>signal_emit</code>,
-      <code>signal_is_connected</code>,
-      <code>signal_subscribers</code>
-      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -240,9 +283,9 @@ protocols.Transport.Trackable --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">name</span>,
-        <span class="sig-arg">password</span>,
-        <span class="sig-arg">password2</span>=<span class="sig-default">None</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+        <span class="sig-arg">lexer</span>,
+        <span class="sig-arg">parser</span>,
+        <span class="sig-arg">parent</span>=<span class="sig-default">None</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -250,90 +293,13 @@ protocols.Transport.Trackable --+
     </td>
   </tr></table>
   
-  <p>Constructor.</p>
-  <p>The authorization password is only required on hosts that separate the
-  authentication from the authorization procedure. If an authorization 
-  password is not given, it defaults to the same value as the 
-  authentication password.</p>
+  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
+  signature</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - A username.</li>
-        <li><strong class="pname"><code>password</code></strong> (string) - The authentication password.</li>
-        <li><strong class="pname"><code>password2</code></strong> (string) - The authorization password, if required.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - The following options are supported:
-          <ul>
-            <li>
-              ssh_key_file: the key file that is used (SSH only).
-            </li>
-          </ul></li>
-    </ul></dd>
     <dt>Overrides:
         object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_authorization_password"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_authorization_password</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the authorization password of the account.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The account password.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_name"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_name</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the name of the account.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The account name.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_password"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_password</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the password of the account.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The account password.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -369,7 +335,7 @@ protocols.Transport.Trackable --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Sun Dec 13 16:02:52 2009
+    Generated by Epydoc 3.0.1 on Tue Dec 15 23:13:31 2009
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

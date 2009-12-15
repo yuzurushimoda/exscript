@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.start</title>
+  <title>Exscript.Account.Account</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -42,9 +42,10 @@
   <tr valign="top">
     <td width="100%">
       <span class="breadcrumbs">
-        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.util-module.html">Package&nbsp;util</a> ::
-        Module&nbsp;start
+        Exscript ::
+        Account ::
+        Account ::
+        Class&nbsp;Account
       </span>
     </td>
     <td>
@@ -54,15 +55,24 @@
     </td>
   </tr>
 </table>
-<!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module start</h1><p class="nomargin-top"></p>
-<!-- ==================== FUNCTIONS ==================== -->
-<a name="section-Functions"></a>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Account</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+external.SpiffSignal.Trackable --+
+                                 |
+                                <strong class="uidshort">Account</strong>
+</pre>
+
+<hr />
+<p>This class represents a user account.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Functions</span></td>
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
@@ -70,13 +80,12 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.start-module.html#run" class="summary-sig-name">run</a>(<span class="summary-sig-arg">users</span>,
-        <span class="summary-sig-arg">hosts</span>,
-        <span class="summary-sig-arg">func</span>,
+          <td><span class="summary-sig"><a href="Exscript.Account.Account-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">password</span>,
+        <span class="summary-sig-arg">password2</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Convenience function that creates an Exscript.Queue instance, adds 
-      the given accounts, and calls Queue.run() with the given hosts and 
-      function as an argument.</td>
+      Constructor.</td>
           <td align="right" valign="top">
             
             
@@ -92,11 +101,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.start-module.html#quickrun" class="summary-sig-name">quickrun</a>(<span class="summary-sig-arg">hosts</span>,
-        <span class="summary-sig-arg">func</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      A wrapper around run() that creates the account by asking the user 
-      for entering his login information.</td>
+          <td><span class="summary-sig"><a name="acquire"></a><span class="summary-sig-name">acquire</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Locks the account.</td>
           <td align="right" valign="top">
             
             
@@ -112,12 +118,8 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.start-module.html#start" class="summary-sig-name">start</a>(<span class="summary-sig-arg">users</span>,
-        <span class="summary-sig-arg">hosts</span>,
-        <span class="summary-sig-arg">func</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Like run(), but automatically logs into the host before passing the 
-      connection to the callback function.</td>
+          <td><span class="summary-sig"><a name="release"></a><span class="summary-sig-name">release</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Unlocks the account.</td>
           <td align="right" valign="top">
             
             
@@ -129,15 +131,46 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.start-module.html#quickstart" class="summary-sig-name">quickstart</a>(<span class="summary-sig-arg">hosts</span>,
-        <span class="summary-sig-arg">func</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Like quickrun(), but automatically logs into the host before passing 
-      the connection to the callback function.</td>
+          <td><span class="summary-sig"><a href="Exscript.Account.Account-class.html#get_name" class="summary-sig-name">get_name</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the name of the account.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Account.Account-class.html#get_password" class="summary-sig-name">get_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the password of the account.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Account.Account-class.html#get_authorization_password" class="summary-sig-name">get_authorization_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the authorization password of the account.</td>
           <td align="right" valign="top">
             
             
@@ -148,140 +181,115 @@
     </td>
   </tr>
 </table>
-<!-- ==================== FUNCTION DETAILS ==================== -->
-<a name="section-FunctionDetails"></a>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Function Details</span></td>
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
-<a name="run"></a>
+<a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">run</span>(<span class="sig-arg">users</span>,
-        <span class="sig-arg">hosts</span>,
-        <span class="sig-arg">func</span>,
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">password</span>,
+        <span class="sig-arg">password2</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Convenience function that creates an Exscript.Queue instance, adds the
-  given accounts, and calls Queue.run() with the given hosts and function 
-  as an argument.</p>
-  <p>If you also want to pass arguments to the given function, you may use 
-  util.decorator.bind() like this:</p>
-<pre class="literalblock">
- def my_callback(conn, my_arg, **kwargs):
-     print my_arg, kwargs.get('foo')
-
- run(account,
-     host,
-     bind(my_callback, 'hello', foo = 'world'),
-     max_threads = 10)
-</pre>
+  <p>Constructor.</p>
+  <p>The authorization password is only required on hosts that separate the
+  authentication from the authorization procedure. If an authorization 
+  password is not given, it defaults to the same value as the 
+  authentication password.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>users</code></strong> (Account|list[Account]) - The account(s) to use for logging in.</li>
-        <li><strong class="pname"><code>hosts</code></strong> (Host|list[Host]) - A list of Host objects.</li>
-        <li><strong class="pname"><code>func</code></strong> (function) - The callback function.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed to the Exscript.Queue constructor.</li>
+        <li><strong class="pname"><code>name</code></strong> (string) - A username.</li>
+        <li><strong class="pname"><code>password</code></strong> (string) - The authentication password.</li>
+        <li><strong class="pname"><code>password2</code></strong> (string) - The authorization password, if required.</li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - The following options are supported:
+          <ul>
+            <li>
+              ssh_key_file: the key file that is used (SSH only).
+            </li>
+          </ul></li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="quickrun"></a>
+<a name="get_name"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">quickrun</span>(<span class="sig-arg">hosts</span>,
-        <span class="sig-arg">func</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_name</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>A wrapper around run() that creates the account by asking the user for
-  entering his login information.</p>
+  <p>Returns the name of the account.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>hosts</code></strong> (Host|list[Host]) - A list of Host objects.</li>
-        <li><strong class="pname"><code>func</code></strong> (function) - The callback function.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed to the Exscript.Queue constructor.</li>
-    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>The account name.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="start"></a>
+<a name="get_password"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">start</span>(<span class="sig-arg">users</span>,
-        <span class="sig-arg">hosts</span>,
-        <span class="sig-arg">func</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_password</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Like run(), but automatically logs into the host before passing the 
-  connection to the callback function.</p>
+  <p>Returns the password of the account.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>users</code></strong> (Account|list[Account]) - The account(s) to use for logging in.</li>
-        <li><strong class="pname"><code>hosts</code></strong> (Host|list[Host]) - A list of Host objects.</li>
-        <li><strong class="pname"><code>func</code></strong> (function) - The callback function.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed to the Exscript.Queue constructor.</li>
-    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>The account password.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="quickstart"></a>
+<a name="get_authorization_password"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">quickstart</span>(<span class="sig-arg">hosts</span>,
-        <span class="sig-arg">func</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_authorization_password</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Like quickrun(), but automatically logs into the host before passing 
-  the connection to the callback function.</p>
+  <p>Returns the authorization password of the account.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>hosts</code></strong> (Host|list[Host]) - A list of Host objects.</li>
-        <li><strong class="pname"><code>func</code></strong> (function) - The callback function.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed to the Exscript.Queue constructor.</li>
-    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>The account password.</dd>
   </dl>
 </td></tr></table>
 </div>
