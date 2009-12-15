@@ -1,0 +1,750 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Exscript.protocols.Telnet</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
+        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
+        Class&nbsp;Telnet
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class Telnet</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+         object --+        
+                  |        
+Transport.Trackable --+    
+                      |    
+    <a href="Exscript.protocols.Transport.Transport-class.html">Transport.Transport</a> --+
+                          |
+                         <strong class="uidshort">Telnet</strong>
+</pre>
+
+<hr />
+<p>The Telnet protocol adapter.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Instance Methods</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Transport</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#__copy__" class="summary-sig-name">__copy__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Overwritten to return the very same object instead of copying the 
+      stream, because copying a network connection is impossible.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Transport</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#__deepcopy__" class="summary-sig-name">__deepcopy__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">memo</span>)</span><br />
+      Overwritten to return the very same object instead of copying the 
+      stream, because copying a network connection is impossible.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">user</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">password</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Authenticates at the remote host.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#authorize" class="summary-sig-name">authorize</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">password</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Authorizes at the remote host, if the remote host supports 
+      authorization.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#close" class="summary-sig-name">close</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">force</span>=<span class="summary-sig-default">0</span>)</span><br />
+      Closes the connection with the remote host.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">hostname</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">port</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Opens the connection to the remote host or IP address.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Sends the given data to the remote host (with a newline appended) and
+      waits for a prompt in the response.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#expect" class="summary-sig-name">expect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prompt</span>)</span><br />
+      Monitors the data received from the remote host and waits until the 
+      response matches the given prompt.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#expect_prompt" class="summary-sig-name">expect_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Monitors the data received from the remote host and waits for a 
+      prompt in the response.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">regex</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#get_error_prompt" class="summary-sig-name">get_error_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the regular expression that is used to monitor the response 
+      of the connected host for errors.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#get_host" class="summary-sig-name">get_host</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the name or address of the currently connected host.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">regex</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#get_prompt" class="summary-sig-name">get_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the regular expression that is matched against the host 
+      response when calling the expect_prompt() method.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#get_timeout" class="summary-sig-name">get_timeout</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the current timeout in seconds.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#guess_os" class="summary-sig-name">guess_os</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns an identifer that specifies the operating system that is 
+      running on the remote host.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#is_authenticated" class="summary-sig-name">is_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the authentication procedure was completed, False 
+      otherwise.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">bool</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#is_authorized" class="summary-sig-name">is_authorized</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the authentication procedure was completed, False 
+      otherwise.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the adapter implements a virtual device, i.e.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Boolean</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#send" class="summary-sig-name">send</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Sends the given data to the remote host.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#set_error_prompt" class="summary-sig-name">set_error_prompt</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">error</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Defines a pattern that is used to monitor the response of the 
+      connected host.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#set_prompt" class="summary-sig-name">set_prompt</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prompt</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Defines a pattern that is waited for when calling the expect_prompt()
+      method.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport.Transport-class.html#set_timeout" class="summary-sig-name">set_timeout</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">timeout</span>)</span><br />
+      Defines the maximum time that the adapter waits before a call to 
+      expect() or expect_prompt() fails.
+      <em>(Inherited from <a href="Exscript.protocols.Transport.Transport-class.html">Exscript.protocols.Transport.Transport</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>Transport.Trackable</code></b>:
+      <code>signal_connect</code>,
+      <code>signal_disconnect</code>,
+      <code>signal_emit</code>,
+      <code>signal_is_connected</code>,
+      <code>signal_subscribers</code>
+      </p>
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__str__</code>,
+      <code>__subclasshook__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Method Details</span></td>
+</tr>
+</table>
+<a name="__init__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Constructor. The following signals are provided:</p>
+  <ul>
+    <li>
+      data_received: Sent whenever a packet was received from the connected
+      host.
+    </li>
+    <li>
+      otp_requested: Sent whenever the connected host requested a 
+      one-time-password to be entered.
+    </li>
+  </ul>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>kwargs</code></strong> - The following arguments are supported:
+          <ul>
+            <li>
+              echo: Whether to echo the device response to the terminal. 
+              The default is False.
+            </li>
+            <li>
+              debug: An integer between 0 (no debugging) and 5 (very 
+              verbose debugging) that specifies the amount of debug info 
+              sent to the terminal. The default value is 0.
+            </li>
+            <li>
+              timeout: See set_timeout(). The default value is 30.
+            </li>
+            <li>
+              logfile: A file into which a log of the conversation with the
+              device is dumped.
+            </li>
+          </ul></li>
+    </ul></dd>
+    <dt>Overrides:
+        object.__init__
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="close"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">close</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">force</span>=<span class="sig-default">0</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Closes the connection with the remote host.</p>
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="Exscript.protocols.Transport.Transport-class.html#close">Transport.Transport.close</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="execute"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">execute</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sends the given data to the remote host (with a newline appended) and 
+  waits for a prompt in the response. The prompt attempts to use a sane 
+  default that works with many devices running Unix, IOS, IOS-XR, or Junos 
+  and others. If that fails, a custom prompt may also be defined using the 
+  set_prompt() method. This method also modifies the value of the response 
+  (self.response) attribute, for details please see the documentation of 
+  the expect() method.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>command</code></strong> - The data that is sent to the remote host.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="Exscript.protocols.Transport.Transport-class.html#execute">Transport.Transport.execute</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="send"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">send</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">data</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Sends the given data to the remote host. Returns without waiting for a
+  response.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>data</code></strong> - The data that is sent to the remote host.</li>
+    </ul></dd>
+    <dt>Returns: Boolean</dt>
+        <dd>True on success, False otherwise.</dd>
+    <dt>Overrides:
+        <a href="Exscript.protocols.Transport.Transport-class.html#send">Transport.Transport.send</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Dec 15 23:23:19 2009
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
