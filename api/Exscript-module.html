@@ -14,9 +14,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th bgcolor="#70b0f0" class="navbar-select"
-          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -54,9 +51,11 @@
 </table>
 <!-- ==================== PACKAGE DESCRIPTION ==================== -->
 <h1 class="epydoc">Package Exscript</h1><p class="nomargin-top"></p>
+<p>The core module.</p>
+
 <hr />
 <div class="fields">      <p><strong>Version:</strong>
-        v1.9.177-g71d8d9a
+        v2.0
       </p>
 </div><!-- ==================== SUBMODULES ==================== -->
 <a name="section-Submodules"></a>
@@ -68,53 +67,36 @@
 </tr>
   <tr><td class="summary">
   <ul class="nomargin">
-    <li> <strong class="uidlink">Exscript.Account</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.Account%27-module.html">Exscript.Account'</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.Connection-module.html" onclick="show_private();">Exscript.Connection</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.FileLogger</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.FileLogger%27-module.html">Exscript.FileLogger'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.Host</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.Host%27-module.html">Exscript.Host'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.Queue</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.Queue%27-module.html">Exscript.Queue'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.QueueListener</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.QueueListener%27-module.html">Exscript.QueueListener'</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.parselib-module.html" onclick="show_private();">Exscript.parselib</a></strong>
-    <ul class="private">
-    <li class="private"> <strong class="uidlink"><a href="Exscript.parselib.Exception-module.html" onclick="show_private();">Exscript.parselib.Exception</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.parselib.Lexer</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.parselib.Lexer%27-module.html">Exscript.parselib.Lexer'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.parselib.Token</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.parselib.Token%27-module.html">Exscript.parselib.Token'</a></strong>    </li>
-    </ul>
-    </li>
+    <li> <strong class="uidlink"><a href="Exscript.Account%27-module.html">Exscript.Account'</a></strong>: <em class="summary">Representing user accounts.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.Connection-module.html" onclick="show_private();">Exscript.Connection</a></strong>: <em class="summary">Accessing the connection to a remote host.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.FileLogger%27-module.html">Exscript.FileLogger'</a></strong>: <em class="summary">Logging to the file system.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.Host%27-module.html">Exscript.Host'</a></strong>: <em class="summary">Representing a device to connect with.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.Logger%27-module.html">Exscript.Logger'</a></strong>: <em class="summary">Logging to memory.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.Queue%27-module.html">Exscript.Queue'</a></strong>: <em class="summary">The heart of Exscript.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.protocols-module.html" onclick="show_private();">Exscript.protocols</a></strong>
     <ul class="private">
-    <li> <strong class="uidlink">Exscript.protocols.Dummy</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Dummy%27-module.html">Exscript.protocols.Dummy'</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.protocols.Exception-module.html" onclick="show_private();">Exscript.protocols.Exception</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.protocols.SSH</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH%27-module.html">Exscript.protocols.SSH'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.protocols.SSH2</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH2%27-module.html">Exscript.protocols.SSH2'</a></strong>    </li>
-    <li> <strong class="uidlink">Exscript.protocols.Telnet</strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Telnet%27-module.html">Exscript.protocols.Telnet'</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.protocols.Transport-module.html" onclick="show_private();">Exscript.protocols.Transport</a></strong>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Dummy%27-module.html">Exscript.protocols.Dummy'</a></strong>: <em class="summary">Emulating a device.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.protocols.Exception-module.html" onclick="show_private();">Exscript.protocols.Exception</a></strong>: <em class="summary">Network related error types.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH%27-module.html">Exscript.protocols.SSH'</a></strong>: <em class="summary">Deprecated OpenSSH wrapper that is used for SSH version 1.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH2%27-module.html">Exscript.protocols.SSH2'</a></strong>: <em class="summary">SSH version 2 support, based on paramiko.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Telnet%27-module.html">Exscript.protocols.Telnet'</a></strong>: <em class="summary">The Telnet protocol.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Transport%27-module.html">Exscript.protocols.Transport'</a></strong>: <em class="summary">An abstract base class for all protocols.</em>    </li>
     </ul>
     </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.util-module.html" onclick="show_private();">Exscript.util</a></strong>
     <ul class="private">
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.cast-module.html" onclick="show_private();">Exscript.util.cast</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.crypt-module.html" onclick="show_private();">Exscript.util.crypt</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.decorator-module.html">Exscript.util.decorator</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.file-module.html">Exscript.util.file</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.interact-module.html">Exscript.util.interact</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.ipv4-module.html" onclick="show_private();">Exscript.util.ipv4</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.match-module.html">Exscript.util.match</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.report-module.html">Exscript.util.report</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.start-module.html">Exscript.util.start</a></strong>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.template-module.html">Exscript.util.template</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.util.url-module.html" onclick="show_private();">Exscript.util.url</a></strong>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.cast-module.html" onclick="show_private();">Exscript.util.cast</a></strong>: <em class="summary">Handy shortcuts for converting types.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.crypt-module.html" onclick="show_private();">Exscript.util.crypt</a></strong>: <em class="summary">Encryption related utilities.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.decorator-module.html">Exscript.util.decorator</a></strong>: <em class="summary">Decorators for callbacks passed to Queue.run().</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.file-module.html">Exscript.util.file</a></strong>: <em class="summary">Utilities for reading data from files.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.interact-module.html">Exscript.util.interact</a></strong>: <em class="summary">Tools for interacting with the user on the command line.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.ipv4-module.html" onclick="show_private();">Exscript.util.ipv4</a></strong>: <em class="summary">IPv4 address calculation and conversion.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.mail-module.html">Exscript.util.mail</a></strong>: <em class="summary">Sending and formatting emails.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.match-module.html">Exscript.util.match</a></strong>: <em class="summary">Shorthands for regular expression matching.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.report-module.html">Exscript.util.report</a></strong>: <em class="summary">Formatting logs into human readable reports.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.start-module.html">Exscript.util.start</a></strong>: <em class="summary">Quickstart methods for the Exscript queue.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.template-module.html">Exscript.util.template</a></strong>: <em class="summary">Executing Exscript templates on a connection.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.url-module.html" onclick="show_private();">Exscript.util.url</a></strong>: <em class="summary">Working with URLs (as used in URL formatted hostnames).</em>    </li>
     </ul>
     </li>
   </ul></td></tr>
@@ -141,17 +123,8 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.Queue-class.html" class="summary-name">Queue</a><br />
-      The heart of Exscript.
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-        <a href="Exscript.QueueListener-class.html" class="summary-name">QueueListener</a><br />
-      A QueueListener is notified of any actions that are added into the 
-        Exscript.Queue.
+        <a href="Exscript.FileLogger-class.html" class="summary-name">FileLogger</a><br />
+      A Logger that stores logs into files.
     </td>
   </tr>
 <tr>
@@ -174,8 +147,17 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a href="Exscript.FileLogger-class.html" class="summary-name">FileLogger</a><br />
-      A Logger that stores logs into files.
+        <a href="Exscript.Queue-class.html" class="summary-name">Queue</a><br />
+      Manages hosts/tasks, accounts, connections, and threads.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.QueueListener-class.html" class="summary-name">QueueListener</a><br />
+      A QueueListener is notified of any actions that are added into the 
+        Exscript.Queue.
     </td>
   </tr>
 </table>
@@ -183,9 +165,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th bgcolor="#70b0f0" class="navbar-select"
-          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -210,7 +189,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Dec 21 20:02:27 2009
+    Generated by Epydoc 3.0.1 on Thu Mar  4 20:08:37 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

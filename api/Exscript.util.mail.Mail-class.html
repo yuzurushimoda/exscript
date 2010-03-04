@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.Host</title>
+  <title>Exscript.util.mail.Mail</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -40,7 +40,9 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        Class&nbsp;Host
+        <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
+        <a href="Exscript.util.mail-module.html">Module&nbsp;mail</a> ::
+        Class&nbsp;Mail
       </span>
     </td>
     <td>
@@ -51,15 +53,17 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Host</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class Mail</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">Host</strong>
+object --+    
+         |    
+ Trackable --+
+             |
+            <strong class="uidshort">Mail</strong>
 </pre>
 
 <hr />
-<p>Represents a device on which to open a connection.</p>
+<p>Represents an email.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -75,10 +79,14 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">uri</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
-      Constructor.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sender</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">to</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">cc</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">bcc</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">subject</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">body</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span><br />
+      Creates a new email with the given values.</td>
           <td align="right" valign="top">
             
             
@@ -94,10 +102,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#append" class="summary-sig-name">append</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
-      Appends the given value to the list variable with the given name.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#add_bcc" class="summary-sig-name">add_bcc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bcc</span>)</span><br />
+      Like add_to(), but for the 'bcc' field.</td>
           <td align="right" valign="top">
             
             
@@ -109,15 +116,48 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">object</span>
+      <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get" class="summary-sig-name">get</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Returns the value of the given variable, or the given default value 
-      if the variable is not defined.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#add_cc" class="summary-sig-name">add_cc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cc</span>)</span><br />
+      Like add_to(), but for the 'cc' field.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#add_to" class="summary-sig-name">add_to</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">to</span>)</span><br />
+      Adds the given list of receipients to the 'to' field.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(string)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_bcc" class="summary-sig-name">get_bcc</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the value of the &quot;bcc&quot; field.</td>
           <td align="right" valign="top">
             
             
@@ -133,8 +173,42 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_address" class="summary-sig-name">get_address</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the name with the domain appended (if any).</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_body" class="summary-sig-name">get_body</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the body of the mail.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(string)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_cc" class="summary-sig-name">get_cc</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the value of the &quot;cc&quot; field.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(string)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_receipients" class="summary-sig-name">get_receipients</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns a list of all receipients (to, cc, and bcc).</td>
           <td align="right" valign="top">
             
             
@@ -150,8 +224,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_domain" class="summary-sig-name">get_domain</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the domain name.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_sender" class="summary-sig-name">get_sender</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the value of the &quot;From:&quot; field.</td>
           <td align="right" valign="top">
             
             
@@ -167,8 +241,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_name" class="summary-sig-name">get_name</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the hostname, excluding the domain part.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_smtp_header" class="summary-sig-name">get_smtp_header</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the SMTP formatted header of the line.</td>
           <td align="right" valign="top">
             
             
@@ -184,8 +258,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_password" class="summary-sig-name">get_password</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the password of the account that is used to log in.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_smtp_mail" class="summary-sig-name">get_smtp_mail</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the SMTP formatted email, as it may be passed to sendmail.</td>
           <td align="right" valign="top">
             
             
@@ -201,8 +275,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_protocol" class="summary-sig-name">get_protocol</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the name of the protocol.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_subject" class="summary-sig-name">get_subject</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the subject line.</td>
           <td align="right" valign="top">
             
             
@@ -214,48 +288,12 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
+      <span class="summary-type">list(string)</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_tcp_port" class="summary-sig-name">get_tcp_port</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the TCP port number.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#get_username" class="summary-sig-name">get_username</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the username of the account that is used to log in.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#has_key" class="summary-sig-name">has_key</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Returns True if the variable with the given name is defined, False 
-      otherwise.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#get_to" class="summary-sig-name">get_to</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the value of the &quot;to&quot; field.</td>
           <td align="right" valign="top">
             
             
@@ -271,10 +309,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set" class="summary-sig-name">set</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
-      Stores the given variable/value in the object for later retrieval.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_bcc" class="summary-sig-name">set_bcc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bcc</span>)</span><br />
+      Like set_to(), but for the 'bcc' field.</td>
           <td align="right" valign="top">
             
             
@@ -290,10 +327,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_address" class="summary-sig-name">set_address</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">address</span>)</span><br />
-      Set the hostname/domain or IP address of the remote host without 
-      changing username, password, protocol, and TCP port number.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_body" class="summary-sig-name">set_body</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">body</span>)</span><br />
+      Defines the body of the mail.</td>
           <td align="right" valign="top">
             
             
@@ -309,11 +345,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_default" class="summary-sig-name">set_default</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
-      Like set(), but only sets the value if the variable is not already 
-      defined.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_cc" class="summary-sig-name">set_cc</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">cc</span>)</span><br />
+      Like set_to(), but for the 'cc' field.</td>
           <td align="right" valign="top">
             
             
@@ -329,9 +363,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_domain" class="summary-sig-name">set_domain</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">domain</span>)</span><br />
-      Defines the domain name.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_from_template_string" class="summary-sig-name">set_from_template_string</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">string</span>)</span><br />
+      Reads the given template (SMTP formatted) and sets all fields 
+      accordingly.</td>
           <td align="right" valign="top">
             
             
@@ -347,9 +382,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_name" class="summary-sig-name">set_name</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Defines the hostname, without changing the domain.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_sender" class="summary-sig-name">set_sender</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">sender</span>)</span><br />
+      Defines the value of the &quot;From:&quot; field.</td>
           <td align="right" valign="top">
             
             
@@ -365,9 +400,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_password" class="summary-sig-name">set_password</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">password</span>)</span><br />
-      Defines the password of the account that is used to log in.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_subject" class="summary-sig-name">set_subject</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">subject</span>)</span><br />
+      Defines the subject line.</td>
           <td align="right" valign="top">
             
             
@@ -383,64 +418,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_protocol" class="summary-sig-name">set_protocol</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">protocol</span>)</span><br />
-      Defines the protocol.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_tcp_port" class="summary-sig-name">set_tcp_port</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">tcp_port</span>)</span><br />
-      Defines the TCP port number.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_uri" class="summary-sig-name">set_uri</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">uri</span>)</span><br />
-      Defines the protocol, hostname, domain, TCP port number, username, 
-      and password from the given URL.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Host-class.html#set_username" class="summary-sig-name">set_username</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Defines the username of the account that is used to log in.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.mail.Mail-class.html#set_to" class="summary-sig-name">set_to</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">to</span>)</span><br />
+      Replaces the current list of receipients in the 'to' field by the 
+      given value.</td>
           <td align="right" valign="top">
             
             
@@ -452,6 +433,13 @@ object --+
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>Trackable</code></b>:
+      <code>signal_connect</code>,
+      <code>signal_disconnect</code>,
+      <code>signal_emit</code>,
+      <code>signal_is_connected</code>,
+      <code>signal_subscribers</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -502,8 +490,12 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">uri</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+        <span class="sig-arg">sender</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">to</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">cc</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">bcc</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">subject</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">body</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -511,13 +503,18 @@ object --+
     </td>
   </tr></table>
   
-  <p>Constructor. The given uri is passed to Host.set_uri(). The given 
-  kwargs are variables that are passed to Host.set().</p>
+  <p>Creates a new email with the given values. If the given sender is 
+  None, one will be automatically chosen from the USER environment 
+  variable.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>uri</code></strong> (string) - A hostname; see set_uri() for more info.</li>
-        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Variables to define using Host.set()</li>
+        <li><strong class="pname"><code>sender</code></strong> (string) - The email address of the sender.</li>
+        <li><strong class="pname"><code>to</code></strong> (string|list(string)) - A list of email addresses, passed to set_to().</li>
+        <li><strong class="pname"><code>cc</code></strong> (string|list(string)) - A list of email addresses, passed to set_cc().</li>
+        <li><strong class="pname"><code>bcc</code></strong> (string|list(string)) - A list of email addresses, passed to set_bcc().</li>
+        <li><strong class="pname"><code>subject</code></strong> (string) - A subject line, passed to set_subject().</li>
+        <li><strong class="pname"><code>body</code></strong> (string) - The email body, passed to set_body().</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -525,532 +522,442 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="append"></a>
+<a name="add_bcc"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">append</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_bcc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bcc</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Appends the given value to the list variable with the given name.</p>
+  <p>Like add_to(), but for the 'bcc' field.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The appended value.</li>
+        <li><strong class="pname"><code>bcc</code></strong> (string|list(string)) - The list of email addresses.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get"></a>
+<a name="add_cc"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">default</span>=<span class="sig-default">None</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_cc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cc</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the value of the given variable, or the given default value if
-  the variable is not defined.</p>
+  <p>Like add_to(), but for the 'cc' field.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>default</code></strong> (object) - The default value.</li>
+        <li><strong class="pname"><code>cc</code></strong> (string|list(string)) - The list of email addresses.</li>
     </ul></dd>
-    <dt>Returns: object</dt>
-        <dd>The value of the variable.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_address"></a>
+<a name="add_to"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_address</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_to</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">to</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the name with the domain appended (if any).</p>
+  <p>Adds the given list of receipients to the 'to' field. Accepts the same
+  argument types as set_to().</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>to</code></strong> (string|list(string)) - The list of email addresses.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_bcc"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_bcc</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the value of the &quot;bcc&quot; field.</p>
+  <dl class="fields">
+    <dt>Returns: list(string)</dt>
+        <dd>The email addresses in the 'bcc' field.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_body"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_body</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the body of the mail.</p>
   <dl class="fields">
     <dt>Returns: string</dt>
-        <dd>The hostname including the domain name.</dd>
+        <dd>The body of the mail.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_domain"></a>
+<a name="get_cc"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_domain</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_cc</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the domain name.</p>
+  <p>Returns the value of the &quot;cc&quot; field.</p>
+  <dl class="fields">
+    <dt>Returns: list(string)</dt>
+        <dd>The email addresses in the 'cc' field.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_receipients"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_receipients</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a list of all receipients (to, cc, and bcc).</p>
+  <dl class="fields">
+    <dt>Returns: list(string)</dt>
+        <dd>The email addresses of all receipients.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_sender"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_sender</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns the value of the &quot;From:&quot; field.</p>
   <dl class="fields">
     <dt>Returns: string</dt>
-        <dd>The domain name.</dd>
+        <dd>The email address of the sender.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_name"></a>
+<a name="get_smtp_header"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_name</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_smtp_header</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the hostname, excluding the domain part.</p>
+  <p>Returns the SMTP formatted header of the line.</p>
   <dl class="fields">
     <dt>Returns: string</dt>
-        <dd>The hostname excluding the domain name.</dd>
+        <dd>The SMTP header.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_password"></a>
+<a name="get_smtp_mail"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_password</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_smtp_mail</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the password of the account that is used to log in.</p>
+  <p>Returns the SMTP formatted email, as it may be passed to sendmail.</p>
   <dl class="fields">
     <dt>Returns: string</dt>
-        <dd>The password.</dd>
+        <dd>The SMTP formatted mail.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_protocol"></a>
+<a name="get_subject"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_protocol</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_subject</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the name of the protocol.</p>
+  <p>Returns the subject line.</p>
   <dl class="fields">
     <dt>Returns: string</dt>
-        <dd>The protocol name.</dd>
+        <dd>The subject line.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_tcp_port"></a>
+<a name="get_to"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_tcp_port</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_to</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the TCP port number.</p>
+  <p>Returns the value of the &quot;to&quot; field.</p>
   <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The TCP port number.</dd>
+    <dt>Returns: list(string)</dt>
+        <dd>The email addresses in the 'to' field.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="get_username"></a>
+<a name="set_bcc"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_username</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_bcc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bcc</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the username of the account that is used to log in.</p>
-  <dl class="fields">
-    <dt>Returns: string</dt>
-        <dd>The username.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="has_key"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">has_key</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns True if the variable with the given name is defined, False 
-  otherwise.</p>
+  <p>Like set_to(), but for the 'bcc' field.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-    </ul></dd>
-    <dt>Returns: bool</dt>
-        <dd>Whether the variable is defined.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Stores the given variable/value in the object for later retrieval.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
+        <li><strong class="pname"><code>bcc</code></strong> (string|list(string)) - The email addresses for the 'bcc' field.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_address"></a>
+<a name="set_body"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_address</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">address</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_body</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">body</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Set the hostname/domain or IP address of the remote host without 
-  changing username, password, protocol, and TCP port number.</p>
+  <p>Defines the body of the mail.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>address</code></strong> (string) - A hostname or IP address.</li>
+        <li><strong class="pname"><code>body</code></strong> (string) - The new email body.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_default"></a>
+<a name="set_cc"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_default</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>,
-        <span class="sig-arg">value</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_cc</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">cc</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Like set(), but only sets the value if the variable is not already 
-  defined.</p>
+  <p>Like set_to(), but for the 'cc' field.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The name of the variable.</li>
-        <li><strong class="pname"><code>value</code></strong> (object) - The value of the variable.</li>
+        <li><strong class="pname"><code>cc</code></strong> (string|list(string)) - The email addresses for the 'cc' field.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_domain"></a>
+<a name="set_from_template_string"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_domain</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">domain</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_from_template_string</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">string</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Defines the domain name.</p>
+  <p>Reads the given template (SMTP formatted) and sets all fields 
+  accordingly.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>domain</code></strong> (string) - A domain name, or None for default.</li>
+        <li><strong class="pname"><code>string</code></strong> (string) - The template.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_name"></a>
+<a name="set_sender"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_name</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_sender</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">sender</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Defines the hostname, without changing the domain.</p>
+  <p>Defines the value of the &quot;From:&quot; field.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - A hostname or IP address.</li>
+        <li><strong class="pname"><code>sender</code></strong> (string) - The email address of the sender.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_password"></a>
+<a name="set_subject"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_password</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">password</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_subject</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">subject</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Defines the password of the account that is used to log in.</p>
+  <p>Defines the subject line.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>password</code></strong> (string) - The password.</li>
+        <li><strong class="pname"><code>subject</code></strong> (string) - The new subject line.</li>
     </ul></dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="set_protocol"></a>
+<a name="set_to"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_protocol</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">protocol</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_to</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">to</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Defines the protocol. The following protocols are currently 
-  supported:</p>
+  <p>Replaces the current list of receipients in the 'to' field by the 
+  given value. The value may be one of the following:</p>
   <ul>
     <li>
-      telnet: Telnet
+      A list of strings (email addresses).
     </li>
     <li>
-      ssh1: SSH version 1
-    </li>
-    <li>
-      ssh2: SSH version 2
-    </li>
-    <li>
-      ssh: Automatically selects the best supported SSH version
-    </li>
-    <li>
-      dummy: A virtual device that accepts any command, but that does not 
-      respond anything useful.
-    </li>
-    <li>
-      pseudo: A virtual device that loads a file with the given 
-      &quot;hostname&quot;. The given file is a Python file containing 
-      information on how the virtual device shall respond to commands. For 
-      more information please refer to the documentation of 
-      protocols.Dummy.load_command_handler_from_file().
+      A comma separated string containing one or more email addresses.
     </li>
   </ul>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>protocol</code></strong> (string) - The protocol name.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_tcp_port"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_tcp_port</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">tcp_port</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Defines the TCP port number.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>tcp_port</code></strong> (int) - The TCP port number.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_uri"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_uri</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">uri</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Defines the protocol, hostname, domain, TCP port number, username, and
-  password from the given URL. The hostname may be URL formatted, so the 
-  following formats are all valid:</p>
-  <ul>
-    <li>
-      myhostname
-    </li>
-    <li>
-      myhostname.domain
-    </li>
-    <li>
-      ssh:hostname
-    </li>
-    <li>
-      ssh:hostname.domain
-    </li>
-    <li>
-      ssh://hostname
-    </li>
-    <li>
-      ssh://user@hostname
-    </li>
-    <li>
-      ssh://user:password@hostname
-    </li>
-    <li>
-      ssh://user:password@hostname:21
-    </li>
-  </ul>
-  <p>For a list of supported protocols please see set_protocol().</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>uri</code></strong> (string) - An URL formatted hostname.</li>
-    </ul></dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="set_username"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">set_username</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">name</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Defines the username of the account that is used to log in.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>name</code></strong> (string) - The username.</li>
+        <li><strong class="pname"><code>to</code></strong> (string|list(string)) - The email addresses for the 'to' field.</li>
     </ul></dd>
   </dl>
 </td></tr></table>

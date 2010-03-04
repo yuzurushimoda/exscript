@@ -14,9 +14,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -56,6 +53,8 @@
 </table>
 <!-- ==================== MODULE DESCRIPTION ==================== -->
 <h1 class="epydoc">Module ipv4</h1><p class="nomargin-top"></p>
+<p>IPv4 address calculation and conversion.</p>
+
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -66,12 +65,12 @@
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
+      <span class="summary-type">string</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#is_ip" class="summary-sig-name">is_ip</a>(<span class="summary-sig-arg">string</span>)</span><br />
-      Returns True if the given string is an IPv4 address, False otherwise.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#int2ip" class="summary-sig-name">int2ip</a>(<span class="summary-sig-arg">number</span>)</span><br />
+      Converts the given integer value to an IP address.</td>
           <td align="right" valign="top">
             
             
@@ -100,46 +99,12 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
+      <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#int2ip" class="summary-sig-name">int2ip</a>(<span class="summary-sig-arg">number</span>)</span><br />
-      Converts the given integer value to an IP address.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">long</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask_int" class="summary-sig-name">pfxlen2mask_int</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
-      Converts the given prefix length to an IP mask value.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask" class="summary-sig-name">pfxlen2mask</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
-      Converts the given prefix length to an IP mask.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#is_ip" class="summary-sig-name">is_ip</a>(<span class="summary-sig-arg">string</span>)</span><br />
+      Returns True if the given string is an IPv4 address, False otherwise.</td>
           <td align="right" valign="top">
             
             
@@ -176,6 +141,40 @@
         <span class="summary-sig-arg">default_length</span>=<span class="summary-sig-default">24</span>)</span><br />
       Splits the given IP prefix into a network address and a prefix 
       length.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">string</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask" class="summary-sig-name">pfxlen2mask</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
+      Converts the given prefix length to an IP mask.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">long</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask_int" class="summary-sig-name">pfxlen2mask_int</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
+      Converts the given prefix length to an IP mask value.</td>
           <td align="right" valign="top">
             
             
@@ -229,29 +228,28 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
-<a name="is_ip"></a>
+<a name="int2ip"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_ip</span>(<span class="sig-arg">string</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">int2ip</span>(<span class="sig-arg">number</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns True if the given string is an IPv4 address, False 
-  otherwise.</p>
+  <p>Converts the given integer value to an IP address.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>string</code></strong> (string) - Any string.</li>
+        <li><strong class="pname"><code>number</code></strong> (long) - An IP as a number.</li>
     </ul></dd>
-    <dt>Returns: bool</dt>
-        <dd>True if the string is an IP address, False otherwise.</dd>
+    <dt>Returns: string</dt>
+        <dd>The IP address.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -280,78 +278,29 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="int2ip"></a>
+<a name="is_ip"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">int2ip</span>(<span class="sig-arg">number</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_ip</span>(<span class="sig-arg">string</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given integer value to an IP address.</p>
+  <p>Returns True if the given string is an IPv4 address, False 
+  otherwise.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>number</code></strong> (long) - An IP as a number.</li>
+        <li><strong class="pname"><code>string</code></strong> (string) - Any string.</li>
     </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The IP address.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="pfxlen2mask_int"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask_int</span>(<span class="sig-arg">pfxlen</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Converts the given prefix length to an IP mask value.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
-    </ul></dd>
-    <dt>Returns: long</dt>
-        <dd>The mask, as a long value.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="pfxlen2mask"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask</span>(<span class="sig-arg">pfxlen</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Converts the given prefix length to an IP mask.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
-    </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The mask.</dd>
+    <dt>Returns: bool</dt>
+        <dd>True if the string is an IP address, False otherwise.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -409,6 +358,56 @@
   </dl>
 </td></tr></table>
 </div>
+<a name="pfxlen2mask"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask</span>(<span class="sig-arg">pfxlen</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Converts the given prefix length to an IP mask.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
+    </ul></dd>
+    <dt>Returns: string</dt>
+        <dd>The mask.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="pfxlen2mask_int"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask_int</span>(<span class="sig-arg">pfxlen</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Converts the given prefix length to an IP mask value.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
+    </ul></dd>
+    <dt>Returns: long</dt>
+        <dd>The mask, as a long value.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="remote_ip"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -442,9 +441,6 @@
 <table class="navbar" border="0" width="100%" cellpadding="0"
        bgcolor="#a0c0ff" cellspacing="0">
   <tr valign="middle">
-  <!-- Home link -->
-      <th>&nbsp;&nbsp;&nbsp;<a
-        href="Exscript-module.html">Home</a>&nbsp;&nbsp;&nbsp;</th>
 
   <!-- Tree link -->
       <th>&nbsp;&nbsp;&nbsp;<a
@@ -469,7 +465,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Mon Dec 21 20:02:27 2009
+    Generated by Epydoc 3.0.1 on Thu Mar  4 20:08:37 2010
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
