@@ -56,7 +56,7 @@
 <pre class="base-tree">
        object --+    
                 |    
-<a href="Exscriptd.DBObject.DBObject-class.html">DBObject.DBObject</a> --+
+DBObject.DBObject --+
                     |
                    <strong class="uidshort">Order</strong>
 </pre>
@@ -73,26 +73,6 @@
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Instance Methods</span></td>
 </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">object</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscriptd.DBObject.DBObject-class.html#__getattr__" class="summary-sig-name">__getattr__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>)</span><br />
-      Overwritten to proxy any calls to the associated protocol adapter 
-      (decorator pattern).
-      <em>(Inherited from <a href="Exscriptd.DBObject.DBObject-class.html">Exscriptd.DBObject.DBObject</a>)</em></td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
@@ -119,27 +99,6 @@
         <tr>
           <td><span class="summary-sig"><a href="Exscriptd.Order%27.Order-class.html#__repr__" class="summary-sig-name">__repr__</a>(<span class="summary-sig-arg">self</span>)</span><br />
       repr(x)</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscriptd.DBObject.DBObject-class.html#__setattr__" class="summary-sig-name">__setattr__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">name</span>,
-        <span class="summary-sig-arg">value</span>)</span><br />
-      Overwritten to proxy any calls to the associated protocol adapter 
-      (decorator pattern).
-      <em>(Inherited from <a href="Exscriptd.DBObject.DBObject-class.html">Exscriptd.DBObject.DBObject</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -288,23 +247,6 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="is_dirty"></a><span class="summary-sig-name">is_dirty</span>(<span class="summary-sig-arg">self</span>)</span>
-      <em>(Inherited from <a href="Exscriptd.DBObject.DBObject-class.html">Exscriptd.DBObject.DBObject</a>)</em></td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -375,23 +317,6 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="touch"></a><span class="summary-sig-name">touch</span>(<span class="summary-sig-arg">self</span>)</span>
-      <em>(Inherited from <a href="Exscriptd.DBObject.DBObject-class.html">Exscriptd.DBObject.DBObject</a>)</em></td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">str</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -399,23 +324,6 @@
           <td><span class="summary-sig"><a href="Exscriptd.Order%27.Order-class.html#toxml" class="summary-sig-name">toxml</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pretty</span>=<span class="summary-sig-default">True</span>)</span><br />
       Returns the order as an XML formatted string.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="untouch"></a><span class="summary-sig-name">untouch</span>(<span class="summary-sig-arg">self</span>)</span>
-      <em>(Inherited from <a href="Exscriptd.DBObject.DBObject-class.html">Exscriptd.DBObject.DBObject</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -445,6 +353,13 @@
   </tr>
   <tr>
     <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>DBObject.DBObject</code></b>:
+      <code>__getattr__</code>,
+      <code>__setattr__</code>,
+      <code>is_dirty</code>,
+      <code>touch</code>,
+      <code>untouch</code>
+      </p>
     <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
       <code>__delattr__</code>,
       <code>__format__</code>,
@@ -1044,7 +959,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 06:07:30 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 06:36:19 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
