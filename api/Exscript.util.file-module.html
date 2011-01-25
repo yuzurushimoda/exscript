@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>Exscript.util.file</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
+        <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
+        Module&nbsp;file
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+      </table>
+    </td>
+  </tr>
+</table>
+<!-- ==================== MODULE DESCRIPTION ==================== -->
+<h1 class="epydoc">Module file</h1><p class="nomargin-top"></p>
+<p>Utilities for reading data from files.</p>
+
+<!-- ==================== FUNCTIONS ==================== -->
+<a name="section-Functions"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Functions</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Account]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.file-module.html#get_accounts_from_file" class="summary-sig-name">get_accounts_from_file</a>(<span class="summary-sig-arg">filename</span>)</span><br />
+      Reads a list of user/password combinations from the given file and 
+      returns a list of Account instances.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Host]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.file-module.html#get_hosts_from_csv" class="summary-sig-name">get_hosts_from_csv</a>(<span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">default_domain</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">encoding</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">utf-8</code><code class="variable-quote">'</code></span>)</span><br />
+      Reads a list of hostnames and variables from the tab-separated .csv 
+      file with the given name.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list[Host]</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.file-module.html#get_hosts_from_file" class="summary-sig-name">get_hosts_from_file</a>(<span class="summary-sig-arg">filename</span>,
+        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">default_domain</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">remove_duplicates</span>=<span class="summary-sig-default">False</span>,
+        <span class="summary-sig-arg">encoding</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">utf-8</code><code class="variable-quote">'</code></span>)</span><br />
+      Reads a list of hostnames from the file with the given name.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+</table>
+<!-- ==================== VARIABLES ==================== -->
+<a name="section-Variables"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Variables</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.util'"><code class="variable-quote">'</code><code class="variable-string">Exscript.util</code><code class="variable-quote">'</code></code>
+    </td>
+  </tr>
+</table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="get_accounts_from_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_accounts_from_file</span>(<span class="sig-arg">filename</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reads a list of user/password combinations from the given file and 
+  returns a list of Account instances. The file content has the following 
+  format:</p>
+<pre class="literalblock">
+   [account-pool]
+   user1 = cGFzc3dvcmQ=
+   user2 = cGFzc3dvcmQ=
+</pre>
+  <p>Note that &quot;cGFzc3dvcmQ=&quot; is a base64 encoded password. If 
+  the input file contains extra config sections other than 
+  &quot;account-pool&quot;, they are ignored. Each password needs to be 
+  base64 encrypted. To encrypt a password, you may use the following 
+  command:</p>
+<pre class="literalblock">
+   python -c 'import base64; print base64.b64encode(&quot;thepassword&quot;)'
+</pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>filename</code></strong> (string) - The name of the file containing the list of accounts.</li>
+    </ul></dd>
+    <dt>Returns: list[Account]</dt>
+        <dd>The newly created account instances.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_hosts_from_csv"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_hosts_from_csv</span>(<span class="sig-arg">filename</span>,
+        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">default_domain</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">encoding</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">utf-8</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reads a list of hostnames and variables from the tab-separated .csv 
+  file with the given name. The first line of the file must contain the 
+  column names, e.g.:</p>
+<pre class="literalblock">
+   address testvar1        testvar2
+   10.0.0.1        value1  othervalue
+   10.0.0.1        value2  othervalue2
+   10.0.0.2        foo     bar
+</pre>
+  <p>For the above example, the function returns *two* host objects, where 
+  the 'testvar1' variable of the first host holds a list containing two 
+  entries ('value1' and 'value2'), and the 'testvar1' variable of the 
+  second host contains a list with a single entry ('foo').</p>
+  <p>Both, the address and the hostname of each host are set to the address
+  given in the first column. If you want the hostname set to another value,
+  you may add a second column containing the hostname:</p>
+<pre class="literalblock">
+   address hostname        testvar
+   10.0.0.1        myhost  value
+   10.0.0.2        otherhost       othervalue
+</pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>filename</code></strong> (string) - A full filename.</li>
+        <li><strong class="pname"><code>default_protocol</code></strong> (str) - Passed to the Host constructor.</li>
+        <li><strong class="pname"><code>default_domain</code></strong> (str) - Appended to each hostname that has no domain.</li>
+        <li><strong class="pname"><code>encoding</code></strong> (str) - The encoding of the file.</li>
+    </ul></dd>
+    <dt>Returns: list[Host]</dt>
+        <dd>The newly created host instances.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_hosts_from_file"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_hosts_from_file</span>(<span class="sig-arg">filename</span>,
+        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">default_domain</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string"></code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">remove_duplicates</span>=<span class="sig-default">False</span>,
+        <span class="sig-arg">encoding</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">utf-8</code><code class="variable-quote">'</code></span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Reads a list of hostnames from the file with the given name.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>filename</code></strong> (string) - A full filename.</li>
+        <li><strong class="pname"><code>default_protocol</code></strong> (str) - Passed to the Host constructor.</li>
+        <li><strong class="pname"><code>default_domain</code></strong> (str) - Appended to each hostname that has no domain.</li>
+        <li><strong class="pname"><code>remove_duplicates</code></strong> (bool) - Whether duplicates are removed.</li>
+        <li><strong class="pname"><code>encoding</code></strong> (str) - The encoding of the file.</li>
+    </ul></dd>
+    <dt>Returns: list[Host]</dt>
+        <dd>The newly created host instances.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Project homepage -->
+      <th class="navbar" align="right" width="100%">
+        <table border="0" cellpadding="0" cellspacing="0">
+          <tr><th class="navbar" align="center"
+            >Exscript</th>
+          </tr></table></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Tue Jan 25 04:04:54 2011
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
