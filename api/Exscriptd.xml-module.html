@@ -68,6 +68,45 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="Exscriptd.xml-module.html#add_account_to_etree" class="summary-sig-name">add_account_to_etree</a>(<span class="summary-sig-arg">root</span>,
+        <span class="summary-sig-arg">tag</span>,
+        <span class="summary-sig-arg">account</span>)</span><br />
+      Given an account object, this function creates the syntax shown in 
+      get_host_from_etree() and adds it to the given node.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscriptd.xml-module.html#add_accounts_to_etree" class="summary-sig-name">add_accounts_to_etree</a>(<span class="summary-sig-arg">root</span>,
+        <span class="summary-sig-arg">accounts</span>)</span><br />
+      Given a list of accounts, this function creates the syntax shown in 
+      get_accounts_from_etree() and adds it to the given node.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">lxml.etree.ElementNode</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="Exscriptd.xml-module.html#add_dict_to_etree" class="summary-sig-name">add_dict_to_etree</a>(<span class="summary-sig-arg">root</span>,
         <span class="summary-sig-arg">tag</span>,
         <span class="summary-sig-arg">thedict</span>,
@@ -134,6 +173,42 @@
         <span class="summary-sig-arg">name</span>=<span class="summary-sig-default">None</span>)</span><br />
       Given a list, this function creates the syntax shown in 
       get_list_from_etree() and adds it to the given node.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">Exscript.Account</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscriptd.xml-module.html#get_account_from_etree" class="summary-sig-name">get_account_from_etree</a>(<span class="summary-sig-arg">node</span>)</span><br />
+      Given a &lt;account&gt; node, this function returns a 
+      Exscript.Account instance.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">list(Exscript.Account)</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscriptd.xml-module.html#get_accounts_from_etree" class="summary-sig-name">get_accounts_from_etree</a>(<span class="summary-sig-arg">node</span>)</span><br />
+      Given an lxml.etree node, this function looks for &lt;account&gt; 
+      tags and returns a list of Exscript.Account instances.</td>
           <td align="right" valign="top">
             
             
@@ -241,6 +316,63 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
+<a name="add_account_to_etree"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_account_to_etree</span>(<span class="sig-arg">root</span>,
+        <span class="sig-arg">tag</span>,
+        <span class="sig-arg">account</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given an account object, this function creates the syntax shown in 
+  get_host_from_etree() and adds it to the given node. Returns the new host
+  element.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>root</code></strong> (lxml.etree.ElementNode) - The node under which the new element is added.</li>
+        <li><strong class="pname"><code>tag</code></strong> (str) - The tag name of the new node.</li>
+        <li><strong class="pname"><code>account</code></strong> (Exscript.Account) - The account that is added.</li>
+    </ul></dd>
+    <dt>Returns: lxml.etree.ElementNode</dt>
+        <dd>The new node.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_accounts_to_etree"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_accounts_to_etree</span>(<span class="sig-arg">root</span>,
+        <span class="sig-arg">accounts</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a list of accounts, this function creates the syntax shown in 
+  get_accounts_from_etree() and adds it to the given node.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>root</code></strong> (lxml.etree.ElementNode) - The node under which the new elements are added.</li>
+        <li><strong class="pname"><code>accounts</code></strong> (list(Exscript.Account)) - A list of accounts.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="add_dict_to_etree"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -298,7 +430,7 @@
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>root</code></strong> (lxml.etree.ElementNode) - The node under which the new element is added.</li>
         <li><strong class="pname"><code>tag</code></strong> (str) - The tag name of the new node.</li>
-        <li><strong class="pname"><code>host</code></strong> (Exscript.Host) - A dictionary containing strings or lists.</li>
+        <li><strong class="pname"><code>host</code></strong> (Exscript.Host) - The host that is added.</li>
     </ul></dd>
     <dt>Returns: lxml.etree.ElementNode</dt>
         <dd>The new node.</dd>
@@ -361,6 +493,81 @@
     </ul></dd>
     <dt>Returns: lxml.etree.ElementNode</dt>
         <dd>The new node.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_account_from_etree"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_account_from_etree</span>(<span class="sig-arg">node</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given a &lt;account&gt; node, this function returns a Exscript.Account
+  instance. The following XML syntax is expected, whereby the children of 
+  &lt;account&gt; are all optional:</p>
+<pre class="literalblock">
+   &lt;account name=&quot;myaccount&quot;&gt;
+     &lt;password type=&quot;base64&quot;&gt;Zm9v&lt;/password&gt;
+     &lt;authorization-password type=&quot;cleartext&quot;&gt;bar&lt;/authorization-password&gt;
+   &lt;/account&gt;
+</pre>
+  <p>The &lt;password&gt; and &lt;authorization-password&gt; tags have an 
+  optional type attribute defaulting to 'cleartext'. Allowed values are 
+  'cleartext' and 'base64'.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>node</code></strong> (lxml.etree.ElementNode) - A &lt;account&gt; element.</li>
+    </ul></dd>
+    <dt>Returns: Exscript.Account</dt>
+        <dd>The resulting account.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="get_accounts_from_etree"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_accounts_from_etree</span>(<span class="sig-arg">node</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Given an lxml.etree node, this function looks for &lt;account&gt; tags
+  and returns a list of Exscript.Account instances. The following XML 
+  syntax is expected:</p>
+<pre class="literalblock">
+   &lt;root&gt;
+      &lt;account name=&quot;one&quot;/&gt;
+      &lt;account name=&quot;two&quot;&gt;
+        ...
+      &lt;/account&gt;
+      ...
+   &lt;/root&gt;
+</pre>
+  <p>The individual accounts are parsed using <a 
+  href="Exscriptd.xml-module.html#get_account_from_etree" 
+  class="link">get_account_from_etree()</a>.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>node</code></strong> (lxml.etree.ElementNode) - A node containing &lt;account&gt; elements.</li>
+    </ul></dd>
+    <dt>Returns: list(Exscript.Account)</dt>
+        <dd>A list of accounts.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -541,7 +748,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 06:36:19 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

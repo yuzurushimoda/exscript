@@ -56,7 +56,7 @@
 <pre class="base-tree">
 object --+    
          |    
- <a href="Exscript.protocols.Transport-class.html">Transport</a> --+
+  <a href="Exscript.protocols.Protocol-class.html">Protocol</a> --+
              |
             <strong class="uidshort">Telnet</strong>
 </pre>
@@ -74,14 +74,14 @@ object --+
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Transport</span>
+      <span class="summary-type">Protocol</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#__copy__" class="summary-sig-name">__copy__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#__copy__" class="summary-sig-name">__copy__</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Overwritten to return the very same object instead of copying the 
       stream, because copying a network connection is impossible.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -93,15 +93,15 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Transport</span>
+      <span class="summary-type">Protocol</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#__deepcopy__" class="summary-sig-name">__deepcopy__</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#__deepcopy__" class="summary-sig-name">__deepcopy__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">memo</span>)</span><br />
       Overwritten to return the very same object instead of copying the 
       stream, because copying a network connection is impossible.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -135,11 +135,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#app_authenticate" class="summary-sig-name">app_authenticate</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#app_authenticate" class="summary-sig-name">app_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Attempt to perform application-level authentication.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -155,12 +155,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#app_authorize" class="summary-sig-name">app_authorize</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#app_authorize" class="summary-sig-name">app_authorize</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Like app_authenticate(), but uses the authorization password of the 
       account.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -176,12 +176,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">app_account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Like login(), but skips the authorization procedure.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -197,13 +197,13 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#auto_app_authorize" class="summary-sig-name">auto_app_authorize</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#auto_app_authorize" class="summary-sig-name">auto_app_authorize</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Like authorize(), but instead of just waiting for a user or password 
       prompt, it automatically initiates the authorization procedure by 
       sending a driver-specific command.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -219,10 +219,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#autoinit" class="summary-sig-name">autoinit</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#autoinit" class="summary-sig-name">autoinit</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Make the remote host more script-friendly by automatically executing 
       one or more commands on it.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -274,31 +274,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">hostname</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">port</span>=<span class="summary-sig-default">None</span>)</span><br />
       Opens the connection to the remote host or IP address.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">command</span>)</span><br />
-      Sends the given data to the remote host (with a newline appended) and
-      waits for a prompt in the response.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -314,11 +294,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#expect" class="summary-sig-name">expect</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">prompt</span>)</span><br />
-      Like waitfor(), but also removes the matched string from the buffer 
-      containing the incoming data.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#execute" class="summary-sig-name">execute</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">command</span>)</span><br />
+      Sends the given data to the remote host (with a newline appended) and
+      waits for a prompt in the response.
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -330,14 +310,34 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
+      <span class="summary-type">int, re.MatchObject</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#expect_prompt" class="summary-sig-name">expect_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#expect" class="summary-sig-name">expect</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">prompt</span>)</span><br />
+      Like waitfor(), but also removes the matched string from the buffer 
+      containing the incoming data.
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int, re.MatchObject</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#expect_prompt" class="summary-sig-name">expect_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Monitors the data received from the remote host and waits for a 
       prompt in the response.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -353,9 +353,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_driver" class="summary-sig-name">get_driver</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_driver" class="summary-sig-name">get_driver</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the currently used driver.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -371,10 +371,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_error_prompt" class="summary-sig-name">get_error_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_error_prompt" class="summary-sig-name">get_error_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the regular expression that is used to monitor the response 
       of the connected host for errors.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -390,9 +390,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_host" class="summary-sig-name">get_host</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_host" class="summary-sig-name">get_host</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the name or address of the currently connected host.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -408,11 +408,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_login_error_prompt" class="summary-sig-name">get_login_error_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_login_error_prompt" class="summary-sig-name">get_login_error_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the regular expression that is used to monitor the response 
       of the connected host for login errors; this is only used during the 
       login procedure, i.e.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -428,10 +428,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_password_prompt" class="summary-sig-name">get_password_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_password_prompt" class="summary-sig-name">get_password_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the regular expression that is used to monitor the response 
       of the connected host for a username prompt.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -447,10 +447,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_prompt" class="summary-sig-name">get_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_prompt" class="summary-sig-name">get_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the regular expressions that is matched against the host 
       response when calling the expect_prompt() method.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -466,9 +466,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_timeout" class="summary-sig-name">get_timeout</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_timeout" class="summary-sig-name">get_timeout</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the current timeout in seconds.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -484,10 +484,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#get_username_prompt" class="summary-sig-name">get_username_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_username_prompt" class="summary-sig-name">get_username_prompt</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns the regular expression that is used to monitor the response 
       of the connected host for a username prompt.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -503,10 +503,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#guess_os" class="summary-sig-name">guess_os</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#guess_os" class="summary-sig-name">guess_os</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns an identifer that specifies the operating system that is 
       running on the remote host.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -522,10 +522,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_app_authenticated" class="summary-sig-name">is_app_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#is_app_authenticated" class="summary-sig-name">is_app_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns True if the application-level authentication procedure was 
       completed, False otherwise.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -541,10 +541,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_app_authorized" class="summary-sig-name">is_app_authorized</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#is_app_authorized" class="summary-sig-name">is_app_authorized</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns True if the application-level authorization procedure was 
       completed, False otherwise.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -560,9 +560,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns True if the adapter implements a virtual device, i.e.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -578,10 +578,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_protocol_authenticated" class="summary-sig-name">is_protocol_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#is_protocol_authenticated" class="summary-sig-name">is_protocol_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
       Returns True if the protocol-level authentication procedure was 
       completed, False otherwise.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -597,12 +597,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#login" class="summary-sig-name">login</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#login" class="summary-sig-name">login</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">app_account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Log into the connected host using the best method available.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -618,11 +618,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#protocol_authenticate" class="summary-sig-name">protocol_authenticate</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#protocol_authenticate" class="summary-sig-name">protocol_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>)</span><br />
       Low-level API to perform protocol-level authentification on protocols
       that support it.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -656,11 +656,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_driver" class="summary-sig-name">set_driver</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_driver" class="summary-sig-name">set_driver</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">driver</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines the driver that is used to recognize prompts and implement 
       behavior depending on the remote system.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -676,11 +676,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_error_prompt" class="summary-sig-name">set_error_prompt</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_error_prompt" class="summary-sig-name">set_error_prompt</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">error</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines a pattern that is used to monitor the response of the 
       connected host.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -696,11 +696,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_login_error_prompt" class="summary-sig-name">set_login_error_prompt</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_login_error_prompt" class="summary-sig-name">set_login_error_prompt</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">error</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines a pattern that is used to monitor the response of the 
       connected host during the authentication procedure.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -716,11 +716,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_password_prompt" class="summary-sig-name">set_password_prompt</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_password_prompt" class="summary-sig-name">set_password_prompt</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">regex</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines a pattern that is used to monitor the response of the 
       connected host for a password prompt.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -736,11 +736,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_prompt" class="summary-sig-name">set_prompt</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_prompt" class="summary-sig-name">set_prompt</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prompt</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines a pattern that is waited for when calling the expect_prompt()
       method.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -756,11 +756,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_timeout" class="summary-sig-name">set_timeout</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_timeout" class="summary-sig-name">set_timeout</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">timeout</span>)</span><br />
       Defines the maximum time that the adapter waits before a call to 
       expect() or expect_prompt() fails.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -776,11 +776,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#set_username_prompt" class="summary-sig-name">set_username_prompt</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_username_prompt" class="summary-sig-name">set_username_prompt</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">regex</span>=<span class="summary-sig-default">None</span>)</span><br />
       Defines a pattern that is used to monitor the response of the 
       connected host for a username prompt.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -796,11 +796,11 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#waitfor" class="summary-sig-name">waitfor</a>(<span class="summary-sig-arg">self</span>,
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#waitfor" class="summary-sig-name">waitfor</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">prompt</span>)</span><br />
       Monitors the data received from the remote host and waits until the 
       response matches the given prompt.
-      <em>(Inherited from <a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a>)</em></td>
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -916,10 +916,10 @@ object --+
   
   <p>Cancel the current call to expect() as soon as control returns to the 
   protocol adapter. This method may be used in callbacks to the events 
-  emitted by this class, e.g. Transport.data_received_event.</p>
+  emitted by this class, e.g. Protocol.data_received_event.</p>
   <dl class="fields">
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport-class.html#cancel_expect">Transport.cancel_expect</a>
+        <a href="Exscript.protocols.Protocol-class.html#cancel_expect">Protocol.cancel_expect</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -943,7 +943,7 @@ object --+
   <p>Closes the connection with the remote host.</p>
   <dl class="fields">
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport-class.html#close">Transport.close</a>
+        <a href="Exscript.protocols.Protocol-class.html#close">Protocol.close</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -974,7 +974,7 @@ object --+
     <dt>Returns: Boolean</dt>
         <dd>True on success, False otherwise.</dd>
     <dt>Overrides:
-        <a href="Exscript.protocols.Transport-class.html#send">Transport.send</a>
+        <a href="Exscript.protocols.Protocol-class.html#send">Protocol.send</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -1009,7 +1009,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 06:36:19 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

@@ -224,16 +224,15 @@
     <li> <strong class="uidlink">exceptions.Exception</strong>:
       <em class="summary">Common base class for all non-exit exceptions.</em>
     <ul>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.TransportException-class.html">Exscript.protocols.Exception.TransportException</a></strong>:
-      <em class="summary">Default exception that is thrown on most transport related errors.</em>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.ProtocolException-class.html">Exscript.protocols.Exception.ProtocolException</a></strong>:
+      <em class="summary">Default exception that is thrown on most protocol related errors.</em>
     <ul>
     <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.DriverReplacedException-class.html">Exscript.protocols.Exception.DriverReplacedException</a></strong>:
-      <em class="summary">An exception that is thrown if the transport driver was switched 
+      <em class="summary">An exception that is thrown if the protocol driver was switched 
         during a call to expect().</em>
     </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.ExpectCancelledException-class.html">Exscript.protocols.Exception.ExpectCancelledException</a></strong>:
-      <em class="summary">An exception that is thrown if Transport.cancel_expect() was 
-        called.</em>
+      <em class="summary">An exception that is thrown if Protocol.cancel_expect() was called.</em>
     </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.InvalidCommandException-class.html">Exscript.protocols.Exception.InvalidCommandException</a></strong>:
       <em class="summary">An exception that is thrown if the response of a connected host 
@@ -261,7 +260,7 @@
       <em class="summary">A set of commands to be used by the Dummy adapter.</em>
     </li>
     <li> <strong class="uidlink"><a href="Exscript.Connection.Connection-class.html">Exscript.Connection.Connection</a></strong>:
-      <em class="summary">This class is a decorator for protocols.Transport objects that adds
+      <em class="summary">This class is a decorator for protocols.Protocol objects that adds 
         thread safety by adding locking to the authenticate() and 
         authorize() functions.</em>
     </li>
@@ -316,9 +315,6 @@
       <em class="summary">Process objects represent activity that is run in a separate 
         process</em>
     <ul>
-    <li> <strong class="uidlink"><a href="Exscript.util.sshd.SSHd-class.html">Exscript.util.sshd.SSHd</a></strong>:
-      <em class="summary">A SSH server.</em>
-    </li>
     <li> <strong class="uidlink"><a href="Exscript.servers.Server.Server-class.html">Exscript.servers.Server.Server</a></strong>:
       <em class="summary">Base class of all servers.</em>
     <ul>
@@ -329,6 +325,23 @@
       <em class="summary">A Telnet server.</em>
     </li>
     </ul>
+    </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a></strong>:
+      <em class="summary">This is the base class for all protocols; it defines the common 
+        portions of the API.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Dummy-class.html">Exscript.protocols.Dummy</a></strong>:
+      <em class="summary">This protocol adapter does not open a network connection, but talks
+        to a <a href="Exscript.emulators.VirtualDevice-class.html" 
+        class="link">Exscript.emulators.VirtualDevice</a> internally.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH2-class.html">Exscript.protocols.SSH2</a></strong>:
+      <em class="summary">The secure shell protocol version 2 adapter, based on Paramiko.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.Telnet-class.html">Exscript.protocols.Telnet</a></strong>:
+      <em class="summary">The Telnet protocol adapter.</em>
     </li>
     </ul>
     </li>
@@ -355,23 +368,6 @@
     </li>
     <li> <strong class="uidlink"><a href="Exscript.Task.Task-class.html">Exscript.Task.Task</a></strong>:
       <em class="summary">Represents a batch of running actions.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Transport-class.html">Exscript.protocols.Transport</a></strong>:
-      <em class="summary">This is the base class for all protocols; it defines the common 
-        portions of the API.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Dummy-class.html">Exscript.protocols.Dummy</a></strong>:
-      <em class="summary">This protocol adapter does not open a network connection, but talks
-        to a <a href="Exscript.emulators.VirtualDevice-class.html" 
-        class="link">Exscript.emulators.VirtualDevice</a> internally.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.SSH2-class.html">Exscript.protocols.SSH2</a></strong>:
-      <em class="summary">The secure shell protocol version 2 adapter, based on Paramiko.</em>
-    </li>
-    <li> <strong class="uidlink"><a href="Exscript.protocols.Telnet-class.html">Exscript.protocols.Telnet</a></strong>:
-      <em class="summary">The Telnet protocol adapter.</em>
-    </li>
-    </ul>
     </li>
     <li> <strong class="uidlink"><a href="Exscript.util.url.Url-class.html">Exscript.util.url.Url</a></strong>:
       <em class="summary">Represents a URL.</em>
@@ -420,7 +416,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 06:36:18 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:13 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

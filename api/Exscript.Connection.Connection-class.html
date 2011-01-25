@@ -60,11 +60,11 @@ object --+
 </pre>
 
 <hr />
-<p>This class is a decorator for protocols.Transport objects that adds 
+<p>This class is a decorator for protocols.Protocol objects that adds 
   thread safety by adding locking to the authenticate() and authorize() 
   functions. It also provides access to the associated Queue and Host 
   instances.</p>
-  <p>For complete documentation, please refer to the protocols.Transport 
+  <p>For complete documentation, please refer to the protocols.Protocol 
   documentation.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
@@ -77,7 +77,7 @@ object --+
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Transport</span>
+      <span class="summary-type">Protocol</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -95,7 +95,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Transport</span>
+      <span class="summary-type">Protocol</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -139,7 +139,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">action</span>,
-        <span class="summary-sig-arg">transport</span>)</span><br />
+        <span class="summary-sig-arg">protocol</span>)</span><br />
       Do not call directly; Exscript creates the connection for you and 
       passes it to the function that is invoked by Queue.run().</td>
           <td align="right" valign="top">
@@ -180,7 +180,7 @@ object --+
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#app_authenticate" class="summary-sig-name">app_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Like protocols.Transport.app_authenticate(), but makes sure to 
+      Like protocols.Protocol.app_authenticate(), but makes sure to 
       lock/release the account while it is used.</td>
           <td align="right" valign="top">
             
@@ -219,7 +219,7 @@ object --+
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Like protocols.Transport.authenticate(), but makes sure to 
+      Like protocols.Protocol.authenticate(), but makes sure to 
       lock/release the account while it is used.</td>
           <td align="right" valign="top">
             
@@ -241,6 +241,23 @@ object --+
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Executes a command on the remote host that causes an authorization 
       procedure to be started, then authorizes using app_authorize().</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="connect"></a><span class="summary-sig-name">connect</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Opens the connection to the remote host.</td>
           <td align="right" valign="top">
             
             
@@ -327,25 +344,8 @@ object --+
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#login" class="summary-sig-name">login</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Like protocols.Transport.login(), but makes sure to lock/release the 
+      Like protocols.Protocol.login(), but makes sure to lock/release the 
       account while it is used.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">&nbsp;</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a name="open"></a><span class="summary-sig-name">open</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Opens the connection to the remote host.</td>
           <td align="right" valign="top">
             
             
@@ -363,7 +363,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#protocol_authenticate" class="summary-sig-name">protocol_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Like protocols.Transport.protocol_authenticate(), but makes sure to 
+      Like protocols.Protocol.protocol_authenticate(), but makes sure to 
       lock/release the account while it is used.</td>
           <td align="right" valign="top">
             
@@ -434,7 +434,7 @@ object --+
   <p>Overwritten to return the very same object instead of copying the 
   stream, because copying a network connection is impossible.</p>
   <dl class="fields">
-    <dt>Returns: Transport</dt>
+    <dt>Returns: Protocol</dt>
         <dd>self</dd>
   </dl>
 </td></tr></table>
@@ -461,7 +461,7 @@ object --+
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>memo</code></strong> (object) - Please refer to Python's standard library documentation.</li>
     </ul></dd>
-    <dt>Returns: Transport</dt>
+    <dt>Returns: Protocol</dt>
         <dd>self</dd>
   </dl>
 </td></tr></table>
@@ -490,7 +490,7 @@ object --+
         <li><strong class="pname"><code>name</code></strong> (string) - The attribute name.</li>
     </ul></dd>
     <dt>Returns: object</dt>
-        <dd>Whatever the transport adapter returns.</dd>
+        <dd>Whatever the protocol adapter returns.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -503,7 +503,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">action</span>,
-        <span class="sig-arg">transport</span>)</span>
+        <span class="sig-arg">protocol</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -517,8 +517,8 @@ object --+
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>action</code></strong> (HostAction) - The associated HostAction instance.</li>
-        <li><strong class="pname"><code>transport</code></strong> (<a href="Exscript.protocols.Transport-class.html" 
-          class="link">protocols.Transport</a>) - The Transport object that is decorated.</li>
+        <li><strong class="pname"><code>protocol</code></strong> (<a href="Exscript.protocols.Protocol-class.html" 
+          class="link">protocols.Protocol</a>) - The Protocol object that is decorated.</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -572,7 +572,7 @@ object --+
     </td>
   </tr></table>
   
-  <p>Like protocols.Transport.app_authenticate(), but makes sure to 
+  <p>Like protocols.Protocol.app_authenticate(), but makes sure to 
   lock/release the account while it is used. If an account is not given, 
   one is acquired from the account manager. Returns the account that was 
   used to log in.</p>
@@ -632,10 +632,10 @@ object --+
     </td>
   </tr></table>
   
-  <p>Like protocols.Transport.authenticate(), but makes sure to 
-  lock/release the account while it is used. If an account is not given, 
-  one is acquired from the account manager. Returns the account that was 
-  used to log in.</p>
+  <p>Like protocols.Protocol.authenticate(), but makes sure to lock/release
+  the account while it is used. If an account is not given, one is acquired
+  from the account manager. Returns the account that was used to log 
+  in.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -790,7 +790,7 @@ object --+
     </td>
   </tr></table>
   
-  <p>Like protocols.Transport.login(), but makes sure to lock/release the 
+  <p>Like protocols.Protocol.login(), but makes sure to lock/release the 
   account while it is used. If an account is not given, one is acquired 
   from the account manager. Returns the account that was used to log 
   in.</p>
@@ -820,7 +820,7 @@ object --+
     </td>
   </tr></table>
   
-  <p>Like protocols.Transport.protocol_authenticate(), but makes sure to 
+  <p>Like protocols.Protocol.protocol_authenticate(), but makes sure to 
   lock/release the account while it is used. If an account is not given, 
   one is acquired from the account manager. Returns the account that was 
   used to log in.</p>
@@ -863,7 +863,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 06:36:19 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
