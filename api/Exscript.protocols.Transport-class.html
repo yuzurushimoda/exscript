@@ -201,7 +201,7 @@ object --+
   <p>We jhide the following methods behind the login() call:</p>
 <pre class="literalblock">
    # Protocol level authentification.
-   conn.authenticate(...)
+   conn.protocol_authenticate(...)
    # App-level authentification.
    conn.app_authenticate(...)
    # App-level authorization.
@@ -210,23 +210,23 @@ object --+
   <p>The code produces the following result:</p>
 <pre class="literalblock">
    Telnet:
-       conn.authenticate -&gt; NOP
+       conn.protocol_authenticate -&gt; NOP
        conn.app_authenticate
            -&gt; waits for username or password prompt, authenticates,
               returns after a CLI prompt was seen.
        conn.app_authorize
-           -&gt; calls driver.enable(), waits for username or password prompt,
-              authorizes, returns after a CLI prompt was seen.
+           -&gt; calls driver.enable(), waits for username or password
+              prompt, authorizes, returns after a CLI prompt was seen.
 
    SSH:
-       conn.authenticate -&gt; authenticates using user/key/password
+       conn.protocol_authenticate -&gt; authenticates using user/key/password
        conn.app_authenticate -&gt; like Telnet
        conn.app_authorize -&gt; like Telnet
 </pre>
   <p>We can see the following:</p>
   <ul>
     <li>
-      authenticate() must not wait for a prompt, because else 
+      protocol_authenticate() must not wait for a prompt, because else 
       app_authenticate() has no way of knowing whether an app-level login 
       is even necessary.
     </li>
@@ -371,9 +371,9 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#authenticate" class="summary-sig-name">authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">app_account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Low-level API to perform protocol-level authentification on protocols
-      that support it.</td>
+      Like login(), but skips the authorization procedure.</td>
           <td align="right" valign="top">
             
             
@@ -731,13 +731,12 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
+      <span class="summary-type">Boolean</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_authenticated" class="summary-sig-name">is_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns True if the protocol-level authentication procedure was 
-      completed, False otherwise.</td>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the adapter implements a virtual device, i.e.</td>
           <td align="right" valign="top">
             
             
@@ -749,12 +748,13 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Boolean</span>
+      <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_dummy" class="summary-sig-name">is_dummy</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns True if the adapter implements a virtual device, i.e.</td>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#is_protocol_authenticated" class="summary-sig-name">is_protocol_authenticated</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the protocol-level authentication procedure was 
+      completed, False otherwise.</td>
           <td align="right" valign="top">
             
             
@@ -775,6 +775,25 @@ object --+
         <span class="summary-sig-arg">app_account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
       Log into the connected host using the best method available.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Transport-class.html#protocol_authenticate" class="summary-sig-name">protocol_authenticate</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Low-level API to perform protocol-level authentification on protocols
+      that support it.</td>
           <td align="right" valign="top">
             
             
@@ -1172,6 +1191,7 @@ object --+
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">authenticate</span>(<span class="sig-arg">self</span>,
         <span class="sig-arg">account</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">app_account</span>=<span class="sig-default">None</span>,
         <span class="sig-arg">flush</span>=<span class="sig-default">True</span>)</span>
   </h3>
   </td><td align="right" valign="top"
@@ -1179,18 +1199,23 @@ object --+
     </td>
   </tr></table>
   
-  <p>Low-level API to perform protocol-level authentification on protocols 
-  that support it.</p>
+  <p>Like login(), but skips the authorization procedure.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - An account object, like login().</li>
-        <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to expect/flush the first prompt.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account) - The account for protocol level authentification.</li>
+        <li><strong class="pname"><code>app_account</code></strong> (Account) - The account for app level authentification.</li>
+        <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
   </dl>
 <div class="fields">      <p><strong>Note:</strong>
-        In most cases, you want to use the login() method instead, as it 
-        automatically chooses the best login method for each protocol.
+        If you are unsure whether to use <a 
+        href="Exscript.protocols.Transport-class.html#authenticate" 
+        class="link">authenticate()</a> or <a 
+        href="Exscript.protocols.Transport-class.html#login" 
+        class="link">login()</a>, stick with <a 
+        href="Exscript.protocols.Transport-class.html#login" 
+        class="link">login</a>.
       </p>
 </div></td></tr></table>
 </div>
@@ -1473,7 +1498,7 @@ object --+
   
   <p>Returns the regular expression that is used to monitor the response of
   the connected host for login errors; this is only used during the login 
-  procedure, i.e. authenticate() or authorize().</p>
+  procedure, i.e. app_authenticate() or app_authorize().</p>
   <dl class="fields">
     <dt>Returns: regex</dt>
         <dd>A regular expression.</dd>
@@ -1637,28 +1662,6 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="is_authenticated"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_authenticated</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns True if the protocol-level authentication procedure was 
-  completed, False otherwise.</p>
-  <dl class="fields">
-    <dt>Returns: bool</dt>
-        <dd>Whether the authentication was completed.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="is_dummy"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -1678,6 +1681,28 @@ object --+
   <dl class="fields">
     <dt>Returns: Boolean</dt>
         <dd>True for dummy adapters, False for network adapters.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="is_protocol_authenticated"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_protocol_authenticated</span>(<span class="sig-arg">self</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns True if the protocol-level authentication procedure was 
+  completed, False otherwise.</p>
+  <dl class="fields">
+    <dt>Returns: bool</dt>
+        <dd>Whether the authentication was completed.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -1703,8 +1728,12 @@ object --+
   last call to login(). If a previous call was not made, use the account 
   that was passed to the constructor. If that also fails, raise a 
   TypeError.</p>
-  <p>The app_account is passed to app_authenticate. If app_account is not 
-  given, default to the value of the account argument.</p>
+  <p>The app_account is passed to <a 
+  href="Exscript.protocols.Transport-class.html#app_authenticate" 
+  class="link">app_authenticate()</a> and <a 
+  href="Exscript.protocols.Transport-class.html#app_authorize" 
+  class="link">app_authorize()</a>. If app_account is not given, default to
+  the value of the account argument.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
@@ -1714,6 +1743,35 @@ object --+
     </ul></dd>
   </dl>
 </td></tr></table>
+</div>
+<a name="protocol_authenticate"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">protocol_authenticate</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">account</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Low-level API to perform protocol-level authentification on protocols 
+  that support it.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>account</code></strong> (Account) - An account object, like login().</li>
+    </ul></dd>
+  </dl>
+<div class="fields">      <p><strong>Note:</strong>
+        In most cases, you want to use the login() method instead, as it 
+        automatically chooses the best login method for each protocol.
+      </p>
+</div></td></tr></table>
 </div>
 <a name="send"></a>
 <div>
@@ -2002,7 +2060,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 05:34:08 2011
+    Generated by Epydoc 3.0.1 on Tue Jan 25 06:07:30 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
