@@ -55,6 +55,24 @@
 <h1 class="epydoc">Module interact</h1><p class="nomargin-top"></p>
 <p>Tools for interacting with the user on the command line.</p>
 
+<!-- ==================== CLASSES ==================== -->
+<a name="section-Classes"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Classes</span></td>
+</tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.util.interact.InputHistory-class.html" class="summary-name">InputHistory</a><br />
+      When prompting a user for input it is often useful to record his 
+        input in a file, and use previous input as a default value.
+    </td>
+  </tr>
+</table>
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -63,6 +81,28 @@
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Functions</span></td>
 </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#get_filename" class="summary-sig-name">get_filename</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">history</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Like <a href="Exscript.util.interact-module.html#prompt" 
+      class="link">prompt()</a>, but only accepts the name of an existing 
+      file as an input.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">(string, string)</span>
@@ -90,6 +130,28 @@
           <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#get_user" class="summary-sig-name">get_user</a>()</span><br />
       Prompts the user for his login name, defaulting to the USER 
       environment variable.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.interact-module.html#prompt" class="summary-sig-name">prompt</a>(<span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">message</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">strip</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">check</span>=<span class="summary-sig-default">None</span>,
+        <span class="summary-sig-arg">history</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Prompt the user for input.</td>
           <td align="right" valign="top">
             
             
@@ -142,6 +204,40 @@
     <span class="table-header">Function Details</span></td>
 </tr>
 </table>
+<a name="get_filename"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_filename</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">history</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Like <a href="Exscript.util.interact-module.html#prompt" 
+  class="link">prompt()</a>, but only accepts the name of an existing file 
+  as an input.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The key under which to store the input in the <a 
+          href="Exscript.util.interact.InputHistory-class.html" 
+          class="link">InputHistory</a>.</li>
+        <li><strong class="pname"><code>message</code></strong> (str) - The user prompt.</li>
+        <li><strong class="pname"><code>default</code></strong> (str|None) - The offered default if none was found in the history.</li>
+        <li><strong class="pname"><code>history</code></strong> (<a href="Exscript.util.interact.InputHistory-class.html" 
+          class="link">InputHistory</a>|None) - The history used for recording default values, or None.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="get_login"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -185,6 +281,87 @@
   <dl class="fields">
     <dt>Returns: string</dt>
         <dd>A username.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="prompt"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">prompt</span>(<span class="sig-arg">key</span>,
+        <span class="sig-arg">message</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">strip</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">check</span>=<span class="sig-default">None</span>,
+        <span class="sig-arg">history</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Prompt the user for input. This function is similar to Python's built 
+  in raw_input, with the following differences:</p>
+  <ul>
+    <li>
+      You may specify a default value that is returned if the user presses 
+      &quot;enter&quot; without entering anything.
+    </li>
+    <li>
+      The user's input is recorded in a config file, and offered as the 
+      default value the next time this function is used (based on the key 
+      argument).
+    </li>
+  </ul>
+  <p>The config file is based around the <a 
+  href="Exscript.util.interact.InputHistory-class.html" 
+  class="link">InputHistory</a>. If a history object is not passed in the 
+  history argument, a new one will be created.</p>
+  <p>The key argument specifies under which name the input is saved in the 
+  config file.</p>
+  <p>The given default value is only used if a default was not found in the
+  history.</p>
+  <p>The strip argument specifies that the returned value should be 
+  stripped of whitespace (default).</p>
+  <p>The check argument allows for validating the input; if the validation 
+  fails, the user is prompted again before the value is stored in the 
+  InputHistory. Example usage:</p>
+<pre class="literalblock">
+   def validate(input):
+       if len(input) &lt; 4:
+           return 'Please enter at least 4 characters!'
+   value = prompt('test', 'Enter a value', 'My Default', check = validate)
+   print 'You entered:', value
+</pre>
+  <p>This leads to the following output:</p>
+<pre class="literalblock">
+   Please enter a value [My Default]: abc
+   Please enter at least 4 characters!
+   Please enter a value [My Default]: Foobar
+   You entered: Foobar
+</pre>
+  <p>The next time the same code is started, the input 'Foobar' is 
+  remembered:</p>
+<pre class="literalblock">
+   Please enter a value [Foobar]:        (enters nothing)
+   You entered: Foobar
+</pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The key under which to store the input in the <a 
+          href="Exscript.util.interact.InputHistory-class.html" 
+          class="link">InputHistory</a>.</li>
+        <li><strong class="pname"><code>message</code></strong> (str) - The user prompt.</li>
+        <li><strong class="pname"><code>default</code></strong> (str|None) - The offered default if none was found in the history.</li>
+        <li><strong class="pname"><code>strip</code></strong> (bool) - Whether to remove whitespace from the input.</li>
+        <li><strong class="pname"><code>check</code></strong> (callable) - A function that is called for validating the input.</li>
+        <li><strong class="pname"><code>history</code></strong> (<a href="Exscript.util.interact.InputHistory-class.html" 
+          class="link">InputHistory</a>|None) - The history used for recording default values, or None.</li>
+    </ul></dd>
   </dl>
 </td></tr></table>
 </div>
@@ -238,7 +415,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:37 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

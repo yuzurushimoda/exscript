@@ -102,6 +102,14 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
+        <a href="Exscript.Account-class.html" class="summary-name">Account</a><br />
+      This class represents a user account.
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
         <a href="Exscript.protocols.Dummy-class.html" class="summary-name">Dummy</a><br />
       This protocol adapter does not open a network connection, but talks
         to a <a href="Exscript.emulators.VirtualDevice-class.html" 
@@ -133,6 +141,14 @@
       The Telnet protocol adapter.
     </td>
   </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+        <a href="Exscript.util.url.Url-class.html" class="summary-name">Url</a><br />
+      Represents a URL.
+    </td>
+  </tr>
 </table>
 <!-- ==================== FUNCTIONS ==================== -->
 <a name="section-Functions"></a>
@@ -142,6 +158,30 @@
   <td align="left" colspan="2" class="table-header">
     <span class="table-header">Functions</span></td>
 </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols-module.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">uri</span>,
+        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Parses the given URL-formatted hostname using <a 
+      href="Exscript.util.url-module.html" class="link" 
+      onclick="show_private();">Exscript.util.url</a>, creates an instance 
+      of the protocol, and calls <a 
+      href="Exscript.protocols.Protocol-class.html#connect" 
+      class="link">Protocol.connect()</a> on it.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
@@ -198,6 +238,50 @@
     </td>
   </tr>
 </table>
+<!-- ==================== FUNCTION DETAILS ==================== -->
+<a name="section-FunctionDetails"></a>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Function Details</span></td>
+</tr>
+</table>
+<a name="connect"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">connect</span>(<span class="sig-arg">uri</span>,
+        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Parses the given URL-formatted hostname using <a 
+  href="Exscript.util.url-module.html" class="link" 
+  onclick="show_private();">Exscript.util.url</a>, creates an instance of 
+  the protocol, and calls <a 
+  href="Exscript.protocols.Protocol-class.html#connect" 
+  class="link">Protocol.connect()</a> on it. If the URL contains a 
+  username, <a href="Exscript.protocols.Protocol-class.html#login" 
+  class="link">Protocol.login()</a> is also called.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>uri</code></strong> (str) - The URL-formatted hostname.</li>
+        <li><strong class="pname"><code>default_protocol</code></strong> (str) - Protocol that is used if the URL specifies none.</li>
+        <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed to the protocol constructor.</li>
+    </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<br />
 <!-- ==================== VARIABLES DETAILS ==================== -->
 <a name="section-VariablesDetails"></a>
 <table class="details" border="1" cellpadding="3"
@@ -258,7 +342,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:13 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:37 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

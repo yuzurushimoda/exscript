@@ -218,12 +218,20 @@
     <li> <strong class="uidlink"><a href="Exscript.Account-class.html">Exscript.Account</a></strong>:
       <em class="summary">This class represents a user account.</em>
     </li>
+    <li> <strong class="uidlink"><a href="Exscript.AccountPool-class.html">Exscript.AccountPool</a></strong>:
+      <em class="summary">This class manages a collection of available accounts.</em>
+    </li>
     <li> <strong class="uidlink">exceptions.BaseException</strong>:
       <em class="summary">Common base class for all exceptions</em>
     <ul>
     <li> <strong class="uidlink">exceptions.Exception</strong>:
       <em class="summary">Common base class for all non-exit exceptions.</em>
     <ul>
+    <li> <strong class="uidlink"><a href="Exscript.util.weakmethod.DeadMethodCalled-class.html">Exscript.util.weakmethod.DeadMethodCalled</a></strong>:
+      <em class="summary">Raised by <a href="Exscript.util.weakmethod.WeakMethod-class.html" 
+        class="link">WeakMethod</a> if it is called when the referenced 
+        object is already dead.</em>
+    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.Exception.ProtocolException-class.html">Exscript.protocols.Exception.ProtocolException</a></strong>:
       <em class="summary">Default exception that is thrown on most protocol related errors.</em>
     <ul>
@@ -306,10 +314,29 @@
     <li> <strong class="uidlink"><a href="Exscript.Host-class.html">Exscript.Host</a></strong>:
       <em class="summary">Represents a device on which to open a connection.</em>
     </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.interact.InputHistory-class.html">Exscript.util.interact.InputHistory</a></strong>:
+      <em class="summary">When prompting a user for input it is often useful to record his 
+        input in a file, and use previous input as a default value.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.Logger-class.html">Exscript.Logger</a></strong>:
+      <em class="summary">A QueueListener that implements logging for the queue.</em>
+    <ul>
+    <li> <strong class="uidlink"><a href="Exscript.FileLogger-class.html">Exscript.FileLogger</a></strong>:
+      <em class="summary">A Logger that stores logs into files.</em>
+    </li>
+    </ul>
+    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.mail.Mail-class.html">Exscript.util.mail.Mail</a></strong>:
       <em class="summary">Represents an email.</em>
     </li>
-    <li> <strong class="uidlink"><a href="Exscript.PrivateKey-class.html">Exscript.PrivateKey</a></strong>
+    <li> <strong class="uidlink"><a href="Exscript.util.buffer.MonitoredBuffer-class.html">Exscript.util.buffer.MonitoredBuffer</a></strong>:
+      <em class="summary">A specialized string buffer that allows for monitoring the content 
+        using regular expression-triggered callbacks.</em>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.PrivateKey-class.html">Exscript.PrivateKey</a></strong>:
+      <em class="summary">Represents a cryptographic key, and may be used to authenticate 
+        useing <a href="Exscript.protocols-module.html" class="link" 
+        onclick="show_private();">Exscript.protocols</a>.</em>
     </li>
     <li> <strong class="uidlink">multiprocessing.process.Process</strong>:
       <em class="summary">Process objects represent activity that is run in a separate 
@@ -348,20 +375,6 @@
     <li> <strong class="uidlink"><a href="Exscript.Queue-class.html">Exscript.Queue</a></strong>:
       <em class="summary">Manages hosts/tasks, accounts, connections, and threads.</em>
     </li>
-    <li> <strong class="uidlink"><a href="Exscript.QueueListener-class.html">Exscript.QueueListener</a></strong>:
-      <em class="summary">A QueueListener is notified of any actions that are added into the 
-        Exscript.Queue.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="Exscript.Logger-class.html">Exscript.Logger</a></strong>:
-      <em class="summary">A QueueListener that implements logging for the queue.</em>
-    <ul>
-    <li> <strong class="uidlink"><a href="Exscript.FileLogger-class.html">Exscript.FileLogger</a></strong>:
-      <em class="summary">A Logger that stores logs into files.</em>
-    </li>
-    </ul>
-    </li>
-    </ul>
-    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.sigint.SigIntWatcher-class.html">Exscript.util.sigint.SigIntWatcher</a></strong>:
       <em class="summary">This class solves two problems with multithreaded programs in 
         Python:</em>
@@ -377,6 +390,13 @@
     <ul>
     <li> <strong class="uidlink"><a href="Exscript.emulators.IOSEmulator-class.html">Exscript.emulators.IOSEmulator</a></strong>
     </li>
+    </ul>
+    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.weakmethod.WeakMethod-class.html">Exscript.util.weakmethod.WeakMethod</a></strong>:
+      <em class="summary">Do not create this class directly; use <a 
+        href="Exscript.util.weakmethod-module.html#ref" 
+        class="link">ref()</a> instead.</em>
+    <ul>
     </ul>
     </li>
     <li> <strong class="uidlink"><a href="float-class.html">float</a></strong>:
@@ -416,7 +436,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:13 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:37 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

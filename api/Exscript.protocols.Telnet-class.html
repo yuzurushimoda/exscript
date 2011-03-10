@@ -135,6 +135,27 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#add_monitor" class="summary-sig-name">add_monitor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pattern</span>,
+        <span class="summary-sig-arg">callback</span>)</span><br />
+      Calls the given function whenever the given pattern matches the 
+      incoming data.
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#app_authenticate" class="summary-sig-name">app_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>,
         <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
@@ -239,8 +260,10 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#cancel_expect" class="summary-sig-name">cancel_expect</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Cancel the current call to expect() as soon as control returns to the
-      protocol adapter.</td>
+      Cancel the current call to <a 
+      href="Exscript.protocols.Protocol-class.html#expect" 
+      class="link">expect()</a> as soon as control returns to the protocol 
+      adapter.</td>
           <td align="right" valign="top">
             
             
@@ -518,6 +541,24 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#interact" class="summary-sig-name">interact</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key_handlers</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Opens a simple interactive shell.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -758,8 +799,11 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_timeout" class="summary-sig-name">set_timeout</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">timeout</span>)</span><br />
-      Defines the maximum time that the adapter waits before a call to 
-      expect() or expect_prompt() fails.
+      Defines the maximum time that the adapter waits before a call to <a 
+      href="Exscript.protocols.Protocol-class.html#expect" 
+      class="link">expect()</a> or <a 
+      href="Exscript.protocols.Protocol-class.html#expect_prompt" 
+      class="link">expect_prompt()</a> fails.
       <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
@@ -892,6 +936,7 @@ object --+
         <li><strong class="pname"><code>timeout</code></strong> - See set_timeout(). The default value is 30.</li>
         <li><strong class="pname"><code>logfile</code></strong> - A file into which a log of the conversation with the device is 
           dumped.</li>
+        <li><strong class="pname"><code>termtype</code></strong> - The terminal type to request from the remote host, e.g. 'vt100'.</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -914,9 +959,11 @@ object --+
     </td>
   </tr></table>
   
-  <p>Cancel the current call to expect() as soon as control returns to the 
-  protocol adapter. This method may be used in callbacks to the events 
-  emitted by this class, e.g. Protocol.data_received_event.</p>
+  <p>Cancel the current call to <a 
+  href="Exscript.protocols.Protocol-class.html#expect" 
+  class="link">expect()</a> as soon as control returns to the protocol 
+  adapter. This method may be used in callbacks to the events emitted by 
+  this class, e.g. Protocol.data_received_event.</p>
   <dl class="fields">
     <dt>Overrides:
         <a href="Exscript.protocols.Protocol-class.html#cancel_expect">Protocol.cancel_expect</a>
@@ -944,6 +991,39 @@ object --+
   <dl class="fields">
     <dt>Overrides:
         <a href="Exscript.protocols.Protocol-class.html#close">Protocol.close</a>
+        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="interact"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">interact</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key_handlers</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Opens a simple interactive shell. Returns when the remote host sends 
+  EOF. The optional key handlers are functions that are called whenever the
+  user presses a specific key. For example, to catch CTRL+y:</p>
+<pre class="literalblock">
+   conn.interact({'': mycallback})
+</pre>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key_handlers</code></strong> - A dictionary mapping chars to a functions.</li>
+    </ul></dd>
+    <dt>Overrides:
+        <a href="Exscript.protocols.Protocol-class.html#interact">Protocol.interact</a>
         <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
@@ -1009,7 +1089,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:38 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

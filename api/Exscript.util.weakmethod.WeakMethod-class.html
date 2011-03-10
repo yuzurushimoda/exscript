@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.url.Url</title>
+  <title>Exscript.util.weakmethod.WeakMethod</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -41,8 +41,8 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
-        <a href="Exscript.util.url-module.html" onclick="show_private();">Module&nbsp;url</a> ::
-        Class&nbsp;Url
+        <a href="Exscript.util.weakmethod-module.html" onclick="show_private();">Module&nbsp;weakmethod</a> ::
+        Class&nbsp;WeakMethod
       </span>
     </td>
     <td>
@@ -53,15 +53,23 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Url</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class WeakMethod</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">Url</strong>
+        <strong class="uidshort">WeakMethod</strong>
 </pre>
 
+<dl><dt>Known Subclasses:</dt>
+<dd>
+      <ul class="subclass-list">
+<li class="private">_WeakMethodBound</li><li class="private">, _WeakMethodFree</li>  </ul>
+</dd></dl>
+
 <hr />
-<p>Represents a URL.</p>
+<p>Do not create this class directly; use <a 
+  href="Exscript.util.weakmethod-module.html#ref" class="link">ref()</a> 
+  instead.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -73,12 +81,33 @@ object --+
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">object</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.weakmethod.WeakMethod-class.html#__call__" class="summary-sig-name">__call__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">*args</span>,
+        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+      Proxied to the underlying function or method.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td><span class="summary-sig"><a href="Exscript.util.weakmethod.WeakMethod-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">callback</span>)</span><br />
+      Constructor.</td>
           <td align="right" valign="top">
             
             
@@ -90,13 +119,12 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">callable|None</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Like <a href="Exscript.util.url.Url-class.html#to_string" 
-      class="link">to_string()</a>.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.weakmethod.WeakMethod-class.html#get_function" class="summary-sig-name">get_function</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the referenced method/function if it is still alive.</td>
           <td align="right" valign="top">
             
             
@@ -108,12 +136,13 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">bool</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#to_string" class="summary-sig-name">to_string</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the URL, including all attributes, as a string.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.weakmethod.WeakMethod-class.html#isalive" class="summary-sig-name">isalive</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns True if the referenced function is still alive, False 
+      otherwise.</td>
           <td align="right" valign="top">
             
             
@@ -136,35 +165,9 @@ object --+
       <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
+      <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
-    </td>
-  </tr>
-</table>
-<!-- ==================== STATIC METHODS ==================== -->
-<a name="section-StaticMethods"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Static Methods</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Url</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#from_string" class="summary-sig-name">from_string</a>(<span class="summary-sig-arg">url</span>,
-        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span><br />
-      Parses the given URL and returns an URL object.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
     </td>
   </tr>
 </table>
@@ -193,6 +196,32 @@ object --+
     <span class="table-header">Method Details</span></td>
 </tr>
 </table>
+<a name="__call__"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__call__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">*args</span>,
+        <span class="sig-arg">**kwargs</span>)</span>
+    <br /><em class="fname">(Call operator)</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Proxied to the underlying function or method. Raises <a 
+  href="Exscript.util.weakmethod.DeadMethodCalled-class.html" 
+  class="link">DeadMethodCalled</a> if the referenced function is dead.</p>
+  <dl class="fields">
+    <dt>Returns: object</dt>
+        <dd>Whatever the referenced function returned.</dd>
+  </dl>
+</td></tr></table>
+</div>
 <a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -200,7 +229,9 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">callback</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -208,106 +239,57 @@ object --+
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
+  <p>Constructor. Do not use directly, use <a 
+  href="Exscript.util.weakmethod-module.html#ref" class="link">ref()</a> 
+  instead.</p>
   <dl class="fields">
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="__str__"></a>
+<a name="get_function"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_function</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Like <a href="Exscript.util.url.Url-class.html#to_string" 
-  class="link">to_string()</a>.</p>
+  <p>Returns the referenced method/function if it is still alive. Returns 
+  None otherwise.</p>
   <dl class="fields">
-    <dt>Returns: str</dt>
-        <dd>A URL.</dd>
-    <dt>Overrides:
-        object.__str__
-    </dt>
+    <dt>Returns: callable|None</dt>
+        <dd>The referenced function if it is still alive.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="from_string"></a>
+<a name="isalive"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">from_string</span>(<span class="sig-arg">url</span>,
-        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span>
-    <br /><em class="fname">Static Method</em>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">isalive</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Parses the given URL and returns an URL object. There are some 
-  differences to Python's built-in URL parser:</p>
-  <ul>
-    <li>
-      It is less strict, many more inputs are accepted. This is necessary 
-      to allow for passing a simple hostname as a URL.
-    </li>
-    <li>
-      You may specify a default protocol that is used when the http:// 
-      portion is missing.
-    </li>
-    <li>
-      The port number defaults to the well-known port of the given 
-      protocol.
-    </li>
-    <li>
-      The query variables are parsed into a dictionary (Url.vars).
-    </li>
-  </ul>
+  <p>Returns True if the referenced function is still alive, False 
+  otherwise.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>url</code></strong> (string) - A URL.</li>
-        <li><strong class="pname"><code>default_protocol</code></strong> (string) - A protocol name.</li>
-    </ul></dd>
-    <dt>Returns: Url</dt>
-        <dd>The Url object contructed from the given URL.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="to_string"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_string</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the URL, including all attributes, as a string.</p>
-  <dl class="fields">
-    <dt>Returns: str</dt>
-        <dd>A URL.</dd>
+    <dt>Returns: bool</dt>
+        <dd>Whether the referenced function is still alive.</dd>
   </dl>
 </td></tr></table>
 </div>

@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.url.Url</title>
+  <title>Exscript.util.interact.InputHistory</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -41,8 +41,8 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
-        <a href="Exscript.util.url-module.html" onclick="show_private();">Module&nbsp;url</a> ::
-        Class&nbsp;Url
+        <a href="Exscript.util.interact-module.html">Module&nbsp;interact</a> ::
+        Class&nbsp;InputHistory
       </span>
     </td>
     <td>
@@ -53,15 +53,18 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Url</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class InputHistory</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
 object --+
          |
-        <strong class="uidshort">Url</strong>
+        <strong class="uidshort">InputHistory</strong>
 </pre>
 
 <hr />
-<p>Represents a URL.</p>
+<p>When prompting a user for input it is often useful to record his input
+  in a file, and use previous input as a default value. This class allows 
+  for recording user input in a config file to allow for such 
+  functionality.</p>
 
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
@@ -77,8 +80,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td><span class="summary-sig"><a href="Exscript.util.interact.InputHistory-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">filename</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">~/.exscript_history</code><code class="variable-quote">'</code></span>,
+        <span class="summary-sig-arg">section</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">(imported)</code><code class="variable-quote">'</code></span>)</span><br />
+      Constructor.</td>
           <td align="right" valign="top">
             
             
@@ -90,13 +95,15 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">str|object</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Like <a href="Exscript.util.url.Url-class.html#to_string" 
-      class="link">to_string()</a>.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.interact.InputHistory-class.html#get" class="summary-sig-name">get</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">default</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Returns the input with the given key from the section that was passed
+      to the constructor.</td>
           <td align="right" valign="top">
             
             
@@ -108,12 +115,15 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">str</span>
+      <span class="summary-type">str|None</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#to_string" class="summary-sig-name">to_string</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the URL, including all attributes, as a string.</td>
+          <td><span class="summary-sig"><a href="Exscript.util.interact.InputHistory-class.html#set" class="summary-sig-name">set</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">key</span>,
+        <span class="summary-sig-arg">value</span>)</span><br />
+      Saves the input with the given key in the section that was passed to 
+      the constructor.</td>
           <td align="right" valign="top">
             
             
@@ -136,35 +146,9 @@ object --+
       <code>__repr__</code>,
       <code>__setattr__</code>,
       <code>__sizeof__</code>,
+      <code>__str__</code>,
       <code>__subclasshook__</code>
       </p>
-    </td>
-  </tr>
-</table>
-<!-- ==================== STATIC METHODS ==================== -->
-<a name="section-StaticMethods"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Static Methods</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Url</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.url.Url-class.html#from_string" class="summary-sig-name">from_string</a>(<span class="summary-sig-arg">url</span>,
-        <span class="summary-sig-arg">default_protocol</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span><br />
-      Parses the given URL and returns an URL object.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
     </td>
   </tr>
 </table>
@@ -200,7 +184,9 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">filename</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">~/.exscript_history</code><code class="variable-quote">'</code></span>,
+        <span class="sig-arg">section</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">(imported)</code><code class="variable-quote">'</code></span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -208,106 +194,85 @@ object --+
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
-  <dl class="fields">
-    <dt>Overrides:
-        object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
-    </dt>
-  </dl>
-</td></tr></table>
-</div>
-<a name="__str__"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
-    <br /><em class="fname">(Informal representation operator)</em>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Like <a href="Exscript.util.url.Url-class.html#to_string" 
-  class="link">to_string()</a>.</p>
-  <dl class="fields">
-    <dt>Returns: str</dt>
-        <dd>A URL.</dd>
-    <dt>Overrides:
-        object.__str__
-    </dt>
-  </dl>
-</td></tr></table>
-</div>
-<a name="from_string"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">from_string</span>(<span class="sig-arg">url</span>,
-        <span class="sig-arg">default_protocol</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">telnet</code><code class="variable-quote">'</code></span>)</span>
-    <br /><em class="fname">Static Method</em>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Parses the given URL and returns an URL object. There are some 
-  differences to Python's built-in URL parser:</p>
-  <ul>
-    <li>
-      It is less strict, many more inputs are accepted. This is necessary 
-      to allow for passing a simple hostname as a URL.
-    </li>
-    <li>
-      You may specify a default protocol that is used when the http:// 
-      portion is missing.
-    </li>
-    <li>
-      The port number defaults to the well-known port of the given 
-      protocol.
-    </li>
-    <li>
-      The query variables are parsed into a dictionary (Url.vars).
-    </li>
-  </ul>
+  <p>Constructor. The filename argument allows for listing on or more 
+  config files, and is passed to Python's RawConfigParser; please consult 
+  the documentation of RawConfigParser.read() if you require more 
+  information. The optional section argument allows to specify a section 
+  under which the input is stored in the config file. The section defaults 
+  to the name of the running script.</p>
+  <p>Silently creates a tempfile if the given file can not be opened, such 
+  that the object behavior does not change, but the history is not 
+  remembered across instances.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>url</code></strong> (string) - A URL.</li>
-        <li><strong class="pname"><code>default_protocol</code></strong> (string) - A protocol name.</li>
+        <li><strong class="pname"><code>filename</code></strong> (str|list(str)) - The config file.</li>
+        <li><strong class="pname"><code>section</code></strong> (str) - The section in the configfile.</li>
     </ul></dd>
-    <dt>Returns: Url</dt>
-        <dd>The Url object contructed from the given URL.</dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="to_string"></a>
+<a name="get"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">to_string</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">get</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>,
+        <span class="sig-arg">default</span>=<span class="sig-default">None</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns the URL, including all attributes, as a string.</p>
+  <p>Returns the input with the given key from the section that was passed 
+  to the constructor. If either the section or the key are not found, the 
+  default value is returned.</p>
   <dl class="fields">
-    <dt>Returns: str</dt>
-        <dd>A URL.</dd>
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The key for which to return a value.</li>
+        <li><strong class="pname"><code>default</code></strong> (str|object) - The default value that is returned.</li>
+    </ul></dd>
+    <dt>Returns: str|object</dt>
+        <dd>The value from the config file, or the default.</dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="set"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">set</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">key</span>,
+        <span class="sig-arg">value</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Saves the input with the given key in the section that was passed to 
+  the constructor. If either the section or the key are not found, they are
+  created.</p>
+  <p>Does nothing if the given value is None.</p>
+  <dl class="fields">
+    <dt>Parameters:</dt>
+    <dd><ul class="nomargin-top">
+        <li><strong class="pname"><code>key</code></strong> (str) - The key for which to define a value.</li>
+        <li><strong class="pname"><code>value</code></strong> (str|None) - The value that is defined, or None.</li>
+    </ul></dd>
+    <dt>Returns: str|None</dt>
+        <dd>The given value.</dd>
   </dl>
 </td></tr></table>
 </div>

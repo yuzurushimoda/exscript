@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.util.ipv4</title>
+  <title>Exscript.util.buffer.MonitoredBuffer</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -41,7 +41,8 @@
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
         <a href="Exscript.util-module.html" onclick="show_private();">Package&nbsp;util</a> ::
-        Module&nbsp;ipv4
+        <a href="Exscript.util.buffer-module.html" onclick="show_private();">Module&nbsp;buffer</a> ::
+        Class&nbsp;MonitoredBuffer
       </span>
     </td>
     <td>
@@ -51,433 +52,431 @@
     </td>
   </tr>
 </table>
-<!-- ==================== MODULE DESCRIPTION ==================== -->
-<h1 class="epydoc">Module ipv4</h1><p class="nomargin-top"></p>
-<p>IPv4 address calculation and conversion.</p>
+<!-- ==================== CLASS DESCRIPTION ==================== -->
+<h1 class="epydoc">Class MonitoredBuffer</h1><p class="nomargin-top"></p>
+<pre class="base-tree">
+object --+
+         |
+        <strong class="uidshort">MonitoredBuffer</strong>
+</pre>
 
-<!-- ==================== FUNCTIONS ==================== -->
-<a name="section-Functions"></a>
+<hr />
+<p>A specialized string buffer that allows for monitoring the content 
+  using regular expression-triggered callbacks.</p>
+
+<!-- ==================== INSTANCE METHODS ==================== -->
+<a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Functions</span></td>
-</tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#clean_ip" class="summary-sig-name">clean_ip</a>(<span class="summary-sig-arg">ip</span>)</span><br />
-      Cleans the ip address up, useful for removing leading zeros, e.g.:</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#int2ip" class="summary-sig-name">int2ip</a>(<span class="summary-sig-arg">number</span>)</span><br />
-      Converts the given integer value to an IP address.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">long</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#ip2int" class="summary-sig-name">ip2int</a>(<span class="summary-sig-arg">ip</span>)</span><br />
-      Converts the given IP address to a 4 byte integer value.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#is_ip" class="summary-sig-name">is_ip</a>(<span class="summary-sig-arg">string</span>)</span><br />
-      Returns True if the given string is an IPv4 address, False otherwise.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">long</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#mask2pfxlen" class="summary-sig-name">mask2pfxlen</a>(<span class="summary-sig-arg">mask</span>)</span><br />
-      Converts the given IP mask to a prefix length.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string, int</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#parse_prefix" class="summary-sig-name">parse_prefix</a>(<span class="summary-sig-arg">prefix</span>,
-        <span class="summary-sig-arg">default_length</span>=<span class="summary-sig-default">24</span>)</span><br />
-      Splits the given IP prefix into a network address and a prefix 
-      length.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask" class="summary-sig-name">pfxlen2mask</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
-      Converts the given prefix length to an IP mask.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">long</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#pfxlen2mask_int" class="summary-sig-name">pfxlen2mask_int</a>(<span class="summary-sig-arg">pfxlen</span>)</span><br />
-      Converts the given prefix length to an IP mask value.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">string</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.ipv4-module.html#remote_ip" class="summary-sig-name">remote_ip</a>(<span class="summary-sig-arg">local_ip</span>)</span><br />
-      Given an IP address, this function calculates the remaining available
-      IP address under the assumption that it is a /30 network.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-</table>
-<!-- ==================== VARIABLES ==================== -->
-<a name="section-Variables"></a>
-<table class="summary" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr bgcolor="#70b0f0" class="table-header">
-  <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Variables</span></td>
+    <span class="table-header">Instance Methods</span></td>
 </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.util'"><code class="variable-quote">'</code><code class="variable-string">Exscript.util</code><code class="variable-quote">'</code></code>
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">io</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Constructor.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#__str__" class="summary-sig-name">__str__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the content of the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#add_monitor" class="summary-sig-name">add_monitor</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pattern</span>,
+        <span class="summary-sig-arg">callback</span>)</span><br />
+      Calls the given function whenever the given pattern matches the 
+      buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#append" class="summary-sig-name">append</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">data</span>)</span><br />
+      Appends the given data to the buffer, and triggers all connected 
+      monitors, if any of them match the buffer content.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clear"></a><span class="summary-sig-name">clear</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Removes all data from the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#head" class="summary-sig-name">head</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bytes</span>)</span><br />
+      Returns the number of given bytes from the head of the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#pop" class="summary-sig-name">pop</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bytes</span>)</span><br />
+      Like <a href="Exscript.util.buffer.MonitoredBuffer-class.html#head" 
+      class="link">head()</a>, but also removes the head from the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#size" class="summary-sig-name">size</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the size of the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.util.buffer.MonitoredBuffer-class.html#tail" class="summary-sig-name">tail</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">bytes</span>)</span><br />
+      Returns the number of given bytes from the tail of the buffer.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__delattr__</code>,
+      <code>__format__</code>,
+      <code>__getattribute__</code>,
+      <code>__hash__</code>,
+      <code>__new__</code>,
+      <code>__reduce__</code>,
+      <code>__reduce_ex__</code>,
+      <code>__repr__</code>,
+      <code>__setattr__</code>,
+      <code>__sizeof__</code>,
+      <code>__subclasshook__</code>
+      </p>
     </td>
   </tr>
 </table>
-<!-- ==================== FUNCTION DETAILS ==================== -->
-<a name="section-FunctionDetails"></a>
+<!-- ==================== PROPERTIES ==================== -->
+<a name="section-Properties"></a>
+<table class="summary" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr bgcolor="#70b0f0" class="table-header">
+  <td align="left" colspan="2" class="table-header">
+    <span class="table-header">Properties</span></td>
+</tr>
+  <tr>
+    <td colspan="2" class="summary">
+    <p class="indent-wrapped-lines"><b>Inherited from <code>object</code></b>:
+      <code>__class__</code>
+      </p>
+    </td>
+  </tr>
+</table>
+<!-- ==================== METHOD DETAILS ==================== -->
+<a name="section-MethodDetails"></a>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr bgcolor="#70b0f0" class="table-header">
   <td align="left" colspan="2" class="table-header">
-    <span class="table-header">Function Details</span></td>
+    <span class="table-header">Method Details</span></td>
 </tr>
 </table>
-<a name="clean_ip"></a>
+<a name="__init__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">clean_ip</span>(<span class="sig-arg">ip</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">io</span>=<span class="sig-default">None</span>)</span>
+    <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Cleans the ip address up, useful for removing leading zeros, e.g.:</p>
-<pre class="literalblock">
-   192.168.010.001 -&gt; 192.168.10.1
-</pre>
+  <p>Constructor. The data is stored in the given file-like object. If no 
+  object is given, or the io argument is None, a new StringIO is used.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>ip</code></strong> (string) - An IP address.</li>
+        <li><strong class="pname"><code>io</code></strong> (file-like object) - A file-like object that is used for storing the data.</li>
     </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The cleaned up IP.</dd>
+    <dt>Overrides:
+        object.__init__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="int2ip"></a>
+<a name="__str__"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">int2ip</span>(<span class="sig-arg">number</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__str__</span>(<span class="sig-arg">self</span>)</span>
+    <br /><em class="fname">(Informal representation operator)</em>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given integer value to an IP address.</p>
+  <p>Returns the content of the buffer.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>number</code></strong> (long) - An IP as a number.</li>
-    </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The IP address.</dd>
+    <dt>Overrides:
+        object.__str__
+    </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="ip2int"></a>
+<a name="add_monitor"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">ip2int</span>(<span class="sig-arg">ip</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_monitor</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pattern</span>,
+        <span class="sig-arg">callback</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given IP address to a 4 byte integer value.</p>
+  <p>Calls the given function whenever the given pattern matches the 
+  buffer.</p>
+  <p>Arguments passed to the callback are the index of the match, and the 
+  match object of the regular expression.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>ip</code></strong> (string) - An IP address.</li>
+        <li><strong class="pname"><code>pattern</code></strong> (str|re.RegexObject|list(str|re.RegexObject)) - One or more regular expressions.</li>
+        <li><strong class="pname"><code>callback</code></strong> (callable) - The function that is called.</li>
     </ul></dd>
-    <dt>Returns: long</dt>
-        <dd>The IP, converted to a number.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="is_ip"></a>
+<a name="append"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_ip</span>(<span class="sig-arg">string</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">append</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">data</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns True if the given string is an IPv4 address, False 
-  otherwise.</p>
+  <p>Appends the given data to the buffer, and triggers all connected 
+  monitors, if any of them match the buffer content.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>string</code></strong> (string) - Any string.</li>
+        <li><strong class="pname"><code>data</code></strong> (str) - The data that is appended.</li>
     </ul></dd>
-    <dt>Returns: bool</dt>
-        <dd>True if the string is an IP address, False otherwise.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="mask2pfxlen"></a>
+<a name="head"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">mask2pfxlen</span>(<span class="sig-arg">mask</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">head</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bytes</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given IP mask to a prefix length.</p>
+  <p>Returns the number of given bytes from the head of the buffer. The 
+  buffer remains unchanged.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>mask</code></strong> (string) - An IP mask.</li>
+        <li><strong class="pname"><code>bytes</code></strong> (int) - The number of bytes to return.</li>
     </ul></dd>
-    <dt>Returns: long</dt>
-        <dd>The mask, as a long value.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="parse_prefix"></a>
+<a name="pop"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">parse_prefix</span>(<span class="sig-arg">prefix</span>,
-        <span class="sig-arg">default_length</span>=<span class="sig-default">24</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">pop</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bytes</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Splits the given IP prefix into a network address and a prefix length.
-  If the prefix does not have a length (i.e., it is a simple IP address), 
-  it is presumed to have the given default length.</p>
+  <p>Like <a href="Exscript.util.buffer.MonitoredBuffer-class.html#head" 
+  class="link">head()</a>, but also removes the head from the buffer.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>prefix</code></strong> (string) - An IP mask.</li>
-        <li><strong class="pname"><code>default_length</code></strong> (long) - The default ip prefix length.</li>
+        <li><strong class="pname"><code>bytes</code></strong> (int) - The number of bytes to return and remove.</li>
     </ul></dd>
-    <dt>Returns: string, int</dt>
-        <dd>A tuple containing the IP address and prefix length.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="pfxlen2mask"></a>
+<a name="size"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask</span>(<span class="sig-arg">pfxlen</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">size</span>(<span class="sig-arg">self</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given prefix length to an IP mask.</p>
+  <p>Returns the size of the buffer.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
-    </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The mask.</dd>
+    <dt>Returns: int</dt>
+        <dd>The size of the buffer in bytes.</dd>
   </dl>
 </td></tr></table>
 </div>
-<a name="pfxlen2mask_int"></a>
+<a name="tail"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">pfxlen2mask_int</span>(<span class="sig-arg">pfxlen</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">tail</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">bytes</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Converts the given prefix length to an IP mask value.</p>
+  <p>Returns the number of given bytes from the tail of the buffer. The 
+  buffer remains unchanged.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>pfxlen</code></strong> (int) - A prefix length.</li>
+        <li><strong class="pname"><code>bytes</code></strong> (int) - The number of bytes to return.</li>
     </ul></dd>
-    <dt>Returns: long</dt>
-        <dd>The mask, as a long value.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="remote_ip"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">remote_ip</span>(<span class="sig-arg">local_ip</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Given an IP address, this function calculates the remaining available 
-  IP address under the assumption that it is a /30 network. In other words,
-  given one link net address, this function returns the other link net 
-  address.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>local_ip</code></strong> (string) - An IP address.</li>
-    </ul></dd>
-    <dt>Returns: string</dt>
-        <dd>The other IP address of the link address pair.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -510,7 +509,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:37 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:38 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

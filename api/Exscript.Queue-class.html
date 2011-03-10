@@ -95,8 +95,28 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.Queue-class.html#add_account" class="summary-sig-name">add_account</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>)</span><br />
-      Adds the given account to the account pool that Exscript uses to log 
-      into hosts.</td>
+      Adds the given account to the default account pool that Exscript uses
+      to log into all hosts that have no specific <a 
+      href="Exscript.Account-class.html" class="link">Account</a> attached.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#add_account_pool" class="summary-sig-name">add_account_pool</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">pool</span>,
+        <span class="summary-sig-arg">match</span>=<span class="summary-sig-default">None</span>)</span><br />
+      Adds a new account pool to the queue.</td>
           <td align="right" valign="top">
             
             
@@ -367,24 +387,6 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Queue-class.html#task_is_completed" class="summary-sig-name">task_is_completed</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">task</span>)</span><br />
-      This method is deprecated, use Task.is_completed() instead.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -541,13 +543,93 @@ object --+
     </td>
   </tr></table>
   
-  <p>Adds the given account to the account pool that Exscript uses to log 
-  into hosts.</p>
+  <p>Adds the given account to the default account pool that Exscript uses 
+  to log into all hosts that have no specific <a 
+  href="Exscript.Account-class.html" class="link">Account</a> attached.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
         <li><strong class="pname"><code>account</code></strong> (Account) - The account that is added.</li>
     </ul></dd>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_account_pool"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_account_pool</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">pool</span>,
+        <span class="sig-arg">match</span>=<span class="sig-default">None</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <pre class="literalblock">
+
+Adds a new account pool to the queue. If the given match argument is
+None, the pool the default pool. Otherwise, the match argument is
+a callback function that is invoked to decide whether or not the
+given pool should be used for a host.
+
+When Exscript logs into a host, the account is chosen in the following
+order:
+
+    # Exscript checks whether an account was attached to the
+    L{Host} object using L{Host.set_account()}), and uses that.
+
+    # If the L{Host} has no account attached, Exscript walks
+    through all pools that were passed to L{Queue.add_account_pool()}.
+    For each pool, it passes the L{Host} to the function in the
+    given match argument. If the return value is True, the account
+    pool is used to acquire an account.
+    (Accounts within each pool are taken in a round-robin
+    fashion.)
+
+    # If no matching account pool is found, an account is taken
+    from the default account pool.
+
+    # Finally, if all that fails and the default account pool
+    contains no accounts, an error is raised.
+
+Example usage::
+
+    def do_nothing(conn):
+        conn.autoinit()
+
+    def use_this_pool(host):
+        return host.get_name().startswith('foo')
+
+    default_pool = AccountPool()
+    default_pool.add_account(Account('default-user', 'password'))
+
+    other_pool = AccountPool()
+    other_pool.add_account(Account('user', 'password'))
+
+    queue = Queue()
+    queue.add_account_pool(default_pool)
+    queue.add_account_pool(other_pool, use_this_pool)
+
+    host = Host('localhost')
+    queue.run(host, do_nothing)
+
+In the example code, the host has no account attached. As a result,
+the queue checks whether use_this_pool() returns True. Because the
+hostname does not start with 'foo', the function returns False, and
+Exscript takes the 'default-user' account from the default pool.
+
+@type  pool: AccountPool
+@param pool: The account pool that is added.
+@type  match: callable
+@param match: A callback to check if the pool should be used.
+
+</pre>
+  <dl class="fields">
   </dl>
 </td></tr></table>
 </div>
@@ -871,34 +953,6 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="task_is_completed"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">task_is_completed</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">task</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>This method is deprecated, use Task.is_completed() instead.</p>
-  <p>Returns True if the given task is completed, False otherwise. The task
-  is an object as returned by the Queue.run() method.</p>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>task</code></strong> (Task) - The object that was returned by Queue.run().</li>
-    </ul></dd>
-    <dt>Returns: bool</dt>
-        <dd>Whether the task is completed.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="wait_for"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -953,7 +1007,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Tue Jan 25 10:57:14 2011
+    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:38 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
