@@ -62,8 +62,7 @@ object --+
 <hr />
 <p>This class is a decorator for protocols.Protocol objects that adds 
   thread safety by adding locking to the authenticate() and authorize() 
-  functions. It also provides access to the associated Queue and Host 
-  instances.</p>
+  functions. It also provides access to the associated Host instance.</p>
   <p>For complete documentation, please refer to the protocols.Protocol 
   documentation.</p>
 
@@ -193,7 +192,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -213,7 +212,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -232,7 +231,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -252,7 +251,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -289,23 +288,6 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">HostAction</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#get_action" class="summary-sig-name">get_action</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the associated HostAction instance.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">Host</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -323,24 +305,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Queue</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Connection.Connection-class.html#get_queue" class="summary-sig-name">get_queue</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns the associated Queue instance.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -360,7 +325,7 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">Account</span>
+      <span class="summary-type">AccountProxy</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
@@ -582,10 +547,10 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
   </dl>
 </td></tr></table>
@@ -611,10 +576,10 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
   </dl>
 </td></tr></table>
@@ -642,10 +607,10 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
   </dl>
 </td></tr></table>
@@ -685,32 +650,11 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_action"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_action</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the associated HostAction instance.</p>
-  <dl class="fields">
-    <dt>Returns: HostAction</dt>
-        <dd>The associated HostAction instance.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -732,27 +676,6 @@ object --+
   <dl class="fields">
     <dt>Returns: Host</dt>
         <dd>The Host instance.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="get_queue"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">get_queue</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Returns the associated Queue instance.</p>
-  <dl class="fields">
-    <dt>Returns: Queue</dt>
-        <dd>The associated Queue instance.</dd>
   </dl>
 </td></tr></table>
 </div>
@@ -779,10 +702,10 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
   </dl>
 </td></tr></table>
@@ -809,9 +732,9 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>account</code></strong> (Account) - The account to use for logging in.</li>
+        <li><strong class="pname"><code>account</code></strong> (Account|None) - The account to use for logging in.</li>
     </ul></dd>
-    <dt>Returns: Account</dt>
+    <dt>Returns: AccountProxy</dt>
         <dd>The account that was used to log in.</dd>
   </dl>
 </td></tr></table>
@@ -845,7 +768,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Mar 10 16:47:38 2011
+    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:24 2011
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
