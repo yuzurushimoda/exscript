@@ -82,9 +82,27 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Logger-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">queue</span>)</span><br />
-      Creates a new logger instance and attaches it to the given Queue.</td>
+          <td><span class="summary-sig"><a href="Exscript.Logger-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Creates a new logger instance.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="add_log"></a><span class="summary-sig-name">add_log</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">attempt</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -101,7 +119,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="get_aborted_actions"></a><span class="summary-sig-name">get_aborted_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that were never completed successfully.</td>
+      Returns the number of jobs that were aborted.</td>
           <td align="right" valign="top">
             
             
@@ -117,8 +135,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_error_actions"></a><span class="summary-sig-name">get_error_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that have at least one error.</td>
+          <td><span class="summary-sig"><a name="get_aborted_logs"></a><span class="summary-sig-name">get_aborted_logs</span>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -134,9 +151,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_logged_actions"></a><span class="summary-sig-name">get_logged_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all completed (aborted or succeeded) actions, in 
-      the order in which they were started.</td>
+          <td><span class="summary-sig"><a name="get_logs"></a><span class="summary-sig-name">get_logs</span>(<span class="summary-sig-arg">self</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -152,8 +167,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_logs"></a><span class="summary-sig-name">get_logs</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">action</span>=<span class="summary-sig-default">None</span>)</span></td>
+          <td><span class="summary-sig"><a name="get_succeeded_actions"></a><span class="summary-sig-name">get_succeeded_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the number of jobs that were completed successfully.</td>
           <td align="right" valign="top">
             
             
@@ -169,8 +184,60 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_successful_actions"></a><span class="summary-sig-name">get_successful_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that were completed successfully.</td>
+          <td><span class="summary-sig"><a name="get_succeeded_logs"></a><span class="summary-sig-name">get_succeeded_logs</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="log"></a><span class="summary-sig-name">log</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">message</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="log_aborted"></a><span class="summary-sig-name">log_aborted</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">exc_info</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="log_succeeded"></a><span class="summary-sig-name">log_succeeded</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -231,8 +298,7 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">queue</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -240,14 +306,11 @@ object --+
     </td>
   </tr></table>
   
-  <p>Creates a new logger instance and attaches it to the given Queue. Any 
-  actions performed within the queue are watched, and a log of them is kept
-  in memory.</p>
+  <p>Creates a new logger instance. Use the <a 
+  href="Exscript.util.log-module.html#log_to" 
+  class="link">Exscript.util.log.log_to</a> decorator to send messages to 
+  the logger.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>queue</code></strong> (Queue) - The Queue that is watched.</li>
-    </ul></dd>
     <dt>Overrides:
         object.__init__
     </dt>
@@ -283,7 +346,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:24 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:41:00 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

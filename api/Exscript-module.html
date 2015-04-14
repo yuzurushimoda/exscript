@@ -55,7 +55,7 @@
 
 <hr />
 <div class="fields">      <p><strong>Version:</strong>
-        v2.1.70-gf5583f3
+        v2.1.457-gf5d3444
       </p>
 </div><!-- ==================== SUBMODULES ==================== -->
 <a name="section-Submodules"></a>
@@ -68,17 +68,14 @@
   <tr><td class="summary">
   <ul class="nomargin">
     <li> <strong class="uidlink"><a href="Exscript.Account%27-module.html">Exscript.Account'</a></strong>: <em class="summary">Representing user accounts.</em>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.AccountPool%27-module.html">Exscript.AccountPool'</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.AccountProxy-module.html" onclick="show_private();">Exscript.AccountProxy</a></strong>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.Connection-module.html" onclick="show_private();">Exscript.Connection</a></strong>: <em class="summary">Accessing the connection to a remote host.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.AccountPool%27-module.html">Exscript.AccountPool'</a></strong>: <em class="summary">A collection of user accounts.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.AccountProxy-module.html" onclick="show_private();">Exscript.AccountProxy</a></strong>: <em class="summary">A remote object that acquires/releases an account via a pipe.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.FileLogger%27-module.html">Exscript.FileLogger'</a></strong>: <em class="summary">Logging to the file system.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.Host%27-module.html">Exscript.Host'</a></strong>: <em class="summary">Representing a device to connect with.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.Logger%27-module.html">Exscript.Logger'</a></strong>: <em class="summary">Logging to memory.</em>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.LoggerProxy-module.html">Exscript.LoggerProxy</a></strong>    </li>
     <li> <strong class="uidlink"><a href="Exscript.PrivateKey%27-module.html">Exscript.PrivateKey'</a></strong>: <em class="summary">Represents a private key.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.Queue%27-module.html">Exscript.Queue'</a></strong>: <em class="summary">The heart of Exscript.</em>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.Task-module.html" onclick="show_private();">Exscript.Task</a></strong>: <em class="summary">Represents a batch of enqueued actions.</em>    </li>
-    <li class="private"> <strong class="uidlink"><a href="Exscript.emulators-module.html" onclick="show_private();">Exscript.emulators</a></strong>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.emulators-module.html" onclick="show_private();">Exscript.emulators</a></strong>: <em class="summary">Emulating a device for testing your scripts.</em>
     <ul class="private">
     <li> <strong class="uidlink"><a href="Exscript.emulators.CommandSet%27-module.html">Exscript.emulators.CommandSet'</a></strong>: <em class="summary">Defines the behavior of commands by mapping commands to functions.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.emulators.IOSEmulator%27-module.html">Exscript.emulators.IOSEmulator'</a></strong>: <em class="summary">Cisco IOS emulator.</em>    </li>
@@ -98,27 +95,38 @@
     <li> <strong class="uidlink"><a href="Exscript.protocols.Telnet%27-module.html">Exscript.protocols.Telnet'</a></strong>: <em class="summary">The Telnet protocol.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.protocols.drivers-module.html" onclick="show_private();">Exscript.protocols.drivers</a></strong>
     <ul class="private">
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.aironet-module.html">Exscript.protocols.drivers.aironet</a></strong>: <em class="summary">A driver for Cisco Aironet Wireless Controllers</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.aix-module.html">Exscript.protocols.drivers.aix</a></strong>: <em class="summary">A driver for AIX.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.arbor_peakflow-module.html">Exscript.protocols.drivers.arbor_peakflow</a></strong>: <em class="summary">A driver for Peakflow SP by Arbor Networks.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.aruba-module.html">Exscript.protocols.drivers.aruba</a></strong>: <em class="summary">A driver for Aruba controllers</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.asa-module.html">Exscript.protocols.drivers.asa</a></strong>: <em class="summary">A driver for Cisco ASA.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.brocade-module.html">Exscript.protocols.drivers.brocade</a></strong>: <em class="summary">A driver for Brocade XMR/MLX devices.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.driver-module.html">Exscript.protocols.drivers.driver</a></strong>: <em class="summary">Base class for all drivers.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.enterasys-module.html">Exscript.protocols.drivers.enterasys</a></strong>: <em class="summary">A driver for Enterasys devices.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.enterasys_wc-module.html">Exscript.protocols.drivers.enterasys_wc</a></strong>: <em class="summary">A driver for Enterasys/Extreme (HiPath) Wireless Controller 
+        devices.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.fortios-module.html">Exscript.protocols.drivers.fortios</a></strong>: <em class="summary">A driver for FortiOS devices.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.generic-module.html">Exscript.protocols.drivers.generic</a></strong>: <em class="summary">The default driver that is used when the OS is not recognized.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.hp_pro_curve-module.html">Exscript.protocols.drivers.hp_pro_curve</a></strong>: <em class="summary">A driver for HP ProCurve switches.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.huawei-module.html">Exscript.protocols.drivers.huawei</a></strong>: <em class="summary">A driver for Huawei Quidway s9300.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.ios-module.html">Exscript.protocols.drivers.ios</a></strong>: <em class="summary">A driver for Cisco IOS (not IOS XR).</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.ios_xr-module.html">Exscript.protocols.drivers.ios_xr</a></strong>: <em class="summary">A driver for Cisco IOS XR.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.junos-module.html">Exscript.protocols.drivers.junos</a></strong>: <em class="summary">A driver for devices running JunOS (by Juniper).</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.junos_erx-module.html">Exscript.protocols.drivers.junos_erx</a></strong>: <em class="summary">A driver for devices running Juniper ERX OS.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.lambdadriver-module.html">Exscript.protocols.drivers.lambdadriver</a></strong>: <em class="summary">A driver for MRV LambdaDriver devices.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.one_os-module.html">Exscript.protocols.drivers.one_os</a></strong>: <em class="summary">A driver for OneOS (OneAccess).</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.shell-module.html">Exscript.protocols.drivers.shell</a></strong>: <em class="summary">A generic shell driver that handles unknown unix shells.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.smart_edge_os-module.html">Exscript.protocols.drivers.smart_edge_os</a></strong>: <em class="summary">A driver for Redback Smart Edge OS.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.sros-module.html">Exscript.protocols.drivers.sros</a></strong>: <em class="summary">A driver for Alcatel SROS.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.protocols.drivers.vrp-module.html">Exscript.protocols.drivers.vrp</a></strong>: <em class="summary">A driver for devices running VRP (by Huawei).</em>    </li>
     </ul>
     </li>
+    <li> <strong class="uidlink"><a href="Exscript.protocols.lambdadriver-module.html">Exscript.protocols.lambdadriver</a></strong>: <em class="summary">A driver for MRV LambdaDriver devices.</em>    </li>
     </ul>
     </li>
     <li> <strong class="uidlink"><a href="Exscript.servers-module.html">Exscript.servers</a></strong>: <em class="summary">Very simple servers, useful for emulating a device for testing.</em>
     <ul>
-    <li> <strong class="uidlink"><a href="Exscript.servers.HTTPd-module.html">Exscript.servers.HTTPd</a></strong>: <em class="summary">A threaded HTTP server with support for HTTP/Digest authentication.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.servers.HTTPd%27-module.html">Exscript.servers.HTTPd'</a></strong>: <em class="summary">A threaded HTTP server with support for HTTP/Digest authentication.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.servers.SSHd%27-module.html">Exscript.servers.SSHd'</a></strong>: <em class="summary">An SSH2 server.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.servers.Server-module.html" onclick="show_private();">Exscript.servers.Server</a></strong>: <em class="summary">Base class for all servers.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.servers.Telnetd%27-module.html">Exscript.servers.Telnetd'</a></strong>: <em class="summary">A Telnet server.</em>    </li>
@@ -129,14 +137,20 @@
     <li class="private"> <strong class="uidlink"><a href="Exscript.util.buffer-module.html" onclick="show_private();">Exscript.util.buffer</a></strong>: <em class="summary">A buffer object.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.util.cast-module.html" onclick="show_private();">Exscript.util.cast</a></strong>: <em class="summary">Handy shortcuts for converting types.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.util.crypt-module.html" onclick="show_private();">Exscript.util.crypt</a></strong>: <em class="summary">Encryption related utilities.</em>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.decorator-module.html">Exscript.util.decorator</a></strong>: <em class="summary">Decorators for callbacks passed to Queue.run().</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.daemonize-module.html">Exscript.util.daemonize</a></strong>: <em class="summary">Daemonizing a process.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.decorator-module.html" onclick="show_private();">Exscript.util.decorator</a></strong>: <em class="summary">Decorators for callbacks passed to Queue.run().</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.util.event-module.html" onclick="show_private();">Exscript.util.event</a></strong>: <em class="summary">A simple signal/event mechanism.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.file-module.html">Exscript.util.file</a></strong>: <em class="summary">Utilities for reading data from files.</em>    </li>
-    <li> <strong class="uidlink"><a href="Exscript.util.impl-module.html">Exscript.util.impl</a></strong>: <em class="summary">Development tools.</em>    </li>
+    <li class="private"> <strong class="uidlink"><a href="Exscript.util.impl-module.html" onclick="show_private();">Exscript.util.impl</a></strong>: <em class="summary">Development tools.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.interact-module.html">Exscript.util.interact</a></strong>: <em class="summary">Tools for interacting with the user on the command line.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.ip-module.html">Exscript.util.ip</a></strong>: <em class="summary">Wrapper around the ipv4 and ipv6 modules to handle both, ipv4 and 
+        ipv6.</em>    </li>
     <li class="private"> <strong class="uidlink"><a href="Exscript.util.ipv4-module.html" onclick="show_private();">Exscript.util.ipv4</a></strong>: <em class="summary">IPv4 address calculation and conversion.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.ipv6-module.html">Exscript.util.ipv6</a></strong>: <em class="summary">IPv6 address calculation and conversion.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.log-module.html">Exscript.util.log</a></strong>: <em class="summary">Logging utilities.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.mail-module.html">Exscript.util.mail</a></strong>: <em class="summary">Sending and formatting emails.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.match-module.html">Exscript.util.match</a></strong>: <em class="summary">Shorthands for regular expression matching.</em>    </li>
+    <li> <strong class="uidlink"><a href="Exscript.util.pidutil-module.html">Exscript.util.pidutil</a></strong>: <em class="summary">Handling PID (process id) files.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.report-module.html">Exscript.util.report</a></strong>: <em class="summary">Formatting logs into human readable reports.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.sigint-module.html">Exscript.util.sigint</a></strong>: <em class="summary">A class for catching SIGINT, such that CTRL+c works.</em>    </li>
     <li> <strong class="uidlink"><a href="Exscript.util.start-module.html">Exscript.util.start</a></strong>: <em class="summary">Quickstart methods for the Exscript queue.</em>    </li>
@@ -246,7 +260,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:22 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:40:59 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

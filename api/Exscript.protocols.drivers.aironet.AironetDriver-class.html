@@ -3,7 +3,7 @@
           "DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title>Exscript.Task.Task</title>
+  <title>Exscript.protocols.drivers.aironet.AironetDriver</title>
   <link rel="stylesheet" href="epydoc.css" type="text/css" />
   <script type="text/javascript" src="epydoc.js"></script>
 </head>
@@ -40,8 +40,10 @@
     <td width="100%">
       <span class="breadcrumbs">
         <a href="Exscript-module.html">Package&nbsp;Exscript</a> ::
-        <a href="Exscript.Task-module.html" onclick="show_private();">Module&nbsp;Task</a> ::
-        Class&nbsp;Task
+        <a href="Exscript.protocols-module.html" onclick="show_private();">Package&nbsp;protocols</a> ::
+        <a href="Exscript.protocols.drivers-module.html" onclick="show_private();">Package&nbsp;drivers</a> ::
+        <a href="Exscript.protocols.drivers.aironet-module.html">Module&nbsp;aironet</a> ::
+        Class&nbsp;AironetDriver
       </span>
     </td>
     <td>
@@ -52,16 +54,16 @@
   </tr>
 </table>
 <!-- ==================== CLASS DESCRIPTION ==================== -->
-<h1 class="epydoc">Class Task</h1><p class="nomargin-top"></p>
+<h1 class="epydoc">Class AironetDriver</h1><p class="nomargin-top"></p>
 <pre class="base-tree">
-object --+
-         |
-        <strong class="uidshort">Task</strong>
+   object --+    
+            |    
+<a href="Exscript.protocols.drivers.driver.Driver-class.html">driver.Driver</a> --+
+                |
+               <strong class="uidshort">AironetDriver</strong>
 </pre>
 
 <hr />
-<p>Represents a batch of running actions.</p>
-
 <!-- ==================== INSTANCE METHODS ==================== -->
 <a name="section-InstanceMethods"></a>
 <table class="summary" border="1" cellpadding="3"
@@ -76,9 +78,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Task.Task-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">queue</span>)</span><br />
-      x.__init__(...) initializes x; see x.__class__.__doc__ for signature</td>
+          <td><span class="summary-sig"><a href="Exscript.protocols.drivers.aironet.AironetDriver-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      x.__init__(...) initializes x; see help(type(x)) for signature</td>
           <td align="right" valign="top">
             
             
@@ -94,27 +95,12 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Task.Task-class.html#add_action" class="summary-sig-name">add_action</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">action</span>)</span><br />
-      Adds a new action to the task.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">bool</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.Task.Task-class.html#is_completed" class="summary-sig-name">is_completed</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns True if all actions in the task are completed, returns False 
-      otherwise.</td>
+          <td><span class="summary-sig"><a name="auto_authorize"></a><span class="summary-sig-name">auto_authorize</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>,
+        <span class="summary-sig-arg">account</span>,
+        <span class="summary-sig-arg">flush</span>,
+        <span class="summary-sig-arg">bailout</span>)</span>
+      <em>(Inherited from <a href="Exscript.protocols.drivers.driver.Driver-class.html">Exscript.protocols.drivers.driver.Driver</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -130,8 +116,78 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.Task.Task-class.html#wait" class="summary-sig-name">wait</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Waits until all actions in the task have completed.</td>
+          <td><span class="summary-sig"><a href="Exscript.protocols.drivers.aironet.AironetDriver-class.html#check_head_for_os" class="summary-sig-name">check_head_for_os</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">string</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="check_response_for_os"></a><span class="summary-sig-name">check_response_for_os</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">string</span>)</span>
+      <em>(Inherited from <a href="Exscript.protocols.drivers.driver.Driver-class.html">Exscript.protocols.drivers.driver.Driver</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="clean_response_for_re_match"></a><span class="summary-sig-name">clean_response_for_re_match</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">response</span>)</span>
+      <em>(Inherited from <a href="Exscript.protocols.drivers.driver.Driver-class.html">Exscript.protocols.drivers.driver.Driver</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.drivers.aironet.AironetDriver-class.html#init_terminal" class="summary-sig-name">init_terminal</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">conn</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="supports_auto_authorize"></a><span class="summary-sig-name">supports_auto_authorize</span>(<span class="summary-sig-arg">self</span>)</span>
+      <em>(Inherited from <a href="Exscript.protocols.drivers.driver.Driver-class.html">Exscript.protocols.drivers.driver.Driver</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -192,8 +248,7 @@ object --+
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">queue</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>)</span>
     <br /><em class="fname">(Constructor)</em>
   </h3>
   </td><td align="right" valign="top"
@@ -201,8 +256,7 @@ object --+
     </td>
   </tr></table>
   
-  <p>x.__init__(...) initializes x; see x.__class__.__doc__ for 
-  signature</p>
+  <p>x.__init__(...) initializes x; see help(type(x)) for signature</p>
   <dl class="fields">
     <dt>Overrides:
         object.__init__
@@ -211,69 +265,49 @@ object --+
   </dl>
 </td></tr></table>
 </div>
-<a name="add_action"></a>
+<a name="check_head_for_os"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_action</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">action</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">check_head_for_os</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">string</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Adds a new action to the task.</p>
+  
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>action</code></strong> (Action) - The action to be added.</li>
-    </ul></dd>
+    <dt>Overrides:
+        <a href="Exscript.protocols.drivers.driver.Driver-class.html#check_head_for_os">driver.Driver.check_head_for_os</a>
+    </dt>
   </dl>
 </td></tr></table>
 </div>
-<a name="is_completed"></a>
+<a name="init_terminal"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
        cellspacing="0" width="100%" bgcolor="white">
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">is_completed</span>(<span class="sig-arg">self</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">init_terminal</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">conn</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Returns True if all actions in the task are completed, returns False 
-  otherwise.</p>
-  <dl class="fields">
-    <dt>Returns: bool</dt>
-        <dd>Whether the task is completed.</dd>
-  </dl>
-</td></tr></table>
-</div>
-<a name="wait"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">wait</span>(<span class="sig-arg">self</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
   
-  <p>Waits until all actions in the task have completed. Does not use any 
-  polling.</p>
   <dl class="fields">
+    <dt>Overrides:
+        <a href="Exscript.protocols.drivers.driver.Driver-class.html#init_terminal">driver.Driver.init_terminal</a>
+    </dt>
   </dl>
 </td></tr></table>
 </div>
@@ -306,7 +340,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:25 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:41:00 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

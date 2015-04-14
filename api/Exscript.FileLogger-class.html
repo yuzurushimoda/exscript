@@ -78,12 +78,30 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Exscript.FileLogger-class.html#__init__" class="summary-sig-name">__init__</a>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">queue</span>,
         <span class="summary-sig-arg">logdir</span>,
         <span class="summary-sig-arg">mode</span>=<span class="summary-sig-default"><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code></span>,
         <span class="summary-sig-arg">delete</span>=<span class="summary-sig-default">False</span>,
         <span class="summary-sig-arg">clearmem</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Creates a new logger instance and attaches it to the given Queue.</td>
+      The logdir argument specifies the location where the logs are stored.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.FileLogger-class.html#add_log" class="summary-sig-name">add_log</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">name</span>,
+        <span class="summary-sig-arg">attempt</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -100,7 +118,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a name="get_aborted_actions"></a><span class="summary-sig-name">get_aborted_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that were never completed successfully.
+      Returns the number of jobs that were aborted.
       <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
           <td align="right" valign="top">
             
@@ -117,8 +135,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_error_actions"></a><span class="summary-sig-name">get_error_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that have at least one error.
+          <td><span class="summary-sig"><a name="get_aborted_logs"></a><span class="summary-sig-name">get_aborted_logs</span>(<span class="summary-sig-arg">self</span>)</span>
       <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
           <td align="right" valign="top">
             
@@ -135,9 +152,7 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_logged_actions"></a><span class="summary-sig-name">get_logged_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all completed (aborted or succeeded) actions, in 
-      the order in which they were started.
+          <td><span class="summary-sig"><a name="get_logs"></a><span class="summary-sig-name">get_logs</span>(<span class="summary-sig-arg">self</span>)</span>
       <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
           <td align="right" valign="top">
             
@@ -154,8 +169,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_logs"></a><span class="summary-sig-name">get_logs</span>(<span class="summary-sig-arg">self</span>,
-        <span class="summary-sig-arg">action</span>=<span class="summary-sig-default">None</span>)</span>
+          <td><span class="summary-sig"><a name="get_succeeded_actions"></a><span class="summary-sig-name">get_succeeded_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the number of jobs that were completed successfully.
       <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
           <td align="right" valign="top">
             
@@ -172,9 +187,62 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="get_successful_actions"></a><span class="summary-sig-name">get_successful_actions</span>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns a list of all actions that were completed successfully.
+          <td><span class="summary-sig"><a name="get_succeeded_logs"></a><span class="summary-sig-name">get_succeeded_logs</span>(<span class="summary-sig-arg">self</span>)</span>
       <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a name="log"></a><span class="summary-sig-name">log</span>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">message</span>)</span>
+      <em>(Inherited from <a href="Exscript.Logger-class.html">Exscript.Logger</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.FileLogger-class.html#log_aborted" class="summary-sig-name">log_aborted</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>,
+        <span class="summary-sig-arg">exc_info</span>)</span></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.FileLogger-class.html#log_succeeded" class="summary-sig-name">log_succeeded</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">job_id</span>)</span></td>
           <td align="right" valign="top">
             
             
@@ -236,7 +304,6 @@ object --+
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
   <h3 class="epydoc"><span class="sig"><span class="sig-name">__init__</span>(<span class="sig-arg">self</span>,
-        <span class="sig-arg">queue</span>,
         <span class="sig-arg">logdir</span>,
         <span class="sig-arg">mode</span>=<span class="sig-default"><code class="variable-quote">'</code><code class="variable-string">a</code><code class="variable-quote">'</code></span>,
         <span class="sig-arg">delete</span>=<span class="sig-default">False</span>,
@@ -248,17 +315,89 @@ object --+
     </td>
   </tr></table>
   
-  <p>Creates a new logger instance and attaches it to the given Queue. Any 
-  actions performed within the queue are watched, and a log of them is kept
-  in memory.</p>
+  <p>The logdir argument specifies the location where the logs are stored. 
+  The mode specifies whether to append the existing logs (if any). If 
+  delete is True, the logs are deleted after they are completed, unless 
+  they have an error in them. If clearmem is True, the logger does not 
+  store a reference to the log in it. If you want to use the functions from
+  <a href="Exscript.util.report-module.html" 
+  class="link">Exscript.util.report</a> with the logger, clearmem must be 
+  False.</p>
   <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>queue</code></strong> - The Queue that is watched.</li>
-    </ul></dd>
     <dt>Overrides:
         object.__init__
-        <dd><em class="note">(inherited documentation)</em></dd>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="add_log"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">add_log</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">job_id</span>,
+        <span class="sig-arg">name</span>,
+        <span class="sig-arg">attempt</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="Exscript.Logger-class.html#add_log">Logger.add_log</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="log_aborted"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">log_aborted</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">job_id</span>,
+        <span class="sig-arg">exc_info</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="Exscript.Logger-class.html#log_aborted">Logger.log_aborted</a>
+    </dt>
+  </dl>
+</td></tr></table>
+</div>
+<a name="log_succeeded"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">log_succeeded</span>(<span class="sig-arg">self</span>,
+        <span class="sig-arg">job_id</span>)</span>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  
+  <dl class="fields">
+    <dt>Overrides:
+        <a href="Exscript.Logger-class.html#log_succeeded">Logger.log_succeeded</a>
     </dt>
   </dl>
 </td></tr></table>
@@ -292,7 +431,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:24 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:41:00 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

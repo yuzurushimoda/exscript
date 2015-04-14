@@ -69,9 +69,10 @@
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.decorator-module.html#autologin" class="summary-sig-name">autologin</a>(<span class="summary-sig-arg">function</span>,
-        <span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>)</span><br />
-      Wraps the given function such that...</td>
+          <td><span class="summary-sig"><a href="Exscript.util.decorator-module.html#autologin" class="summary-sig-name">autologin</a>(<span class="summary-sig-arg">flush</span>=<span class="summary-sig-default">True</span>,
+        <span class="summary-sig-arg">attempts</span>=<span class="summary-sig-default">1</span>)</span><br />
+      Wraps the given function such that conn.login() is executed before 
+      calling it.</td>
           <td align="right" valign="top">
             
             
@@ -103,35 +104,14 @@
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
-      <span class="summary-type">function</span>
-    </td><td class="summary">
-      <table width="100%" cellpadding="0" cellspacing="0" border="0">
-        <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.decorator-module.html#connect" class="summary-sig-name">connect</a>(<span class="summary-sig-arg">function</span>)</span><br />
-      Wraps the given function such that the connection is opened before 
-      calling it.</td>
-          <td align="right" valign="top">
-            
-            
-          </td>
-        </tr>
-      </table>
-      
-    </td>
-  </tr>
-<tr>
-    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">object</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a href="Exscript.util.decorator-module.html#os_function_mapper" class="summary-sig-name">os_function_mapper</a>(<span class="summary-sig-arg">conn</span>,
-        <span class="summary-sig-arg">map</span>,
-        <span class="summary-sig-arg">*args</span>,
-        <span class="summary-sig-arg">**kwargs</span>)</span><br />
+          <td><span class="summary-sig"><a href="Exscript.util.decorator-module.html#os_function_mapper" class="summary-sig-name">os_function_mapper</a>(<span class="summary-sig-arg">map</span>)</span><br />
       When called with an open connection, this function uses the 
-      conn.guess_os() function to determine the operating system that is 
-      running on the connected host.</td>
+      conn.guess_os() function to guess the operating system of the 
+      connected host.</td>
           <td align="right" valign="top">
             
             
@@ -154,7 +134,7 @@
     <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">&nbsp;</span>
     </td><td class="summary">
-        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="None">None</code>
+        <a name="__package__"></a><span class="summary-name">__package__</span> = <code title="'Exscript.util'"><code class="variable-quote">'</code><code class="variable-string">Exscript.util</code><code class="variable-quote">'</code></code>
     </td>
   </tr>
 </table>
@@ -174,34 +154,27 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">autologin</span>(<span class="sig-arg">function</span>,
-        <span class="sig-arg">flush</span>=<span class="sig-default">True</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">autologin</span>(<span class="sig-arg">flush</span>=<span class="sig-default">True</span>,
+        <span class="sig-arg">attempts</span>=<span class="sig-default">1</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
     </td>
   </tr></table>
   
-  <p>Wraps the given function such that...</p>
-  <ul>
-    <li>
-      the connection is opened, and
-    </li>
-    <li>
-      the user is logged in
-    </li>
-  </ul>
-  <p>before calling calling it. Example:</p>
+  <p>Wraps the given function such that conn.login() is executed before 
+  calling it. Example:</p>
 <pre class="literalblock">
-   def my_func(conn):
+   @autologin(attempts = 2)
+   def my_func(job, host, conn):
        pass # Do something.
-   Exscript.util.start.quickrun('myhost', autologin(my_func))
+   Exscript.util.start.quickrun('myhost', my_func)
 </pre>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>function</code></strong> (function) - The function that's ought to be wrapped.</li>
         <li><strong class="pname"><code>flush</code></strong> (bool) - Whether to flush the last prompt from the buffer.</li>
+        <li><strong class="pname"><code>attempts</code></strong> (int) - The number of login attempts if login fails.</li>
     </ul></dd>
     <dt>Returns: function</dt>
         <dd>The wrapped function.</dd>
@@ -238,37 +211,6 @@
   </dl>
 </td></tr></table>
 </div>
-<a name="connect"></a>
-<div>
-<table class="details" border="1" cellpadding="3"
-       cellspacing="0" width="100%" bgcolor="white">
-<tr><td>
-  <table width="100%" cellpadding="0" cellspacing="0" border="0">
-  <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">connect</span>(<span class="sig-arg">function</span>)</span>
-  </h3>
-  </td><td align="right" valign="top"
-    >&nbsp;
-    </td>
-  </tr></table>
-  
-  <p>Wraps the given function such that the connection is opened before 
-  calling it. Example:</p>
-<pre class="literalblock">
-   def my_func(conn):
-       pass # Do something.
-   Exscript.util.start.quickrun('myhost', connect(my_func))
-</pre>
-  <dl class="fields">
-    <dt>Parameters:</dt>
-    <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>function</code></strong> (function) - The function that's ought to be wrapped.</li>
-    </ul></dd>
-    <dt>Returns: function</dt>
-        <dd>The wrapped function.</dd>
-  </dl>
-</td></tr></table>
-</div>
 <a name="os_function_mapper"></a>
 <div>
 <table class="details" border="1" cellpadding="3"
@@ -276,10 +218,7 @@
 <tr><td>
   <table width="100%" cellpadding="0" cellspacing="0" border="0">
   <tr valign="top"><td>
-  <h3 class="epydoc"><span class="sig"><span class="sig-name">os_function_mapper</span>(<span class="sig-arg">conn</span>,
-        <span class="sig-arg">map</span>,
-        <span class="sig-arg">*args</span>,
-        <span class="sig-arg">**kwargs</span>)</span>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">os_function_mapper</span>(<span class="sig-arg">map</span>)</span>
   </h3>
   </td><td align="right" valign="top"
     >&nbsp;
@@ -287,28 +226,27 @@
   </tr></table>
   
   <p>When called with an open connection, this function uses the 
-  conn.guess_os() function to determine the operating system that is 
-  running on the connected host. It then uses the given map to look up a 
-  function name that corresponds to the operating system, and calls it. 
-  Example:</p>
+  conn.guess_os() function to guess the operating system of the connected 
+  host. It then uses the given map to look up a function name that 
+  corresponds to the operating system, and calls it. Example:</p>
 <pre class="literalblock">
-   def ios(conn):
+   def ios_xr(job, host, conn):
        pass # Do something.
 
-   def junos(conn):
+   def junos(job, host, conn):
        pass # Do something else.
 
-   def shell(conn):
+   def shell(job, host, conn):
        pass # Do something else.
 
-   Exscript.util.start.quickrun('myhost', os_function_mapper)
+   Exscript.util.start.quickrun('myhost', os_function_mapper(globals()))
 </pre>
   <p>An exception is raised if a matching function is not found in the 
   map.</p>
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>conn</code></strong> (Connection) - The open connection.</li>
+        <li><strong class="pname"><code>conn</code></strong> (Exscript.protocols.Protocol) - The open connection.</li>
         <li><strong class="pname"><code>map</code></strong> (dict) - A dictionary mapping operating system name to a function.</li>
         <li><strong class="pname"><code>args</code></strong> (list) - Passed on to the called function.</li>
         <li><strong class="pname"><code>kwargs</code></strong> (dict) - Passed on to the called function.</li>
@@ -347,7 +285,7 @@
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:23 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:40:59 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

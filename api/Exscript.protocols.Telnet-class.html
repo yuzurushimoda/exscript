@@ -137,7 +137,8 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#add_monitor" class="summary-sig-name">add_monitor</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">pattern</span>,
-        <span class="summary-sig-arg">callback</span>)</span><br />
+        <span class="summary-sig-arg">callback</span>,
+        <span class="summary-sig-arg">limit</span>=<span class="summary-sig-default">80</span>)</span><br />
       Calls the given function whenever the given pattern matches the 
       incoming data.
       <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
@@ -375,6 +376,24 @@ object --+
   </tr>
 <tr>
     <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">int</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#get_connect_timeout" class="summary-sig-name">get_connect_timeout</a>(<span class="summary-sig-arg">self</span>)</span><br />
+      Returns the current connect_timeout in seconds.
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
       <span class="summary-type">Driver</span>
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
@@ -530,7 +549,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#guess_os" class="summary-sig-name">guess_os</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      Returns an identifer that specifies the operating system that is 
+      Returns an identifier that specifies the operating system that is 
       running on the remote host.
       <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
@@ -665,7 +684,7 @@ object --+
         <tr>
           <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#protocol_authenticate" class="summary-sig-name">protocol_authenticate</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">account</span>=<span class="summary-sig-default">None</span>)</span><br />
-      Low-level API to perform protocol-level authentification on protocols
+      Low-level API to perform protocol-level authentication on protocols 
       that support it.
       <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
@@ -686,6 +705,26 @@ object --+
           <td><span class="summary-sig"><a href="Exscript.protocols.Telnet-class.html#send" class="summary-sig-name">send</a>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">data</span>)</span><br />
       Sends the given data to the remote host.</td>
+          <td align="right" valign="top">
+            
+            
+          </td>
+        </tr>
+      </table>
+      
+    </td>
+  </tr>
+<tr>
+    <td width="15%" align="right" valign="top" class="summary">
+      <span class="summary-type">&nbsp;</span>
+    </td><td class="summary">
+      <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tr>
+          <td><span class="summary-sig"><a href="Exscript.protocols.Protocol-class.html#set_connect_timeout" class="summary-sig-name">set_connect_timeout</a>(<span class="summary-sig-arg">self</span>,
+        <span class="summary-sig-arg">timeout</span>)</span><br />
+      Defines the maximum time that the adapter waits for initial 
+      connection.
+      <em>(Inherited from <a href="Exscript.protocols.Protocol-class.html">Exscript.protocols.Protocol</a>)</em></td>
           <td align="right" valign="top">
             
             
@@ -931,16 +970,20 @@ object --+
   <dl class="fields">
     <dt>Parameters:</dt>
     <dd><ul class="nomargin-top">
-        <li><strong class="pname"><code>driver</code></strong> - passed to set_driver().</li>
+        <li><strong class="pname"><code>driver</code></strong> - Driver()|str</li>
         <li><strong class="pname"><code>stdout</code></strong> - Where to write the device response. Defaults to os.devnull.</li>
         <li><strong class="pname"><code>stderr</code></strong> - Where to write debug info. Defaults to stderr.</li>
         <li><strong class="pname"><code>debug</code></strong> - An integer between 0 (no debugging) and 5 (very verbose 
           debugging) that specifies the amount of debug info sent to the 
           terminal. The default value is 0.</li>
+        <li><strong class="pname"><code>connect_timeout</code></strong> - Timeout for the initial TCP connection attempt</li>
         <li><strong class="pname"><code>timeout</code></strong> - See set_timeout(). The default value is 30.</li>
         <li><strong class="pname"><code>logfile</code></strong> - A file into which a log of the conversation with the device is 
           dumped.</li>
         <li><strong class="pname"><code>termtype</code></strong> - The terminal type to request from the remote host, e.g. 'vt100'.</li>
+        <li><strong class="pname"><code>verify_fingerprint</code></strong> - Whether to verify the host's fingerprint.</li>
+        <li><strong class="pname"><code>account_factory</code></strong> - A function that produces a new <a 
+          href="Exscript.Account-class.html" class="link">Account</a>.</li>
     </ul></dd>
     <dt>Overrides:
         object.__init__
@@ -1096,7 +1139,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:25 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:41:00 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"

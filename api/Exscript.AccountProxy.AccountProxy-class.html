@@ -77,7 +77,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="__enter__"></a><span class="summary-sig-name">__enter__</span>(<span class="summary-sig-arg">self</span>)</span></td>
+          <td><span class="summary-sig"><a name="__enter__"></a><span class="summary-sig-name">__enter__</span>(<span class="summary-sig-arg">self</span>)</span><br />
+      Like <a href="Exscript.AccountProxy.AccountProxy-class.html#acquire" 
+      class="link">acquire()</a>.</td>
           <td align="right" valign="top">
             
             
@@ -96,7 +98,9 @@ object --+
           <td><span class="summary-sig"><a name="__exit__"></a><span class="summary-sig-name">__exit__</span>(<span class="summary-sig-arg">self</span>,
         <span class="summary-sig-arg">thetype</span>,
         <span class="summary-sig-arg">value</span>,
-        <span class="summary-sig-arg">traceback</span>)</span></td>
+        <span class="summary-sig-arg">traceback</span>)</span><br />
+      Like <a href="Exscript.AccountProxy.AccountProxy-class.html#release" 
+      class="link">release()</a>.</td>
           <td align="right" valign="top">
             
             
@@ -113,7 +117,7 @@ object --+
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
           <td><span class="summary-sig"><a href="Exscript.AccountProxy.AccountProxy-class.html#__hash__" class="summary-sig-name">__hash__</a>(<span class="summary-sig-arg">self</span>)</span><br />
-      hash(x)</td>
+      Returns the hash of the currently acquired account.</td>
           <td align="right" valign="top">
             
             
@@ -292,8 +296,10 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="for_account"></a><span class="summary-sig-name">for_account</span>(<span class="summary-sig-arg">parent</span>,
-        <span class="summary-sig-arg">account</span>)</span></td>
+          <td><span class="summary-sig"><a href="Exscript.AccountProxy.AccountProxy-class.html#for_account_hash" class="summary-sig-name">for_account_hash</a>(<span class="summary-sig-arg">parent</span>,
+        <span class="summary-sig-arg">account_hash</span>)</span><br />
+      Returns a new AccountProxy that acquires the account with the given 
+      hash, if such an account is known to the account manager.</td>
           <td align="right" valign="top">
             
             
@@ -309,8 +315,9 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="for_host"></a><span class="summary-sig-name">for_host</span>(<span class="summary-sig-arg">parent</span>,
-        <span class="summary-sig-arg">host</span>)</span></td>
+          <td><span class="summary-sig"><a href="Exscript.AccountProxy.AccountProxy-class.html#for_host" class="summary-sig-name">for_host</a>(<span class="summary-sig-arg">parent</span>,
+        <span class="summary-sig-arg">host</span>)</span><br />
+      Returns a new AccountProxy that has an account acquired.</td>
           <td align="right" valign="top">
             
             
@@ -326,7 +333,8 @@ object --+
     </td><td class="summary">
       <table width="100%" cellpadding="0" cellspacing="0" border="0">
         <tr>
-          <td><span class="summary-sig"><a name="for_random_account"></a><span class="summary-sig-name">for_random_account</span>(<span class="summary-sig-arg">parent</span>)</span></td>
+          <td><span class="summary-sig"><a href="Exscript.AccountProxy.AccountProxy-class.html#for_random_account" class="summary-sig-name">for_random_account</a>(<span class="summary-sig-arg">parent</span>)</span><br />
+      Returns a new AccountProxy that has an account acquired.</td>
           <td align="right" valign="top">
             
             
@@ -377,11 +385,10 @@ object --+
     </td>
   </tr></table>
   
-  <p>hash(x)</p>
+  <p>Returns the hash of the currently acquired account.</p>
   <dl class="fields">
     <dt>Overrides:
         object.__hash__
-        <dd><em class="note">(inherited documentation)</em></dd>
     </dt>
   </dl>
 </td></tr></table>
@@ -430,6 +437,73 @@ object --+
   
   <p>Locks the account. Returns True on success, False if the account is 
   thread-local and must not be locked.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="for_account_hash"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">for_account_hash</span>(<span class="sig-arg">parent</span>,
+        <span class="sig-arg">account_hash</span>)</span>
+    <br /><em class="fname">Static Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new AccountProxy that acquires the account with the given 
+  hash, if such an account is known to the account manager. It is an error 
+  if the account manager does not have such an account.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="for_host"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">for_host</span>(<span class="sig-arg">parent</span>,
+        <span class="sig-arg">host</span>)</span>
+    <br /><em class="fname">Static Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new AccountProxy that has an account acquired. The account 
+  is chosen based on what the connected AccountManager selects for the 
+  given host.</p>
+  <dl class="fields">
+  </dl>
+</td></tr></table>
+</div>
+<a name="for_random_account"></a>
+<div>
+<table class="details" border="1" cellpadding="3"
+       cellspacing="0" width="100%" bgcolor="white">
+<tr><td>
+  <table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr valign="top"><td>
+  <h3 class="epydoc"><span class="sig"><span class="sig-name">for_random_account</span>(<span class="sig-arg">parent</span>)</span>
+    <br /><em class="fname">Static Method</em>
+  </h3>
+  </td><td align="right" valign="top"
+    >&nbsp;
+    </td>
+  </tr></table>
+  
+  <p>Returns a new AccountProxy that has an account acquired. The account 
+  is chosen by the connected AccountManager.</p>
   <dl class="fields">
   </dl>
 </td></tr></table>
@@ -547,7 +621,7 @@ object --+
 <table border="0" cellpadding="0" cellspacing="0" width="100%%">
   <tr>
     <td align="left" class="footer">
-    Generated by Epydoc 3.0.1 on Thu Aug 18 16:05:24 2011
+    Generated by Epydoc 3.0.1 on Tue Apr 14 21:41:00 2015
     </td>
     <td align="right" class="footer">
       <a target="mainFrame" href="http://epydoc.sourceforge.net"
